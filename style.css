@@ -8,10 +8,16 @@ html
 
 .header{
     width: 100%;
-    background-size: 100%;
     height: 500px;
-    background-image: url(images/header-tlo1.jpg);
+}
+
+.tlo
+{
+    background-size: 100%;
+    background-image: url(images/header-tlo2.png);
     background-repeat: no-repeat;
+    width: 100%;
+    height: 400px;
 }
 
 
@@ -39,6 +45,26 @@ html
     position: absolute;
     top: 50px;
     right: 45px;
+}
+
+.logowanie
+{
+    position: absolute;
+    top: 50px;
+    right: 100px; 
+    background-color: rgba(0, 0, 0, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.9);
+    border-radius: 50px;
+    padding: 10px 20px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.logowanie:hover
+{
+    color: white;
+    text-decoration: none;
 }
 
 .menu-nakladka a {
