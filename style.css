@@ -35,6 +35,10 @@ html
 {
     z-index: 1;
     transition: all 0.3s ease-in-out;
+    position: relative;
+    left: -40px;
+    top: -37px;
+    scale: 0.7;
 }
 
 .menu-nakladka {
@@ -90,6 +94,7 @@ html
     top: 50px;
     left: 45px;
     text-align: center;
+    
 }
 
 .logowanie2:hover
@@ -167,7 +172,7 @@ html
 {
     background-color: none;
 	transition: all 0.3s ease-in-out;
-    height: 150px;
+    height: 70px;
 
 }
 
