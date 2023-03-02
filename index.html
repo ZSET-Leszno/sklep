@@ -11,6 +11,7 @@
 
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="css/fontello.css" type="text/css" />
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 
@@ -23,28 +24,34 @@
 		<div class="header">
 			<div class="tlo">
 				<div class="navb">
-				<div id="przelacznik" class="menu-nakladka">
-					<a href="#" class="nakladka-zamykanie" onclick="zamykanie()">&times;</a>
-					<div class="menu">
-						<a href="">1</a>
-						<a href="">2</a>
-						<a href="">3</a>
-						<a href="">4</a>
-						<a href="">5</a>
-					</div>
-				</div>
+					<div id="przelacznik" class="menu-nakladka">
+						<div class="d-inline d-md-none">
+							<a href="" class="logowanie2">Logowanie</a>
+						</div>
 
-				<div class="d-none d-md-inline-block logo-div">
-					<img src="images/logo.png" alt="Logo" class="logo d-inline">
-					<img src="images/logo2.png" alt="Logo" class="logo2 d-none">
-				</div>
-				
-					<div class="">
-			   		<span onclick="otwieranie()" class="float-right przycisk"><img src="images/toogle-icon1.png" class="nakladka-otwieranie"></span>
-				
-					<div class="d-none d-md-block temp">
-						<a href="" class="float-right logowanie">Logowanie</a>
-		 			</div>
+						<a href="#" class="nakladka-zamykanie" onclick="zamykanie()">&times;</a>
+						<div class="menu">
+							<a href="">Strona główna</a>
+							<a href="">2</a>
+							<a href="">3</a>
+							<a href="">4</a>
+							<a href="">5</a>
+						</div>
+					</div>
+
+					<div class="d-inline-block logo-div">
+						<img src="images/logo.png" alt="Logo" class="logo col-lg-7 col-md-6 col-4 d-inline mt-lg-0 mt-md-1 mt-3">
+						<img src="images/logo2.png" alt="Logo" class="logo2 col-lg-7 col-md-6 col-4 d-none mt-lg-0 mt-md-1 mt-3">
+					</div>
+						
+
+							<div class="float-right przycisk-div">
+								<span onclick="otwieranie()" class="przycisk"><img src="images/toogle-icon1.png" class="nakladka-otwieranie"></span>
+							</div>
+							<div class="float-right d-none d-md-block logowanie-div">
+								<a href="" class="logowanie">Logowanie</a>
+							</div>
+					
 				</div>
 		 	</div>
 		</div>
@@ -65,10 +72,26 @@
 
 
 	<footer>
-			&copy Designed by 
-			<p>Mikołaj Przewoźny, Kamil Walkowiak</p>
-		
+		<div class="footer">
+			<div class="footer-top row">
+				<div class="col-4">Tel +48 123456789</div>
+				<div class="col-4">Miejsce</div>
+				<div class="col-4">Mail@zset.leszno.pl</div>
+			</div>
+
+			<div class="footer-bottom">
+
+				<div class="sociale row">
+					<i class="icon-facebook icon"></i>
+					<i class="icon-instagram icon"></i>
+					<i class="icon-twitter icon"></i>
+					<i class="icon-github-circled icon"></i>
+				</div>
+
+			</div>
+		</div>
 	</footer>
+
 	<script>
 		$(document).ready(function() {
 		var NavY = $('.navb').offset().top;
