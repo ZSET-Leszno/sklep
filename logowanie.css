@@ -1,0 +1,90 @@
+
+body
+{
+    font-family: Trebuchet MS, sans-serif
+}
+.pojemnik-logowanie
+{
+    background-color: #9fd9b2;
+    width: 100%;
+    min-height: 800px;
+}
+
+.pojemnik-logowanie h1
+{
+    font-size: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: bold;
+    color: #ffffff;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 30px;
+
+}
+
+.ramka-logowanie
+{
+    border-radius: 15px;
+    border: 2px #ffffff solid;
+    margin-left: auto;
+    margin-right: auto;
+    height: 50%;
+    width: 23%;
+    background-color:#82c7a1;
+    box-shadow: 0px 0px 30px 15px rgba(0, 0, 0, 0.2);
+}
+
+.formularz-logowanie
+{
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    margin-top: 30%;
+}
+
+.rubryka-logowanie1
+{
+    border: 2px #ffffff solid;
+    height: 50px;
+    width: 100%;
+    background: none;
+    border-radius: 5px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.rubryka-logowanie2
+{
+    border: 2px #ffffff solid;
+    height: 50px;
+    width: 100%;
+    background: none;
+    border-radius: 5px;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+input::placeholder
+{
+    color: #ffffff;
+}
+
+.przycisk-logowanie
+{
+  margin-left: auto;
+  margin-right: auto;
+  background: none;
+  color: #ffffff;
+  width: 100px;
+  height: 50px;
+  border: 2px #ffffff solid;
+  border-radius: 10px;
+  margin-top: 30px;
+  margin-bottom: 30%;
+}
+
+
+
+
