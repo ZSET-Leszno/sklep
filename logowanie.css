@@ -1,16 +1,14 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
 
 body
 {
-    font-family: Trebuchet MS, sans-serif
-}
-.pojemnik-logowanie
-{
-    background-color: #9fd9b2;
+    font-family: Trebuchet MS, sans-serif;
+    background-color: #63e0e5;
     width: 100%;
-    min-height: 800px;
+    min-height: 600px;
 }
 
-.pojemnik-logowanie h1
+h1
 {
     font-size: 50px;
     margin-left: auto;
@@ -20,85 +18,71 @@ body
     text-align: center;
     padding-top: 50px;
     padding-bottom: 30px;
-
 }
 
 .ramka-logowanie
 {
-    border-radius: 15px;
-    border: 2px #ffffff solid;
-    margin-left: auto;
-    margin-right: auto;
-    height: 50%;
-    min-width: 150px;
-    width: 23%;
-    background-color:#82c7a1;
-    box-shadow: 0px 0px 30px 15px rgba(0, 0, 0, 0.2);
+    width: 360px;
+    margin: auto;
 }
 
 .formularz-logowanie
 {
-    margin-left: auto;
-    margin-right: auto;
-    width: 90%;
-    margin-top: 30%;
+    position: relative;
+    height: 380px;
+    z-index: 1;
+    background: #48c9b0;
+    max-width: 360px;
+    margin: 0 auto 100px;
+    padding: 45px;
+    text-align: center;
+    border-radius: 15px;
+    border: 2px #e7e6e6 solid;
+    box-shadow: 0px 0px 30px 15px rgba(0, 0, 0, 0.2);
 }
 
-.rubryka-logowanie1
+.formularz-logowanie input 
 {
-    border: 2px #ffffff solid;
-    height: 50px;
+    font-family: FontAwesome, "Roboto", sans-serif;
+    outline: 0;
+    background: #f2f2f2;
     width: 100%;
-    background: none;
-    border-radius: 5px;
-    margin-left: auto;
-    margin-right: auto;
+    border: 0;
+    margin: 0 0 15px;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 15px;
+    border-radius:10px;
 }
-
-.rubryka-logowanie2
+.formularz-logowanie button 
 {
-    border: 2px #ffffff solid;
-    height: 50px;
+    font-family: "Titillium Web", sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: .1em;
+    outline: 0;
+    background: #17a589;
     width: 100%;
-    background: none;
-    border-radius: 5px;
-    margin-top: 30px;
-    margin-left: auto;
-    margin-right: auto;
+    border: 0;
+    border-radius: 30px;
+    margin: 7px;
+    padding: 15px;
+    color: #FFFFFF;
+    transition: all 0.3 ease;
+    cursor: pointer;
+    transition: all 0.2s;
 }
 
-input::placeholder
+.formularz-logowanie button:hover,.form button:focus 
 {
-    color: #ffffff;
+    background: #148f77;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    transform: translateY(-4px);
 }
-
-.przycisk-logowanie
+.formularz-logowanie button:active 
 {
-  margin-left: auto;
-  margin-right: auto;
-  background: none;
-  color: #ffffff;
-  width: 100px;
-  height: 50px;
-  border: 2px #ffffff solid;
-  border-radius: 10px;
-  margin-top: 30px;
-  margin-bottom: 20px;
-  font-size: 18px;
-}
-
-.przycisk-rejestracja
-{
-  margin-left: auto;
-  margin-right: auto;
-  background: none;
-  color: #ffffff;
-  width: 130px;
-  height: 50px;
-  border: 2px #ffffff solid;
-  border-radius: 25px;
-  margin-bottom: 20%;
-  font-size: 18px;
+    transform: translateY(2px);
+    box-shadow: 0 2.5px 5px rgba(0, 0, 0, 0.2);
 }
 
 
