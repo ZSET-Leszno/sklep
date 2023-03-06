@@ -32,11 +32,11 @@
 
 						<a href="#" class="nakladka-zamykanie" onclick="zamykanie()">&times;</a>
 						<div class="menu">
-							<a href="">Strona główna</a>
-							<a href="">2</a>
-							<a href="">3</a>
-							<a href="">4</a>
-							<a href="">5</a>
+							<a href="/?action=page1">Strona główna</a>
+							<a href="/?action=page2">2</a>
+							<a href="/?action=page3">3</a>
+							<a href="/?action=page4">4</a>
+							<a href="/?action=page5">5</a>
 						</div>
 					</div>
 
@@ -62,10 +62,44 @@
 
 
 
+<main>
+	<?php 
+	$pageName = $_GET['action'] ?? null;
+
+	?>
+
+	<div class="php">
+		<?php if($pageName === 'page1'): ?>
+			<h3>strona 1</h3>
+		<?php elseif($pageName === 'page2'): ?>
+			<h3>strona 2</h3>	
+		<?php elseif($pageName === 'page3'): ?>
+			<h3>strona 3</h3>
+		<?php elseif($pageName === 'page4'): ?>
+			<h3>strona 4</h3>
+		<?php elseif($pageName === 'page5'): ?>
+			<h3>strona 5</h3>
+		<?php else: ?>
+			<h3>strona 0</h3>
+		<?php endif; ?>
+
+	</div>
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+</main>
 
 
 
@@ -77,7 +111,7 @@
 			<div class="footer-top">
 				<div class="footer-top-info mx-auto row">
 					<div class="col-3 mx-auto"> <i class="icon-phone"></i> Tel +48 123456789</div>
-					<div class="col-3 mx-auto"><i class="icon-mail"></i> Jana Kilińskiego 4, 64-100 Leszno</div>
+					<div class="col-3 mx-auto"><i class="icon-mail"></i> Jana Kilińskiego 4, Leszno</div>
 					<div class="col-3 mx-auto"><i class="icon-location"></i> Mail@zset.leszno.pl</div>
 				</div>
 			</div>
