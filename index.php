@@ -10,9 +10,10 @@
 	<meta http-equiv="X-Ua-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+	
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-	<link rel="stylesheet" href="style.css">
 	<link rel="stylesheet" href="css/fontello.css" type="text/css" />
+	<link rel="stylesheet" href="style.css">
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 
@@ -32,17 +33,34 @@
 
 						<a href="#" class="nakladka-zamykanie" onclick="zamykanie()">&times;</a>
 						<div class="menu">
-							<a href="/?action=page1">Strona główna</a>
-							<a href="/?action=page2">2</a>
-							<a href="/?action=page3">3</a>
-							<a href="/?action=page4">4</a>
-							<a href="/?action=page5">5</a>
+							<nav>
+							<ul>
+								<li style="--clr:#00ade1">
+									<a href="/?action=page1" data-text="&nbsp;Białko">&nbsp;Białko&nbsp; </a>
+								</li>
+								<li style="--clr:#ff6493">
+									<a href="/?action=page2" data-text="&nbsp;Kreatyna">&nbsp;Kreatyna&nbsp; </a>
+								</li>
+								<li style="--clr:#ffdd1c">
+									<a href="/?action=page3" data-text="&nbsp;PWR">&nbsp;PWR&nbsp;</a>
+								</li>
+								<li style="--clr:#00dc82">
+									<a href="/?action=page4" data-text="&nbsp;Zdrowie">&nbsp;Zdrowie&nbsp; </a>
+								</li>
+								<li style="--clr:#dc00d4">
+									<a href="/?action=page5" data-text="&nbsp;Inne">&nbsp;Inne&nbsp;</a>
+								</li>
+							</ul>
+
+							</nav>
+
+
 						</div>
 					</div>
 
 					<div class="d-inline-block logo-div">
-						<img src="images/logo.png" alt="Logo" class="logo col-lg-7 col-md-6 col-4 d-inline mt-lg-0 mt-md-1 mt-3">
-						<img src="images/logo2.png" alt="Logo" class="logo2 col-lg-7 col-md-6 col-4 d-none mt-lg-0 mt-md-1 mt-3">
+						<a href="/"><img src="images/logo.png" alt="Logo" class="logo col-lg-7 col-md-6 col-4 d-inline mt-lg-0 mt-md-1 mt-3"></a>
+						<a href="/"><img src="images/logo2.png" alt="Logo" class="logo2 col-lg-7 col-md-6 col-4 d-none mt-lg-0 mt-md-1 mt-3"></a>
 					</div>
 						
 
