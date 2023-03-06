@@ -180,3 +180,13 @@ img
 {
     margin-left: 5px;
 }
+
+i
+{
+    font-size: 23px;
+    position: relative;
+    left: 100px;
+    top: -52px;
+    color: #8f8d8d;
+    cursor: pointer;
+}
