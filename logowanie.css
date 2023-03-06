@@ -72,6 +72,8 @@ h1
     transition: all 0.3 ease;
     cursor: pointer;
     transition: all 0.2s;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .formularz-logowanie button:hover,.form button:focus 
@@ -151,6 +153,8 @@ img
     transition: all 0.3 ease;
     cursor: pointer;
     transition: all 0.2s;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .formularz-logowanie2 button:hover,.form button:focus 
