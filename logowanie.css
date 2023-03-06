@@ -86,6 +86,93 @@ h1
     box-shadow: 0 2.5px 5px rgba(0, 0, 0, 0.2);
 }
 
+img
+{
+    height: 80px;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+}
 
 
 
+
+
+/*rejestracja*/
+
+.ramka-logowanie2
+{
+    width: 360px;
+    margin: auto;
+}
+
+.formularz-logowanie2
+{
+    position: relative;
+    height: 465px;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.2);
+    max-width: 360px;
+    margin: 0 auto;
+    padding: 45px;
+    text-align: center;
+    border-radius: 15px;
+    border: 2px #e7e6e6 solid;
+    box-shadow: 0px 0px 30px 15px rgba(0, 0, 0, 0.2);
+}
+
+.formularz-logowanie2 input 
+{
+    font-family: FontAwesome, "Roboto", sans-serif;
+    outline: 0;
+    background: #f2f2f2;
+    width: 100%;
+    border: 0;
+    margin: 0 0 15px;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 15px;
+    border-radius:10px;
+}
+.formularz-logowanie2 button 
+{
+    font-family: "Titillium Web", sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: .1em;
+    outline: 0;
+    background: #17a589;
+    width: 100%;
+    border: 0;
+    border-radius: 30px;
+    margin: 7px;
+    padding: 15px;
+    color: #FFFFFF;
+    transition: all 0.3 ease;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.formularz-logowanie2 button:hover,.form button:focus 
+{
+    background: #148f77;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    transform: translateY(-4px);
+}
+.formularz-logowanie2 button:active 
+{
+    transform: translateY(2px);
+    box-shadow: 0 2.5px 5px rgba(0, 0, 0, 0.2);
+}
+
+.powrot
+{
+    margin: 5px;
+    margin-top: 10px;
+    color:#F2f2f2
+}
+
+.powrot a
+{
+    margin-left: 5px;
+}

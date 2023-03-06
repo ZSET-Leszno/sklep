@@ -8,7 +8,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <link rel="stylesheet" href="bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="rejestracja.css" />
+    <link rel="stylesheet" type="text/css" href="logowanie.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link href="https://fonts.googleapis.com/css?family=Titillium+Web:400,300,600" rel="stylesheet" type="text/css"/>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
@@ -17,22 +17,19 @@
     </head>
 
     <body>
-      
+      <a href="index.html"><img src="images/logo2.png" alt="Logo"></a>
       <h1>Rejestracja</h1>
-      <div class="ramka-logowanie">
-          <div class="formularz-logowanie">
+      <div class="ramka-logowanie2">
+          <div class="formularz-logowanie2">
               <form method="POST" action="register.php">
                 <input type="text" placeholder="Imię" id="imie" required/>
                 <input type="text" placeholder="Nazwisko" id="nazwisko" required/>
                 <input type="text" placeholder="E-Mail" id="email" required/>
                 <input type="password" id="haslo" placeholder="Hasło" required/>
                 <i style="font-size: 23px; position: relative; left: 100px; top: -52px; color: #8f8d8d;" class="fas fa-eye" onclick="show()"></i> 
-                <button type="button" onclick="window.location.href=''">ZAREJESTRUJ SIĘ</button>
+                <button type="submit" onclick="window.location.href='logowanie.htmls'">ZAREJESTRUJ SIĘ</button>
               </form>
-              <div class="powrot">
-                Masz juz konto?
-                <a href="logowanie.html">Zaloguj Się</a>
-              </div>
+              <div class="powrot">Masz juz konto?<a href="logowanie.html">Zaloguj Się</a></div>
           </div>
       </div>
     </body>

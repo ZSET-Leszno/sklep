@@ -6,7 +6,7 @@
        $record = mysqli_fetch_assoc($query_login);
        $hash = $record["user_passworhash"];
        if (password_verify($user_password, $hash)) {
-          $_SESSION["current_user"] = user_id;
+          $_SESSION["current_user"] = 'user_id';
        }
     }
 ?>
