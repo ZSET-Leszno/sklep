@@ -98,7 +98,91 @@
 		<?php elseif($pageName === 'page5'): ?>
 			<h3>strona 5</h3>
 		<?php else: ?>
-			<h3>strona 0</h3>
+			
+			<div class="blok1">
+				<div class="produkty-oferty row">
+					<p class="col-12 text-center text-md-left Proponowane">Odżywki białkowe</p>
+
+
+					<div class="produkty-oferta col-6 col-lg-4 col-xl-2"><a href="" class="produkty-oferta-a">
+						<div class="produkty-oferty-zdj col-12 mt-4">
+							<img src="images/bialko1.jpg" alt="bialko" class="">
+						</div>
+						<div class="produkty-oferty-nazwa col-12 mt-3">
+							KFD Premium WPC 82 700 G
+						</div>
+						<div class="produkty-ofery-cena col-12 mt-4">
+							72,99 PLN
+						</div></a>
+					</div>
+
+
+					<div class="produkty-oferta col-12 col-sm-6 col-lg-4 col-xl-2"><a href="" class="produkty-oferta-a">
+						<div class="produkty-oferty-zdj col-12 mt-4">
+							<img src="images/bialko1.jpg" alt="bialko" class="">
+						</div>
+						<div class="produkty-oferty-nazwa col-12 mt-3">
+							KFD Premium WPC 82 700 G
+						</div>
+						<div class="produkty-ofery-cena col-12 mt-4">
+							72,99 PLN
+						</div></a>
+					</div>
+
+					<div class="produkty-oferta d-none  d-lg-inline-block col-lg-4 col-xl-2"><a href="" class="produkty-oferta-a">
+						<div class="produkty-oferty-zdj col-12 mt-4">
+							<img src="images/bialko1.jpg" alt="bialko" class="">
+						</div>
+						<div class="produkty-oferty-nazwa col-12 mt-3">
+							KFD Premium WPC 82 700 G
+						</div>
+						<div class="produkty-ofery-cena col-12 mt-4">
+							72,99 PLN
+						</div></a>
+					</div>
+
+					<div class="produkty-oferta  d-none d-xl-inline-block col-xl-2"><a href="" class="produkty-oferta-a">
+						<div class="produkty-oferty-zdj col-12 mt-4">
+							<img src="images/bialko1.jpg" alt="bialko" class="">
+						</div>
+						<div class="produkty-oferty-nazwa col-12 mt-3">
+							KFD Premium WPC 82 700 G
+						</div>
+						<div class="produkty-ofery-cena col-12 mt-4">
+							72,99 PLN
+						</div></a>
+					</div>
+
+					<div class="produkty-oferta d-none d-xl-inline-block col-xl-2"><a href="" class="produkty-oferta-a">
+						<div class="produkty-oferty-zdj col-12 mt-4">
+							<img src="images/bialko1.jpg" alt="bialko" class="">
+						</div>
+						<div class="produkty-oferty-nazwa col-12 mt-3">
+							KFD Premium WPC 82 700 G
+						</div>
+						<div class="produkty-ofery-cena col-12 mt-4">
+							72,99 PLN
+						</div></a>
+					</div>
+
+				</div>
+			</div>
+
+
+
+			<div class="blok2">
+
+			</div>
+
+			<div class="blok3"></div>
+
+
+
+			<div class="blok4"></div>
+
+
+
+			<div class="clear"></div>
 		<?php endif; ?>
 
 	</div>

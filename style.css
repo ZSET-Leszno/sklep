@@ -237,6 +237,150 @@ ul li a:hover::before{
 
 }
 
+
+.blok1
+{
+    background-color: #1D9BF0;
+}
+
+.Proponowane
+{
+	font-size: 25px;
+	font-weight: bold;
+	margin-bottom: 40px;
+}
+
+.produkty-oferty
+{
+	width: 100%;
+	margin-right: 0;
+	margin-left: 0;
+	margin-bottom: 200px;
+	background-color: white;
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+
+.produkty-oferta
+{
+	box-shadow: 0px 0px 24px -11px rgba(66, 68, 90, 1);
+	min-height: 300px;
+	max-height: 420px;
+	border-radius: 20px;
+	max-width: 250px;
+	margin-left: auto;
+	margin-right: auto;
+	transition: all 0.2s ease-in-out;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	cursor: pointer;
+}
+.produkty-oferta:hover
+{
+	transform: scale(0.97);
+}
+
+.produkty-oferta-a 
+{
+	color: #1d1f1d;
+	margin: 0;
+	display: block;
+	padding-top: 10px;
+	padding-bottom: 30px;
+}
+.produkty-oferta-a:hover
+{
+	color: #1d1f1d;
+	text-decoration: none;
+}
+
+.produkty-oferty-zdj
+{
+	padding: 0;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
+.produkty-oferty-zdj img
+{
+	max-height: 130px;
+	max-width: 90%;
+}
+
+.produkty-oferty-nazwa
+{
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 22px;
+	padding: 0;
+	text-align: center;
+}
+
+.produkty-ofery-cena
+{
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 28px;
+	padding: 0;
+	text-align: center;
+}
+
+
+.blok2
+{
+    background-color: #1D9BF0;
+    width: 1000px;
+    height: 500px;
+    margin-right: 150px;
+    float: right;
+    margin-top: 100px;
+}
+
+.blok3
+{
+    background-color: #1D9BF0;
+    width: 700px;
+    height: 700px;
+    margin-left: 150px;
+    float: left;
+}
+
+
+.blok4
+{
+    background-color: #1D9BF0;
+    width: 700px;
+    height: 700px;
+    margin-right: 200px;
+    float: right;
+}
+
+.clear
+{
+    clear: both;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .footer
 {
     width: 100%;

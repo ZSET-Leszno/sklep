@@ -1,9 +1,18 @@
 <?php
-    $db_host = "adres_serwera.mysql.db";
-    $db_name = "nazwa_bazy_danych";
-    $db_user = "nazwa_uzytkownika_mysql";
-    $db_pass = "haslo_uzytkownika_do_bazy_danych";
-    $db_conn = mysqli_connect($dbhost,$dbuser,$dbpass)
-    or die ("Odpowiedź: Błąd połączenia z serwerem $host");
-    mysqli_select_db($db_conn, $dbname) or die("jutro bedzie działać");
+    include "config.php";
+    $conn = mysqli_connect($serwer,$user,$password,$baza) or die ("Odpowiedź: Błąd połączenia z serwerem");
+
+    $imie = $_POST['imie'];
+    $nazwisko = $_POST['nazwisko'];
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+
+    $dodanie = "INSERT INTO `MK_Nutrition`(`user_name`, `user_surname`, `user_email`, `user_passwd`) VALUES ('$imie','$nazwisko','$user_email','$password')";
+
+    if(isset($_POST['wyslij_rej'])){
+        mysqli_querry($conn, $dodanie);
+    }
+    
+
+    mysqli_close($conn);
 ?>
