@@ -2,20 +2,17 @@
 <html lang="pl">
 <head>
     <meta charset="utf-8">
-	<title>Logowanie - GYMBRO</title>
-	<meta name="description" content="Strona dla twardzieli.">
-	<meta name="keywords" content="sterydy, sklep, szybkie efekty">
+	<title>Logowanie - MKNutrition</title>
 	
 	<meta http-equiv="X-Ua-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 	<link rel="stylesheet" href="bootstrap.min.css">
 	<link rel="stylesheet" href="logowanie.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,300,600' rel='stylesheet' type='text/css'>  
-    <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,300,600' rel='stylesheet' type='text/css'> 
-  
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,300,600' rel='stylesheet' type='text/css'>  
+  <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,300,600' rel='stylesheet' type='text/css'> 
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
 
 </head>
 <body>
@@ -24,15 +21,13 @@
         <h1>Logowanie</h1>
             <div class="ramka-logowanie">
                 <div class="formularz-logowanie">
-                    <form action="wymagania-hasla.php" method="post" enctype="multipart/form-data"></form>
-                        <input type="text" id="login" placeholder="&#xf007;  Login" required>
-                        <input type="password" id="password" placeholder="&#xf023;  Hasło" required>
+                    <form method="POST" action="login.php"></form>
+                        <input type="text" id="email" placeholder="&#xf007;  E-Mail" required>
+                        <input type="password" id="haslo" placeholder="&#xf023;  Hasło" required>
                         <i style="font-size: 23px; position: relative; left: 100px; top: -52px; color: #8f8d8d;" class="fas fa-eye" onclick="show()"></i> 
                         <button>ZALOGUJ SIĘ</button>
-                    </form>
-                    <form class="login-form">
                         <button type="button" onclick="window.location.href='rejestracja.html'">REJESTRACJA</button>
-                      </form>
+                    </form>
                 </div>
             </div>
 

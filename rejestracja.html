@@ -21,14 +21,18 @@
       <h1>Rejestracja</h1>
       <div class="ramka-logowanie">
           <div class="formularz-logowanie">
-              <form>
-                <input type="text" placeholder="Imię i Nazwisko" />
-                <input type="text" placeholder="E-Mail" />
-                <input type="text" placeholder="Login" />
-                <input type="password" id="password" placeholder="Hasło"/>
-                <i style="font-size: 23px; position: relative; left: 100px; top: -51px; color: #8f8d8d;" class="fas fa-eye" onclick="show()"></i> 
-                <button type="button" onclick="window.location.href='login.html'">ZAREJESTRUJ SIĘ</button>
+              <form method="POST" action="register.php">
+                <input type="text" placeholder="Imię" id="imie" required/>
+                <input type="text" placeholder="Nazwisko" id="nazwisko" required/>
+                <input type="text" placeholder="E-Mail" id="email" required/>
+                <input type="password" id="haslo" placeholder="Hasło" required/>
+                <i style="font-size: 23px; position: relative; left: 100px; top: -52px; color: #8f8d8d;" class="fas fa-eye" onclick="show()"></i> 
+                <button type="button" onclick="window.location.href=''">ZAREJESTRUJ SIĘ</button>
               </form>
+              <div class="powrot">
+                Masz juz konto?
+                <a href="logowanie.html">Zaloguj Się</a>
+              </div>
           </div>
       </div>
     </body>

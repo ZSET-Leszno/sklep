@@ -30,7 +30,7 @@ h1
 .formularz-logowanie
 {
     position: relative;
-    height: 445px;
+    height: 465px;
     z-index: 1;
     background: rgba(0, 0, 0, 0.2);
     max-width: 360px;
@@ -84,6 +84,13 @@ h1
 {
     transform: translateY(2px);
     box-shadow: 0 2.5px 5px rgba(0, 0, 0, 0.2);
+}
+
+.powrot
+{
+    margin: 5px;
+    margin-top: 10px;
+    color:#F2f2f2
 }
 
 
