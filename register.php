@@ -7,10 +7,11 @@
     $email = $_POST['email'];
     $password = $_POST['password'];
 
-    $dodanie = "INSERT INTO `MK_Nutrition`(`user_name`, `user_surname`, `user_email`, `user_passwd`) VALUES ('$imie','$nazwisko','$user_email','$password')";
+    $dodanie = "INSERT INTO `MK_Nutrition`(`user_name`, `user_surname`, `user_email`, `user_passwd`) VALUES ('$imie','$nazwisko','$email','$password')";
 
     if(isset($_POST['wyslij_rej'])){
-        mysqli_querry($conn, $dodanie);
+        mysqli_query($conn, $dodanie);
+        header('Location: logowanie.php?zarejestrowano');
     }
     
 

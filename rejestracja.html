@@ -22,12 +22,12 @@
       <div class="ramka-logowanie2">
           <div class="formularz-logowanie2">
               <form method="POST" action="register.php">
-                <input type="text" placeholder="Imię" id="imie" required/>
-                <input type="text" placeholder="Nazwisko" id="nazwisko" required/>
-                <input type="text" placeholder="E-Mail" id="email" required/>
-                <input type="password" id="password" placeholder="Hasło" required/>
+                <input type="text" placeholder="Imię" id="imie" name="imie" required/>
+                <input type="text" placeholder="Nazwisko" id="nazwisko" name="nazwisko" required/>
+                <input type="text" placeholder="E-Mail" id="email" name="email" required/>
+                <input type="password" id="password" name="password" placeholder="Hasło" required/>
                 <i class="fas fa-eye" onclick="show()"></i> 
-                <button type="submit" onclick="window.location.href='logowanie.htmls'" id="wyslij_rej">ZAREJESTRUJ SIĘ</button>
+                <button type="submit" onclick="window.location.href='logowanie.htmls'" name="wyslij_rej" id="wyslij_rej">ZAREJESTRUJ SIĘ</button>
               </form>
               <div class="powrot">Masz juz konto?<a href="logowanie.html">Zaloguj Się</a></div>
           </div>

@@ -227,7 +227,7 @@
 					<div class="footer-info2 col-3 mx-auto"><h2>Praca w <br>MK-Nutrition</h2>MK-Nutrition Sp. z o. o. to jeden z największych producentów i sprzedawców suplementów diety, odżywek i produktów spożywczych w Polsce. Nasze produkty to sprawdzone składy i najwyższa jakość – stosujemy tylko przebadane składniki o udokumentowanej skuteczności.  </div>
 
 					<div class="footer-info3 col-3 mx-auto"><h2>Przydatne<br>MK-Linki</h2>
-						<ul class="">
+						<ul>
 							<li>O nas</li>
 							<li>Kontakt</li>
 							<li>Praca</li>
