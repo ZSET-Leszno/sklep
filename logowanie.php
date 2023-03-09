@@ -17,7 +17,14 @@
 </head>
 <body>
     <a href="index.php"><img src="images/logo2.png" alt="Logo"></a>
- 
+      
+    
+      <?php if(isset($_GET['zarejestrowano'])): ?>
+        <div class="zarejestrowano">Konto zostało poprawnie dodane, <br>Dziękujemy!</div>
+      <?php endif; ?>
+
+
+
         <h1>Logowanie</h1>
             <div class="ramka-logowanie">
                 <div class="formularz-logowanie">

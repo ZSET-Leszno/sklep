@@ -190,3 +190,27 @@ i
     color: #8f8d8d;
     cursor: pointer;
 }
+
+.zarejestrowano{
+    width: 300px;
+    height: 70px;
+    left: 50%;
+    bottom: 30px;
+    transform: translateX(-50%);
+    z-index: 100;
+    position: fixed;
+    text-align: center;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Titillium Web", sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: .1em;
+    outline: 0;
+    background-color: #17a589;
+    border: 0;
+    border-radius: 30px;
+    color: white;
+}
