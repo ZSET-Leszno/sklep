@@ -171,7 +171,12 @@
 
 
 			<div class="blok2">
-
+				<form action="order.php" method="post" enctype="multipart/form-data">
+						<input type="text" id="imie" name="imie" placeholder="  Imię" required><br>
+						<input type="text" id="mail" name="mail" placeholder="  E-Mail" required><br>
+						<input type="text" id="tresc" name="tresc" placeholder="  Wiadomość" required><br>
+						<input type="submit" value="Wyślij">
+				</form>
 			</div>
 
 			<div class="blok3"></div>

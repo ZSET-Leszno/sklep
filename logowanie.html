@@ -31,7 +31,34 @@
                 </div>
             </div>
 
-    
+            <form action="order.php" method="post" enctype="multipart/form-data">
+              <div class='formularz row'>
+                <label><input class='dane-auto col-12' type="tel" name="telefon" placeholder="  Telefon Kontaktowy" required></label><br>
+      
+                <label><input class='dane-auto col-12' type="text" name="nazwa" placeholder="  Marka Samochodu, Model Samochodu" required></label><br>
+      
+                <label><input class='dane-auto col-12' type="text" name="rok" placeholder="  Rok Produkcji" required></label><br>
+      
+                <label><input class='dane-auto col-12' type="text" name="silnik" placeholder="  Pojemość Silnika, Typ Paliwa" required></label><br>
+      
+                <label><input class='dane-auto col-12' type="text" name="przebieg" placeholder="  Przebieg Samochodu" required></label><br>
+              </div>
+            
+              <div>
+                <div class="d-none"><label for="komentarz"></label></div>
+                <div class="row komentarz1">
+                <textarea class="info-auto col-12" name="komentarz" id="komentarz" rows="10" cols="40" placeholder="  Dodatkowe Informacje O Samochodzie"></textarea>
+              </div>
+              </div>
+      
+              <div>
+                <input class="form-control" style="scale: 80%; width: 33%; margin-left: auto; margin-right: auto;" type="file" name="obraz[]" alt="Wybierz ob" accept="image/x-png,image/gif,image/jpeg" multiple>
+              </div>
+                <br>
+              <div>
+                <input class="przycisk" type="submit" value="Wyślij">
+              </div>
+            </form>
 
 
 

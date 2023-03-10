@@ -40,6 +40,7 @@ h1
     border-radius: 15px;
     border: 2px #e7e6e6 solid;
     box-shadow: 0px 0px 30px 15px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(20px);
 }
 
 .formularz-logowanie input 
@@ -121,6 +122,7 @@ img
     border-radius: 15px;
     border: 2px #e7e6e6 solid;
     box-shadow: 0px 0px 30px 15px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(20px);
 }
 
 .formularz-logowanie2 input 
