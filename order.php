@@ -22,13 +22,13 @@ if(!empty($imie) && !empty($email) && !empty($wiadomosc)) {
 		$mail->Body = '<h1>Przesłane Zapytanie:</h1><strong>Imię:</strong> '.$imie.'<br><strong>Email:</strong> '.$email.'<br><strong>Wiadomość:</strong> '.$wiadomosc;
 		$mail->send();
 		echo 'Poprawnie Wysłano Formularz. Zaraz zostaniesz przeniesony na stronę!';
-		header("Location: index.html");
+		header("Location: index.php");
 	} catch (Exception $e) {
 		echo 'Błąd serwera! ( '.$e.' )';
-		header("Location: index.html");
+		header("Location: index.php");
 	}
 } else {
 	echo 'Wystąpił problem z wysłaniem maila. Zaraz zostaniesz przeniesony na stronę i spróbuj ponownie!';
-	header("Location: index.html");
+	header("Location: index.php");
 }
 ?>
