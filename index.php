@@ -28,7 +28,7 @@
 				<div class="navb">
 					<div id="przelacznik" class="menu-nakladka">
 						<div class="d-inline d-md-none">
-							<a href="" class="logowanie2">Logowanie</a>
+							<a href="logowanie.php" class="logowanie2">Logowanie</a>
 						</div>
 
 						<a href="#" class="nakladka-zamykanie" onclick="zamykanie()">&times;</a>
@@ -68,7 +68,7 @@
 								<span onclick="otwieranie()" class="przycisk"><img src="images/toogle-icon1.png" class="nakladka-otwieranie"></span>
 							</div>
 							<div class="float-right d-none d-md-block logowanie-div">
-								<a href="logowanie.html" class="logowanie">Logowanie</a>
+								<a href="logowanie.php" class="logowanie">Logowanie</a>
 							</div>
 					
 				</div>
@@ -169,23 +169,24 @@
 			</div>
 
 
-
 			<div class="blok2">
-				<form action="order.php" method="post" enctype="multipart/form-data">
-						<input type="text" id="imie" name="imie" placeholder="  Imię" required><br>
-						<input type="text" id="mail" name="mail" placeholder="  E-Mail" required><br>
-						<input type="text" id="tresc" name="tresc" placeholder="  Wiadomość" required><br>
-						<input type="submit" value="Wyślij">
-				</form>
+				
 			</div>
 
 			<div class="blok3"></div>
 
 
 
-			<div class="blok4"></div>
-
-
+			<div class="blok4">
+				<form action="order.php" method="post" enctype="multipart/form-data">
+          			<div class="formularz-logowanie">
+						<input type="text" id="imie" name="imie" placeholder="  Imię" required><br>
+						<input type="text" id="mail" name="mail" placeholder="  E-Mail" required><br>
+						<input type="text" id="tresc" name="tresc" placeholder="  Wiadomość" required><br>
+						<button type="submit">Wyślij</button>
+					</div>
+				</form>
+			</div>
 
 			<div class="clear"></div>
 		<?php endif; ?>
