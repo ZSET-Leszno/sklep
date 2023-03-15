@@ -181,8 +181,8 @@
 				<form action="order.php" method="post" enctype="multipart/form-data">
           			<div class="formularz-logowanie">
 						<input type="text" id="imie" name="imie" placeholder="  Imię" required><br>
-						<input type="text" id="mail" name="mail" placeholder="  E-Mail" required><br>
-						<input type="text" id="tresc" name="tresc" placeholder="  Wiadomość" required><br>
+						<input type="text" id="email" name="email" placeholder="  E-Mail" required><br>
+						<input type="text" id="wiadomosc" name="wiadomosc" placeholder="  Wiadomość" required><br>
 						<button type="submit">Wyślij</button>
 					</div>
 				</form>
