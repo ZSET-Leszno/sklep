@@ -195,14 +195,24 @@ if(isset($_POST['wyloguj']))
 
 
 			<div class="blok4">
-				<form action="order.php" method="post" enctype="multipart/form-data">
-          			<div class="formularz-logowanie">
-						<input type="text" id="imie" name="imie" placeholder="  Imię" required><br>
-						<input type="text" id="email" name="email" placeholder="  E-Mail" required><br>
-						<input type="text" id="wiadomosc" name="wiadomosc" placeholder="  Wiadomość" required><br>
-						<button type="submit">Wyślij</button>
-					</div>
-				</form>
+				<h1>Masz Jakieś Pytanie?</h1>
+				<form class="card-form" action="order.php" method="post" enctype="multipart/form-data">
+                <div class="input">
+                    <input type="text" id="imie" name="imie" class="input-field" required/>
+                    <label class="input-label">Imię:</label>
+                </div>
+                            <div class="input">
+                    <input type="text" id="email" name="email" class="input-field" required/>
+                    <label class="input-label">Email:</label>
+                </div>
+                            <div class="input">
+                    <input type="text" id="wiadomosc" name="wiadomosc" class="input-field" required/>
+                    <label class="input-label">Wiadomość:</label>
+                </div>
+				<div class="formularz-logowanie">
+                	<button type="submit">Wyślij</button>
+				</div>
+            </form>
 			</div>
 
 			<div class="clear"></div>
