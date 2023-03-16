@@ -1,3 +1,4 @@
+<?php session_start();?>
 <!DOCTYPE html>
 <html lang="pl">
 <head>
@@ -28,7 +29,11 @@
 				<div class="navb">
 					<div id="przelacznik" class="menu-nakladka">
 						<div class="d-inline d-md-none">
-							<a href="logowanie.php" class="logowanie2">Logowanie</a>
+							<?php if(!empty($_SESSION['name']) && isset($_SESSION['name'])): ?>
+								<a href="logowanie.php" class="logowanie2">Wyloguj</a>
+							<?php else: ?>
+								<a href="logowanie.php" class="logowanie2">Logowanie</a>
+							<?php endif; ?>
 						</div>
 
 						<a href="#" class="nakladka-zamykanie" onclick="zamykanie()">&times;</a>
@@ -63,12 +68,24 @@
 						<a href="/"><img src="images/logo2.png" alt="Logo" class="logo2 col-lg-7 col-md-6 col-4 d-none mt-lg-0 mt-md-1 mt-3"></a>
 					</div>
 						
-
+<?php 
+if(isset($_POST['wyloguj']))
+{
+	session_destroy();
+	header('Location: index.php'); 
+}
+?>
 							<div class="float-right przycisk-div">
 								<span onclick="otwieranie()" class="przycisk"><img src="images/toogle-icon1.png" class="nakladka-otwieranie"></span>
 							</div>
 							<div class="float-right d-none d-md-block logowanie-div">
+							<?php if(!empty($_SESSION['name']) && isset($_SESSION['name'])): ?>
+								<form method="post">
+									<input type="submit" class="logowanie" name="wyloguj" value="Wyloguj" id="wyloguj"></input>
+								</form>
+							<?php else: ?>
 								<a href="logowanie.php" class="logowanie">Logowanie</a>
+							<?php endif; ?>
 							</div>
 					
 				</div>
