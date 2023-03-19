@@ -1,3 +1,4 @@
+<?php session_start();?>
 <!DOCTYPE html>
 <html lang="pl">
 <head>
@@ -20,7 +21,20 @@
       
     
       <?php if(isset($_GET['zarejestrowano'])): ?>
-        <div class="zarejestrowano">Konto zostało poprawnie dodane, <br>Dziękujemy!</div>
+        <div class="okno_log">Konto zostało poprawnie dodane, <br>Dziękujemy!</div>
+      <?php endif; ?>   
+
+      <?php if(isset($_GET['login'])){
+        echo"<div class='okno_log'>Zalogowano poprawnie <br>Witamy "; 
+       if(!empty($_SESSION['name']) && isset($_SESSION['name']))
+        {
+          echo $_SESSION['name'];
+        }
+        echo"</div>";
+      }?>
+
+      <?php if(isset($_GET['blad'])): ?>
+        <div class="okno_log">Bład w logowaniu</div>
       <?php endif; ?>
 
 
@@ -28,18 +42,59 @@
         <h1>Logowanie</h1>
             <div class="ramka-logowanie">
                 <div class="formularz-logowanie">
-                    <form method="POST" action="login.php"></form>
-                        <input type="text" id="email" placeholder="&#xf007;  E-Mail" required>
-                        <input type="password" id="password" placeholder="&#xf023;  Hasło" required>
+                    <form method="POST" action="">
+                        <input type="text" id="email" name="email" placeholder="&#xf007;  E-Mail" required>
+                        <input type="password" id="password" name="password" placeholder="&#xf023;  Hasło" required>
                         <i class="fas fa-eye" onclick="show()"></i> 
-                        <button type="submit">ZALOGUJ SIĘ</button>
+                        <button type="submit" name="wyslij_login" id="wyslij_login">ZALOGUJ SIĘ</button>
                         <button type="button" onclick="window.location.href='rejestracja.html'">REJESTRACJA</button>
                     </form>
                 </div>
             </div>
 
-    
+        <?php
+          if(isset($_POST['wyslij_login'])){
+            if(!empty($_POST['email']) && !empty($_POST['password']))
+            {
+              include "config.php";
+              $conn = mysqli_connect($serwer,$user,$password,$baza) or die ("Odpowiedź: Błąd połączenia z serwerem");
 
+              $email = $_POST['email'];
+              $password = $_POST['password'];
+
+              $zapytanie = "SELECT * From MK_Nutrition WHERE user_email = '$email' and user_passwd = '$password'";
+              $wynik = mysqli_query($conn, $zapytanie);
+
+              if(mysqli_num_rows($wynik) === 1)
+              {
+                $row = mysqli_fetch_assoc($wynik);
+
+                if($row['user_email'] === $email && $row['user_passwd'] === $password)
+                {
+                  header('Location: index.php');
+                  $_SESSION['name'] = $row['user_name'];
+                }
+                else
+                {
+                  header('Location: logowanie.php?blad'); 
+                }
+              }
+              else
+              {
+                header('Location: logowanie.php?blad'); 
+              }
+
+              mysqli_close($conn);
+            }
+            else
+            {
+              header('Location: logowanie.php?blad'); 
+            }
+          }
+                
+
+              
+            ?>
 
 
     <script>
