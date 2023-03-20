@@ -41,19 +41,19 @@
 							<nav>
 							<ul>
 								<li style="--clr:#00ade1">
-									<a href="/?action=page1" data-text="&nbsp;Białko">&nbsp;Białko&nbsp; </a>
+									<a href="/?action=page1" data-text="&nbsp;Sklep">&nbsp;Sklep&nbsp; </a>
 								</li>
 								<li style="--clr:#ff6493">
-									<a href="/?action=page2" data-text="&nbsp;Kreatyna">&nbsp;Kreatyna&nbsp; </a>
+									<a href="/?action=page2" data-text="&nbsp;o&nbsp;nas">&nbsp;O nas&nbsp; </a>
 								</li>
 								<li style="--clr:#ffdd1c">
-									<a href="/?action=page3" data-text="&nbsp;PWR">&nbsp;PWR&nbsp;</a>
+									<a href="/?action=page3" data-text="&nbsp;Napisz">&nbsp;Napisz&nbsp;</a>
 								</li>
 								<li style="--clr:#00dc82">
-									<a href="/?action=page4" data-text="&nbsp;Zdrowie">&nbsp;Zdrowie&nbsp; </a>
+									<a href="/?action=page4" data-text="&nbsp;Regulamin">&nbsp;Regulamin&nbsp; </a>
 								</li>
 								<li style="--clr:#dc00d4">
-									<a href="/?action=page5" data-text="&nbsp;Inne">&nbsp;Inne&nbsp;</a>
+									<a href="/?action=page5" data-text="&nbsp;Moje&nbsp;Konto">&nbsp;Moje konto&nbsp;</a>
 								</li>
 							</ul>
 
@@ -78,15 +78,19 @@ if(isset($_POST['wyloguj']))
 							<div class="float-right przycisk-div">
 								<span onclick="otwieranie()" class="przycisk"><img src="images/toogle-icon1.png" class="nakladka-otwieranie"></span>
 							</div>
-							<div class="float-right d-none d-md-block logowanie-div">
+							
 							<?php if(!empty($_SESSION['name']) && isset($_SESSION['name'])): ?>
+							<div class="float-right d-none d-md-block wyloguj-div">
 								<form method="post">
 									<input type="submit" class="logowanie" name="wyloguj" value="Wyloguj" id="wyloguj"></input>
 								</form>
-							<?php else: ?>
-								<a href="logowanie.php" class="logowanie">Logowanie</a>
-							<?php endif; ?>
 							</div>
+							<?php else: ?>
+							<div class="float-right d-none d-md-block logowanie-div">
+								<a href="logowanie.php" class="logowanie">Logowanie</a>
+							</div>
+							<?php endif; ?>
+
 					
 				</div>
 		 	</div>
@@ -262,9 +266,9 @@ if(isset($_POST['wyloguj']))
 					<div class="footer-info3 col-3 mx-auto"><h2>Przydatne<br>MK-Linki</h2>
 						<ul>
 							<li>O nas</li>
-							<li>Kontakt</li>
-							<li>Praca</li>
-							<li>Współpraca</li>
+							<li>Napiszt</li>
+							<li>Regulamin</li>
+							<li>E-mail</li>
 						</ul> 
 					</div>
 

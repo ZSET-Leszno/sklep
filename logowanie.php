@@ -73,6 +73,36 @@
                 {
                   header('Location: index.php');
                   $_SESSION['name'] = $row['user_name'];
+                  $duration = 5;
+                  $time = $_SERVER['REQUEST_TIME'];
+                  if (isset($_SESSION['LAST_ACTIVITY']) &&
+
+                  ($time - $_SESSION['LAST_ACTIVITY']) > $duration) {
+
+                  //Unset the session variables
+
+                  session_unset();
+
+                  //Destroy the session
+
+                  session_destroy();
+
+                  //Start another new session
+
+    session_start();
+
+    echo "New session is created.<br/>";
+
+}
+
+else
+
+    echo "Current session exists.<br/>";  
+
+
+//Set the time of the user's last activity
+
+$_SESSION['LAST_ACTIVITY'] = $time;
                 }
                 else
                 {

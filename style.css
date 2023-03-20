@@ -191,6 +191,16 @@ ul li a:hover::before{
     margin-top: 50px;
 }
 
+.wyloguj-div
+{
+    margin-top: 40px; 
+}
+
+.sticky .wyloguj-div
+{
+    margin-top: 11px !important;
+}
+
 .sticky .logowanie-div
 {
     margin-top: 21px !important;
@@ -215,7 +225,7 @@ ul li a:hover::before{
 .menu-nakladka a {
     padding: 0px;
     text-decoration: none;
-    font-size: 22px;
+    font-size: 30px;
     color: #f1f1f1;
     display: block;
     transition: 0.3s;
@@ -550,6 +560,7 @@ ul li a:hover::before{
 
 .footer-info3 ul{
     padding-inline-start: 0px;
+    gap: 10px !important;
 }
 
 .sociale
