@@ -194,7 +194,11 @@ if(isset($_POST['wyloguj']))
 				
 			</div>
 
-			<div class="blok3"></div>
+			<div class="blok3">
+			<p>
+				MKNutrition specjalizująca się w produkcji i sprzedaży suplementów diety to firma, która oferuje produkty, które mają uzupełnić braki w składnikach odżywczych w diecie. Produkujemy różne rodzaje suplementów, takie jak witaminy, minerały, aminokwasy, białka, kreatyna, omega-3 i wiele innych. Mamy w ofercie suplementy zarówno dla osób aktywnych fizycznie, jak i dla tych, którzy chcą dbać o swoje zdrowie i dobre samopoczucie. Staramy się również zapewnić swoim klientom najwyższą jakość swoich produktów poprzez przestrzeganie rygorystycznych standardów jakościowych i bezpieczeństwa.
+			</p>
+			</div>
 
 
 
