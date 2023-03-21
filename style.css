@@ -345,13 +345,26 @@ ul li a:hover::before{
 
 .blok3
 {
-    background-color: #1D9BF0;
+    background-image: url(images/firma.jpg);
+    opacity: 0.65;
     width: 700px;
     height: 700px;
     margin-left: 150px;
     float: left;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border: 1px solid #aaaaaa;
+    border-radius: 15px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-size: 200%;
 }
 
+.blok3 p
+{
+    padding: 20px;
+    color: #0c0e0c;
+    font-size: 26px;
+}
 
 /*formualrz początek*/
 
@@ -366,7 +379,7 @@ ul li a:hover::before{
     border-radius: 15px;
     border: 1px solid #aaaaaa;
     margin-top: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
