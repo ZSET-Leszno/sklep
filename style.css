@@ -491,6 +491,15 @@ ul li a:hover::before{
     clear: both;
 }
 
+.regulamin
+{
+    color: #777777;
+    width: 100%;
+    margin: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
 
 
 

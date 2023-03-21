@@ -50,7 +50,7 @@
 									<a href="/?action=page3" data-text="&nbsp;Napisz">&nbsp;Napisz&nbsp;</a>
 								</li>
 								<li style="--clr:#00dc82">
-									<a href="/?action=page4" data-text="&nbsp;Regulamin">&nbsp;Regulamin&nbsp; </a>
+									<a href="regulamin.php" data-text="&nbsp;Regulamin">&nbsp;Regulamin&nbsp; </a>
 								</li>
 								<li style="--clr:#dc00d4">
 									<a href="/?action=page5" data-text="&nbsp;Moje&nbsp;Konto">&nbsp;Moje konto&nbsp;</a>

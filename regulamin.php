@@ -85,7 +85,7 @@ header('Location: index.php');
             
     </div>
 
-    <div style="color: #777777;">
+    <div class="regulamin">
         <P>
             § 1 Wstęp
 
