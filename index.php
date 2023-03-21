@@ -64,14 +64,15 @@
 					</div>
 
 					<div class="d-inline-block logo-div">
-						<a href="/"><img src="images/logo.png" alt="Logo" class="logo col-lg-7 col-md-6 col-4 d-inline mt-lg-0 mt-md-1 mt-3"></a>
-						<a href="/"><img src="images/logo2.png" alt="Logo" class="logo2 col-lg-7 col-md-6 col-4 d-none mt-lg-0 mt-md-1 mt-3"></a>
+						<a href="#"><img src="images/logo.png" alt="Logo" class="logo col-lg-7 col-md-6 col-4 d-inline mt-lg-0 mt-md-1 mt-3"></a>
+						<a href="#"><img src="images/logo2.png" alt="Logo" class="logo2 col-lg-7 col-md-6 col-4 d-none mt-lg-0 mt-md-1 mt-3"></a>
 					</div>
 						
 <?php 
 if(isset($_POST['wyloguj']))
 {
 	session_destroy();
+	session_unset();
 	header('Location: index.php'); 
 }
 ?>
@@ -119,81 +120,330 @@ if(isset($_POST['wyloguj']))
 		<?php elseif($pageName === 'page5'): ?>
 			<h3>strona 5</h3>
 		<?php else: ?>
-			
+
+
+			<?php 
+			$wylosowano = 0;
+			$produkty = [];
+			for ($i=1; $i<=5; $i++)
+			{
+				do
+				{
+					$liczba=rand(2,34); 
+					$losowanie_ok=true;
+					for ($j=1; $j<=$wylosowano; $j++)
+					{
+						//czy liczba nie zostala juz wczesniej wylosowana?
+						if ($liczba==$produkty[$j]) $losowanie_ok=false;
+					}
+		   
+					if ($losowanie_ok==true)
+					{
+						//mamy unikatowa liczbe, zapiszmy ja do tablicy
+						$wylosowano++;
+						$produkty[$wylosowano]=$liczba;
+					}
+		   
+				} while($losowanie_ok!=true);
+			}
+
+
+			include "config.php";
+			$conn = mysqli_connect($serwer,$user,$password,$baza) or die ("Odpowiedź: Błąd połączenia z serwerem");
+
+			$wynik1 = mysqli_query($conn, "SELECT * From MK_Nutrition_produkty where produkt_id='$produkty[1]'");
+			$wynik2 = mysqli_query($conn, "SELECT * From MK_Nutrition_produkty where produkt_id='$produkty[2]'");
+			$wynik3 = mysqli_query($conn, "SELECT * From MK_Nutrition_produkty where produkt_id='$produkty[3]'");
+			$wynik4 = mysqli_query($conn, "SELECT * From MK_Nutrition_produkty where produkt_id='$produkty[4]'");
+			$wynik5 = mysqli_query($conn, "SELECT * From MK_Nutrition_produkty where produkt_id='$produkty[5]'");
+
+			while($row = mysqli_fetch_row($wynik1))
+			{
+				$nazwa1 = $row[1];
+				$cena1 = $row[2];
+				$rodzaj1 = $row[4];
+				$zdj1 = $row[5];
+			}
+
+			while($row = mysqli_fetch_row($wynik2))
+			{
+				$nazwa2= $row[1];
+				$cena2 = $row[2];
+				$rodzaj2 = $row[4];
+				$zdj2 = $row[5];
+			}
+
+			while($row = mysqli_fetch_row($wynik3))
+			{
+				$nazwa3= $row[1];
+				$cena3 = $row[2];
+				$rodzaj3 = $row[4];
+				$zdj3 = $row[5];
+			}
+
+			while($row = mysqli_fetch_row($wynik4))
+			{
+				$nazwa4= $row[1];
+				$cena4 = $row[2];
+				$rodzaj4 = $row[4];
+				$zdj4 = $row[5];
+			}
+
+			while($row = mysqli_fetch_row($wynik5))
+			{
+				$nazwa5= $row[1];
+				$cena5 = $row[2];
+				$rodzaj5 = $row[4];
+				$zdj5 = $row[5];
+			}
+
+			?>
+
 			<div class="blok1">
 				<div class="produkty-oferty row">
-					<p class="col-12 text-center text-md-left Proponowane">Odżywki białkowe</p>
+					<p class="col-12 text-center text-md-left Proponowane">Proponowane produkty</p>
 
 
+			
 					<div class="produkty-oferta col-6 col-lg-4 col-xl-2"><a href="" class="produkty-oferta-a">
 						<div class="produkty-oferty-zdj col-12 mt-4">
-							<img src="images/bialko1.jpg" alt="bialko" class="">
+							<img src="<?php echo "$zdj1"; ?>" alt="<?php echo "$rodzaj1"; ?>" class="">
 						</div>
 						<div class="produkty-oferty-nazwa col-12 mt-3">
-							KFD Premium WPC 82 700 G
+							<?php echo "$nazwa1"; ?>
 						</div>
 						<div class="produkty-ofery-cena col-12 mt-4">
-							72,99 PLN
+							<?php echo "$cena1"; ?>
 						</div></a>
 					</div>
 
 
 					<div class="produkty-oferta col-12 col-sm-6 col-lg-4 col-xl-2"><a href="" class="produkty-oferta-a">
 						<div class="produkty-oferty-zdj col-12 mt-4">
-							<img src="images/bialko1.jpg" alt="bialko" class="">
+							<img src="<?php echo "$zdj2"; ?>" alt="<?php echo "$rodzaj2"; ?>" class="">
 						</div>
 						<div class="produkty-oferty-nazwa col-12 mt-3">
-							KFD Premium WPC 82 700 G
+							<?php echo "$nazwa2"; ?>
 						</div>
 						<div class="produkty-ofery-cena col-12 mt-4">
-							72,99 PLN
+							<?php echo "$cena2"; ?>
 						</div></a>
 					</div>
 
 					<div class="produkty-oferta d-none  d-lg-inline-block col-lg-4 col-xl-2"><a href="" class="produkty-oferta-a">
 						<div class="produkty-oferty-zdj col-12 mt-4">
-							<img src="images/bialko1.jpg" alt="bialko" class="">
+							<img src="<?php echo "$zdj3"; ?>" alt="<?php echo "$rodzaj3"; ?>" class="">
 						</div>
 						<div class="produkty-oferty-nazwa col-12 mt-3">
-							KFD Premium WPC 82 700 G
+							<?php echo "$nazwa3"; ?>
 						</div>
 						<div class="produkty-ofery-cena col-12 mt-4">
-							72,99 PLN
+							<?php echo "$cena3"; ?>
 						</div></a>
 					</div>
 
 					<div class="produkty-oferta  d-none d-xl-inline-block col-xl-2"><a href="" class="produkty-oferta-a">
 						<div class="produkty-oferty-zdj col-12 mt-4">
-							<img src="images/bialko1.jpg" alt="bialko" class="">
+							<img src="<?php echo "$zdj4"; ?>" alt="<?php echo "$rodzaj4"; ?>" class="">
 						</div>
 						<div class="produkty-oferty-nazwa col-12 mt-3">
-							KFD Premium WPC 82 700 G
+							<?php echo "$nazwa4"; ?>
 						</div>
 						<div class="produkty-ofery-cena col-12 mt-4">
-							72,99 PLN
+							<?php echo "$cena4"; ?>
 						</div></a>
 					</div>
 
 					<div class="produkty-oferta d-none d-xl-inline-block col-xl-2"><a href="" class="produkty-oferta-a">
 						<div class="produkty-oferty-zdj col-12 mt-4">
-							<img src="images/bialko1.jpg" alt="bialko" class="">
+							<img src="<?php echo "$zdj5"; ?>" alt="<?php echo "$rodzaj5"; ?>" class="">
 						</div>
 						<div class="produkty-oferty-nazwa col-12 mt-3">
-							KFD Premium WPC 82 700 G
+							<?php echo "$nazwa5"; ?>
 						</div>
 						<div class="produkty-ofery-cena col-12 mt-4">
-							72,99 PLN
+							<?php echo "$cena5"; ?>
 						</div></a>
 					</div>
 
 				</div>
 			</div>
 
+			<?php 
+			
+			$rodzaj = rand(1,4);
+
+			if($rodzaj == 1)
+			{
+				$od = 2;
+				$do = 8;
+				$rodzaj_nazwa = 'Białko';
+			}
+			elseif($rodzaj == 2)
+			{
+				$od = 9;
+				$do = 13;
+				$rodzaj_nazwa = 'Kreatyna';
+			}
+			elseif($rodzaj == 3)
+			{
+				$od = 14;
+				$do = 18;
+				$rodzaj_nazwa = 'PWR';
+			}
+			elseif($rodzaj == 4)
+			{
+				$od = 19;
+				$do = 34;
+				$rodzaj_nazwa = 'Witaminy';
+			}
+
+			$wylosowano = 0;
+			$produkty2 = [];
+			for ($i=1; $i<=5; $i++)
+			{
+				do
+				{
+					$liczba=rand($od,$do);
+					$losowanie_ok=true;
+					for ($j=1; $j<=$wylosowano; $j++)
+					{
+						//czy liczba nie zostala juz wczesniej wylosowana?
+						if ($liczba==$produkty2[$j]) $losowanie_ok=false;
+					}
+		   
+					if ($losowanie_ok==true)
+					{
+						//mamy unikatowa liczbe, zapiszmy ja do tablicy
+						$wylosowano++;
+						$produkty2[$wylosowano]=$liczba;
+					}
+		   
+				} while($losowanie_ok!=true);
+			}
+
+			$wynik6 = mysqli_query($conn, "SELECT * From MK_Nutrition_produkty where produkt_id='$produkty2[1]'");
+			$wynik7 = mysqli_query($conn, "SELECT * From MK_Nutrition_produkty where produkt_id='$produkty2[2]'");
+			$wynik8 = mysqli_query($conn, "SELECT * From MK_Nutrition_produkty where produkt_id='$produkty2[3]'");
+			$wynik9 = mysqli_query($conn, "SELECT * From MK_Nutrition_produkty where produkt_id='$produkty2[4]'");
+			$wynik10 = mysqli_query($conn, "SELECT * From MK_Nutrition_produkty where produkt_id='$produkty2[5]'");
+
+			while($row = mysqli_fetch_row($wynik6))
+			{
+				$nazwa6 = $row[1];
+				$cena6 = $row[2];
+				$rodzaj6 = $row[4];
+				$zdj6 = $row[5];
+			}
+
+			while($row = mysqli_fetch_row($wynik7))
+			{
+				$nazwa7= $row[1];
+				$cena7 = $row[2];
+				$rodzaj7 = $row[4];
+				$zdj7 = $row[5];
+			}
+
+			while($row = mysqli_fetch_row($wynik8))
+			{
+				$nazwa8= $row[1];
+				$cena8= $row[2];
+				$rodzaj8 = $row[4];
+				$zdj8 = $row[5];
+			}
+
+			while($row = mysqli_fetch_row($wynik9))
+			{
+				$nazwa9= $row[1];
+				$cena9 = $row[2];
+				$rodzaj9 = $row[4];
+				$zdj9 = $row[5];
+			}
+
+			while($row = mysqli_fetch_row($wynik10))
+			{
+				$nazwa10= $row[1];
+				$cena10 = $row[2];
+				$rodzaj10 = $row[4];
+				$zdj10 = $row[5];
+			}
+
+			?>
+			
+			
+			
+
 
 			<div class="blok2">
-				
-			</div>
+			<div class="produkty-oferty row">
+					<p class="col-12 text-center text-md-left Proponowane">Proponowana kategoria: <?php echo "$rodzaj_nazwa"; ?></p>
 
+
+			
+					<div class="produkty-oferta col-6 col-lg-4 col-xl-2"><a href="" class="produkty-oferta-a">
+						<div class="produkty-oferty-zdj col-12 mt-4">
+							<img src="<?php echo "$zdj6"; ?>" alt="<?php echo "$rodzaj6"; ?>" class="">
+						</div>
+						<div class="produkty-oferty-nazwa col-12 mt-3">
+							<?php echo "$nazwa6"; ?>
+						</div>
+						<div class="produkty-ofery-cena col-12 mt-4">
+							<?php echo "$cena6"; ?>
+						</div></a>
+					</div>
+
+
+					<div class="produkty-oferta col-12 col-sm-6 col-lg-4 col-xl-2"><a href="" class="produkty-oferta-a">
+						<div class="produkty-oferty-zdj col-12 mt-4">
+							<img src="<?php echo "$zdj7"; ?>" alt="<?php echo "$rodzaj7"; ?>" class="">
+						</div>
+						<div class="produkty-oferty-nazwa col-12 mt-3">
+							<?php echo "$nazwa7"; ?>
+						</div>
+						<div class="produkty-ofery-cena col-12 mt-4">
+							<?php echo "$cena7"; ?>
+						</div></a>
+					</div>
+
+					<div class="produkty-oferta d-none  d-lg-inline-block col-lg-4 col-xl-2"><a href="" class="produkty-oferta-a">
+						<div class="produkty-oferty-zdj col-12 mt-4">
+							<img src="<?php echo "$zdj8"; ?>" alt="<?php echo "$rodzaj8"; ?>" class="">
+						</div>
+						<div class="produkty-oferty-nazwa col-12 mt-3">
+							<?php echo "$nazwa8"; ?>
+						</div>
+						<div class="produkty-ofery-cena col-12 mt-4">
+							<?php echo "$cena8"; ?>
+						</div></a>
+					</div>
+
+					<div class="produkty-oferta  d-none d-xl-inline-block col-xl-2"><a href="" class="produkty-oferta-a">
+						<div class="produkty-oferty-zdj col-12 mt-4">
+							<img src="<?php echo "$zdj9"; ?>" alt="<?php echo "$rodzaj9"; ?>" class="">
+						</div>
+						<div class="produkty-oferty-nazwa col-12 mt-3">
+							<?php echo "$nazwa9"; ?>
+						</div>
+						<div class="produkty-ofery-cena col-12 mt-4">
+							<?php echo "$cena9"; ?>
+						</div></a>
+					</div>
+
+					<div class="produkty-oferta d-none d-xl-inline-block col-xl-2"><a href="" class="produkty-oferta-a">
+						<div class="produkty-oferty-zdj col-12 mt-4">
+							<img src="<?php echo "$zdj10"; ?>" alt="<?php echo "$rodzaj10"; ?>" class="">
+						</div>
+						<div class="produkty-oferty-nazwa col-12 mt-3">
+							<?php echo "$nazwa10"; ?>
+						</div>
+						<div class="produkty-ofery-cena col-12 mt-4">
+							<?php echo "$cena10"; ?>
+						</div></a>
+					</div>
+
+				</div>
+			</div>
+			<?php mysqli_close($conn);?>
 			<div class="blok3">
 			<p>
 				MKNutrition specjalizująca się w produkcji i sprzedaży suplementów diety to firma, która oferuje produkty, które mają uzupełnić braki w składnikach odżywczych w diecie. Produkujemy różne rodzaje suplementów, takie jak witaminy, minerały, aminokwasy, białka, kreatyna, omega-3 i wiele innych. Mamy w ofercie suplementy zarówno dla osób aktywnych fizycznie, jak i dla tych, którzy chcą dbać o swoje zdrowie i dobre samopoczucie. Staramy się również zapewnić swoim klientom najwyższą jakość swoich produktów poprzez przestrzeganie rygorystycznych standardów jakościowych i bezpieczeństwa.
@@ -254,8 +504,8 @@ if(isset($_POST['wyloguj']))
 			<div class="footer-top">
 				<div class="footer-top-info mx-auto row">
 					<div class="col-3 mx-auto"> <i class="icon-phone"></i> Tel +48 123456789</div>
-					<div class="col-3 mx-auto"><i class="icon-mail"></i> Jana Kilińskiego 4, Leszno</div>
-					<div class="col-3 mx-auto"><i class="icon-location"></i> Mail@zset.leszno.pl</div>
+					<div class="col-3 mx-auto"><i class="icon-location"></i> Jana Kilińskiego 4, Leszno</div>
+					<div class="col-3 mx-auto"><i class="icon-mail"></i> <a href="mailto:m.przewozny@zset.leszno.pl" class="mail">Mail@zset.leszno.pl</a></div>
 				</div>
 			</div>
 
@@ -270,7 +520,7 @@ if(isset($_POST['wyloguj']))
 					<div class="footer-info3 col-3 mx-auto"><h2>Przydatne<br>MK-Linki</h2>
 						<ul>
 							<li>O nas</li>
-							<li>Napiszt</li>
+							<li>Napisz</li>
 							<li>Regulamin</li>
 							<li>E-mail</li>
 						</ul> 

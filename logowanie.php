@@ -18,8 +18,8 @@
 </head>
 <body>
     <a href="index.php"><img src="images/logo2.png" alt="Logo"></a>
-      
     
+
       <?php if(isset($_GET['zarejestrowano'])): ?>
         <div class="okno_log">Konto zostało poprawnie dodane, <br>Dziękujemy!</div>
       <?php endif; ?>   
@@ -73,23 +73,10 @@
                 {
                   header('Location: index.php');
                   $_SESSION['name'] = $row['user_name'];
-
-                  $duration = 5;
-                  $time = $_SERVER['REQUEST_TIME'];
-                  if (isset($_SESSION['LAST_ACTIVITY']) &&
-                  ($time - $_SESSION['LAST_ACTIVITY']) > $duration) {
-                  //Unset the session variables
-                  session_unset();
-                  //Destroy the session
-                  session_destroy();
-                  //Start another new session
-                  session_start();
-                  echo "New session is created.<br/>";
-                  }
-                  else
-                  echo "Current session exists.<br/>";  
-                  //Set the time of the user's last activity
-                  $_SESSION['LAST_ACTIVITY'] = $time;
+                  $_SESSION['email'] = $row['user_email'];
+                  if(!isset($_COOKIE['user'])) {
+                    setcookie("session_name", "$row['user_name']", time() + (30), "/");
+                }
                 }
                 else
                 {

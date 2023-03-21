@@ -252,7 +252,7 @@ ul li a:hover::before{
 
 .blok1
 {
-    background-color: #1D9BF0;
+    margin-top: 100px;
 }
 
 .Proponowane
@@ -340,11 +340,6 @@ ul li a:hover::before{
 
 .blok2
 {
-    background-color: #1D9BF0;
-    width: 1000px;
-    height: 500px;
-    margin-right: 150px;
-    float: right;
     margin-top: 100px;
 }
 
@@ -576,12 +571,13 @@ ul li a:hover::before{
 .footer-info3 li:hover
 {
     color: #9BDBB6;
-    text-decoration:underline;
+    text-decoration: none;
 }
 
 .footer-info3 ul
 {
     padding-inline-start: 0px;
+    gap: 10px;
 }
 
 .sociale
@@ -677,6 +673,16 @@ ul li a:hover::before{
     line-height: 0.8;
 }
 
+.mail
+{
+    color: #fff;
+}
+
+.mail:hover
+{
+    text-decoration: none;  
+    color: #BCE8CD;
+}
 
 /*footer koniec*/
 
