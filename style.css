@@ -192,16 +192,6 @@ ul li a:hover::before{
     margin-top: 50px;
 }
 
-.wyloguj-div
-{
-    margin-top: 40px; 
-}
-
-.sticky .wyloguj-div
-{
-    margin-top: 11px !important;
-}
-
 .sticky .logowanie-div
 {
     margin-top: 21px !important;
@@ -226,7 +216,7 @@ ul li a:hover::before{
 .menu-nakladka a {
     padding: 0px;
     text-decoration: none;
-    font-size: 30px;
+    font-size: 22px;
     color: #f1f1f1;
     display: block;
     transition: 0.3s;
@@ -579,7 +569,6 @@ ul li a:hover::before{
 .footer-info3 ul
 {
     padding-inline-start: 0px;
-    gap: 10px !important;
 }
 
 .sociale
@@ -674,3 +663,83 @@ ul li a:hover::before{
     padding-bottom: 20px;
     line-height: 0.8;
 }
+
+
+/*footer koniec*/
+
+
+
+
+/*początek sklep*/
+
+
+.comtainer_sklep
+{
+    margin-top: 60px;
+    padding-top: 50px;
+}
+
+.lewo_sklep
+{
+    width: 25%;
+    box-sizing: border-box;
+    border-right: 1px solid #000000;
+    min-height: 600px;
+    float: left;
+    
+}
+
+.prawo_sklep
+{
+    width: 75%;
+    min-height: 600px;
+    float: left;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.container_produkty
+{
+    margin: 10px;
+    padding: 10px;
+}
+
+.produkt
+{
+    border-radius: 5px;
+    border: 1px solid #999999;
+    width: 250px;
+    height: 350px;
+    background-color: #ffffff;
+    box-sizing: border-box;
+}
+
+.produkt a
+{
+    text-decoration: none;
+    width: 100px;
+    height: 350px;
+}
+
+.produkt img
+{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    float: left;
+}
+
+.produkt_nazwa
+{
+    padding-top: 20px;
+    height: 102px;
+}
+
+.produkt_nazwa p
+{
+    color: #212121;
+    text-align: center;
+    font-size: 20px;
+}
+
