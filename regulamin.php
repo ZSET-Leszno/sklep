@@ -89,7 +89,7 @@ header('Location: index.php');
         <P>
             § 1 Wstęp
 
-Niniejszy Regulamin określa ogólne warunki, zasady oraz sposób sprzedaży prowadzonej przez KFD Sp. z o.o. z siedzibą we Wróblowicach, za pośrednictwem sklepu internetowego sklep.kfd.pl (zwanego dalej: „Sklepem Internetowym”) oraz określa zasady i warunki świadczenia przez KFD Sp. z o.o. z siedzibą we Wróblowicach usług nieodpłatnych drogą elektroniczną.
+Niniejszy Regulamin określa ogólne warunki, zasady oraz sposób sprzedaży prowadzonej przez MKNutrition Sp. z o.o. z siedzibą we Wróblowicach, za pośrednictwem sklepu internetowego sklep.kfd.pl (zwanego dalej: „Sklepem Internetowym”) oraz określa zasady i warunki świadczenia przez MKNutrition Sp. z o.o. z siedzibą we Wróblowicach usług nieodpłatnych drogą elektroniczną.
 
 § 2 Definicje
 
