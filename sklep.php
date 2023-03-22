@@ -1,3 +1,4 @@
+<?php session_start();?>
 <!DOCTYPE html>
 <html lang="pl">
 <head>
@@ -61,7 +62,7 @@
         </div>
 
         <div class="d-inline-block logo-div">
-            <a href="/"><img src="images/logo2.png" alt="Logo" class="logo2 col-lg-7 col-md-6 col-4 d-inline mt-lg-0 mt-md-1 mt-3"></a>
+            <a href="index.php"><img src="images/logo2.png" alt="Logo" class="logo2 col-lg-7 col-md-6 col-4 d-inline mt-lg-0 mt-md-1 mt-3"></a>
         </div>
             
 <?php 
@@ -72,37 +73,58 @@ header('Location: index.php');
 }
 ?>
                 <div class="float-right przycisk-div">
-                    <span onclick="otwieranie()" class="przycisk"><img src="images/toogle-icon1.png" class="nakladka-otwieranie"></span>
-                </div>
-                <div class="float-right d-none d-md-block logowanie-div">
-                <?php if(!empty($_SESSION['name']) && isset($_SESSION['name'])): ?>
-                    <form method="post">
-                        <input type="submit" class="logowanie" name="wyloguj" value="Wyloguj" id="wyloguj"></input>
-                    </form>
-                <?php else: ?>
-                    <a href="logowanie.php" class="logowanie">Logowanie</a>
-                <?php endif; ?>
-                </div>
+								<span onclick="otwieranie()" class="przycisk"><img src="images/toogle-icon1.png" class="nakladka-otwieranie"></span>
+							</div>
+							
+							<?php if(!empty($_SESSION['name']) && isset($_SESSION['name'])): ?>
+							<div class="float-right d-none d-md-block wyloguj-div">
+								<form method="post">
+									<input type="submit" class="logowanie" name="wyloguj" value="Wyloguj" id="wyloguj"></input>
+								</form>
+							</div>
+							<?php else: ?>
+							<div class="float-right d-none d-md-block logowanie-div">
+								<a href="logowanie.php" class="logowanie">Logowanie</a>
+							</div>
+							<?php endif; ?>
             
     </div>
 
-    <div class="comtainer_sklep">
+    <div class="container_sklep row">
 
-        <div class="lewo_sklep">
+        <div class="lewo_sklep col-3">
            
         </div>
 
-        <div class="prawo_sklep">
-            <div class="container_produkty">
-                <div class="produkt">
-                    <a href="/">
-                        <img src="images/bialko1.jpg" alt="białko">
-                            <div class="produkt_nazwa">
-                                <p>Białko czekolada</p>
-                            </div>
-                    </a>
-                </div>
+        <div class="prawo_sklep col-9 mx-auto">
+            <div class="container_produkty row">
+                <?php 
 
+                include "config.php";
+                $conn = mysqli_connect($serwer,$user,$password,$baza) or die ("Odpowiedź: Błąd połączenia z serwerem");
+
+                $wynik = mysqli_query($conn, "SELECT * FROM MK_Nutrition_produkty");
+
+                while($row = mysqli_fetch_row($wynik))
+			{
+                echo <<<_END
+                <div class="produkty-oferta col-12 col-lg-4"><a href="" class="produkty-oferta-a">
+                <div class="produkty-oferty-zdj col-12 mt-4">
+                    <img src="$row[5]" alt="$row[4]" class="">
+                </div>
+                <div class="produkty-oferty-nazwa col-12 mt-3">
+                    $row[1]
+                </div>
+                <div class="produkty-ofery-cena col-12 mt-4">
+                    $row[2] PLN
+                </div></a>
+            </div>
+            _END;
+			}
+                mysqli_close($conn);
+
+                ?>
+                
 
 
                 <div class="clear"></div>

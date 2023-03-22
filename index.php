@@ -42,7 +42,7 @@
 							<nav>
 							<ul>
 								<li style="--clr:#00ade1">
-									<a href="/?action=page1" data-text="&nbsp;Sklep">&nbsp;Sklep&nbsp; </a>
+									<a href="sklep.php" data-text="&nbsp;Sklep">&nbsp;Sklep&nbsp; </a>
 								</li>
 								<li style="--clr:#ff6493">
 									<a href="/?action=page2" data-text="&nbsp;o&nbsp;nas">&nbsp;O nas&nbsp; </a>
