@@ -522,7 +522,7 @@ if(isset($_POST['wyloguj']))
 						<ul>
 							<li>O nas</li>
 							<li>Napisz</li>
-							<li><a href="regulamin.php">Regulamin</a></li>
+							<li><a href="regulamin.php" class="regulamin_a">Regulamin</a></li>
 							<li>E-mail</li>
 						</ul> 
 					</div>

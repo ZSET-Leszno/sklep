@@ -60,7 +60,7 @@
         </div>
 
         <div class="d-inline-block logo-div">
-            <a href="/"><img src="images/logo2.png" alt="Logo" class="logo2 col-lg-7 col-md-6 col-4 d-inline mt-lg-0 mt-md-1 mt-3"></a>
+            <a href="index.php"><img src="images/logo2.png" alt="Logo" class="logo2 col-lg-7 col-md-6 col-4 d-inline mt-lg-0 mt-md-1 mt-3"></a>
         </div>
             
 <?php 
@@ -90,8 +90,8 @@ header('Location: index.php');
             § 1 Wstęp
 
 Niniejszy Regulamin określa ogólne warunki, zasady oraz sposób sprzedaży prowadzonej przez MKNutrition Sp. z o.o. z siedzibą we Wróblowicach, za pośrednictwem sklepu internetowego sklep.kfd.pl (zwanego dalej: „Sklepem Internetowym”) oraz określa zasady i warunki świadczenia przez MKNutrition Sp. z o.o. z siedzibą we Wróblowicach usług nieodpłatnych drogą elektroniczną.
-
-§ 2 Definicje
+				
+</br>§ 2 Definicje
 
 Dni robocze - oznacza dni tygodnia od poniedziałku do piątku z wyłączeniem dni ustawowo wolnych od pracy.
 Dostawa - oznacza czynność faktyczną polegającą na dostarczeniu Klientowi przez Sprzedawcę, za pośrednictwem Dostawcy, Towaru określonego w zamówieniu.
@@ -113,7 +113,7 @@ Towar - oznacza produkt przedstawiony przez Sprzedawcę za pośrednictwem Strony
 Trwały nośnik - oznacza materiał lub narzędzie umożliwiające Klientowi lub Sprzedawcy przechowywanie informacji kierowanych osobiście do niego, w sposób umożliwiający dostęp do informacji w przyszłości przez czas odpowiedni do celów, jakim te informacje służą, i które pozwalają na odtworzenie przechowywanych informacji w niezmienionej postaci.
 Umowa sprzedaży - oznacza umowę sprzedaży zawartą na odległość, na zasadach określonych w Regulaminie, między Klientem a Sprzedawcą.
 
-§ 3 Postanowienia ogólne i korzystanie ze Sklepu Internetowego
+</br>§ 3 Postanowienia ogólne i korzystanie ze Sklepu Internetowego
 
 Wszelkie prawa do Sklepu Internetowego, w tym majątkowe prawa autorskie, prawa własności intelektualnej do jego nazwy, jego domeny internetowej, Strony Internetowej Sklepu, a także do wzorców, formularzy, logotypów zamieszczanych na Stronie Internetowej Sklepu (z wyjątkiem logotypów i zdjęć prezentowanych na Stronie Internetowej Sklepu w celach prezentacji towarów, do których to prawa autorskie należą do podmiotów trzecich) należą do Sprzedawcy, a korzystanie z nich może następować wyłącznie w sposób określony i zgodny z Regulaminem oraz za zgodą Sprzedawcy wyrażoną na piśmie.
 Sprzedawca dołoży starań, aby korzystanie ze Sklepu Internetowego było możliwe dla użytkowników Internetu z użyciem wszystkich popularnych przeglądarek internetowych, systemów operacyjnych, typów urządzeń oraz typów połączeń internetowych. Minimalne wymagania techniczne umożliwiające korzystanie ze Strony Internetowej Sklepu to przeglądarka internetowa w wersji co najmniej Internet Explorer 11 lub Chrome 66 lub FireFox 60 lub Opera 53 lub Safari 5 lub nowszych, z włączoną obsługą języka Javascript, akceptująca pliki typu „cookies” oraz łącze internetowe o przepustowości co najmniej 256 kbit/s. Strona Internetowa Sklepu jest zoptymalizowana dla minimalnej rozdzielczości ekranu 1024x768 pikseli.
@@ -123,7 +123,7 @@ Zakazane jest dostarczanie przez Klienta treści o charakterze bezprawnym oraz w
 Sprzedawca oświadcza, iż publiczny charakter sieci Internet i korzystanie z usług świadczonych drogą elektroniczną wiązać może się z zagrożeniem pozyskania i modyfikowania danych Klientów przez osoby nieuprawnione, dlatego Klienci powinni stosować właściwe środki techniczne, które zminimalizują wskazane wyżej zagrożenia. W szczególności powinni stosować programy antywirusowe i chroniące tożsamość korzystających z sieci Internet. Sprzedawca nigdy nie zwraca się do Klienta z prośbą o udostępnienie mu w jakiejkolwiek formie Hasła.
 Nie jest dopuszczalne wykorzystywanie zasobów i funkcji Sklepu Internetowego w celu prowadzenia przez Klienta działalności, która naruszałaby interes Sprzedawcy.
 
-§ 4 Rejestracja
+</br>§ 4 Rejestracja
 
 W celu utworzenia Konta Klienta, Klient obowiązany jest dokonać nieodpłatnej Rejestracji.
 Rejestracja jest konieczna do złożenia zamówienia w Sklepie Internetowym oraz do dokonania Rezerwacji.
@@ -131,7 +131,7 @@ W celu Rejestracji, Klient powinien wypełnić formularz rejestracyjny udostępn
 Klient ma również możliwość dokonania Rejestracji za pośrednictwem swojego konta użytkownika facebook.com. Założenie Konta Klienta odbywa się poprzez dedykowane przekierowanie ze Sklepu Internetowego na stronę internetową facebook.com, gdzie Klient poproszony jest o podanie nazwy użytkownika oraz hasła jakie posiada do konta użytkownika w facebook.com. Po dokonaniu autoryzacji na stronie facebook.com, Klient z powrotem jest przekierowany do Sklepu Internetowego, w którym zakładane jest Konto Klienta, z odnośnikiem do konta użytkownika na facebook.com. Nazwa użytkownika do serwisu facebook.com oraz jego hasło nie są rejestrowane i przechowywane przez Sprzedawcę.
 W trakcie wypełniania formularza rejestracyjnego, Klient ma możliwość zapoznania się z Regulaminem, akceptując jego treść poprzez oznaczenie odpowiedniego pola w formularzu.
 Po przesłaniu wypełnionego formularza rejestracyjnego Klient otrzymuje niezwłocznie, drogą elektroniczną na adres poczty elektronicznej podany w formularzu rejestracyjnym potwierdzenie Rejestracji przez Sprzedawcę. Z tą chwilą zawarta zostaje umowa o świadczenie drogą elektroniczną usługi Prowadzenie Konta Klienta, zaś Klient uzyskuje możliwość dostępu do Konta Klienta i dokonywania zmian podanych podczas Rejestracji danych.
-§ 5 Zamówienia
+</br>§ 5 Zamówienia
 
 Informacje zawarte na Stronie Internetowej Sklepu nie stanowią oferty Sprzedawcy w rozumieniu Kodeksu Cywilnego, a jedynie zaproszenie Klientów do składania ofert zawarcia Umowy sprzedaży.
 Klient może składać zamówienia w Sklepie Internetowym za pośrednictwem Strony Internetowej Sklepu przez 7 dni w tygodniu, 24 godziny na dobę.
@@ -139,7 +139,7 @@ Klient składający zamówienie za pośrednictwem Strony Internetowej Sklepu, ko
 Złożenie zamówienia stanowi złożenie Sprzedawcy przez Klienta oferty zawarcia Umowy sprzedaży Towarów będących przedmiotem zamówienia.
 Po złożeniu zamówienia, Sprzedawca przesyła na podany przez Klienta adres poczty elektronicznej potwierdzenie jego złożenia. Informacja o potwierdzeniu złożenia zamówienia jest oświadczeniem Sprzedawcy o przyjęciu oferty, o której mowa w §6 ust. 4 powyżej i z chwilą jego otrzymania przez Klienta zostaje zawarta Umowa sprzedaży.
 Po zawarciu Umowy sprzedaży, Sprzedawca potwierdza Klientowi jej warunki, przesyłając je na Trwałym nośniku na adres poczty elektronicznej Klienta lub pisemnie na wskazany przez Klienta podczas Rejestracji lub składania zamówienia adres.
-§ 6 Płatności
+</br>§ 6 Płatności
 
 Ceny na Stronie Internetowej Sklepu zamieszczone przy danym Towarze stanowią ceny brutto i nie zawierają informacji odnośnie kosztów Dostawy i wszelkich innych kosztów, które Klient będzie zobowiązany ponieść w związku z Umową sprzedaży, o których Klient będzie poinformowany przy wyborze sposobu Dostawy i składaniu zamówienia.
 Klient może wybrać następujące formy płatności za zamówione Towary:
@@ -148,7 +148,7 @@ karta płatnicza lub przelew bankowy poprzez zewnętrzny system płatności PayU
 Klient powinien dokonać płatności za zamówienie w wysokości wynikającej z zawartej Umowy sprzedaży w terminie 7 Dni roboczych, jeżeli wybrał formę przedpłaty.
 W wypadku niewywiązania się przez Klienta z płatności w terminie, o którym mowa w §7 ust. 3 Regulaminu, Sprzedawca wyznacza Klientowi dodatkowy termin na dokonanie płatności i informuje o nim Klienta na Trwałym nośniku. Informacja o dodatkowym terminie na dokonanie płatności zawiera również informację, że po bezskutecznym upływie tego terminu, Sprzedawca odstąpi od Umowy sprzedaży. W wypadku bezskutecznego upływu drugiego terminu na dokonanie płatności, Sprzedawca prześle Klientowi na Trwałym nośniku oświadczenie o odstąpieniu od umowy na podstawie art. 491 Kodeksu Cywilnego.
 W wypadku niewykonania zobowiązania przez Sprzedawcę lub Klienta w terminie ściśle określonym, wynikającym z zawartej Umowy sprzedaży, strona uprawniona może w razie zwłoki drugiej strony odstąpić od umowy bez wyznaczenia terminu dodatkowego, zgodnie z art. 492 Kodeksu Cywilnego. Odstąpienie od umowy może nastąpić w terminie 3 miesięcy od dnia zawarcia Umowy sprzedaży.
-§ 7 Dostawa
+</br>§ 7 Dostawa
 
 Sprzedawca realizuje Dostawę na terytorium Rzeczypospolitej Polskiej, Austrii, Belgii, Bułgarii, Chorwacji, Czech, Danii, Estonii, Finlandii, Francji, Grecji, Hiszpanii, Holandii, Irlandii, Litwy, Luksemburga, Łotwy, Monako, Niemiec, Portugalii, Rumunii, Słowacji, Słowenii, Szwecji, Węgier, Wielkiej Brytanii, Włoch.
 Sprzedawca jest zobowiązany dostarczyć Towar będący przedmiotem Umowy sprzedaży bez wad.
@@ -159,7 +159,7 @@ W dniu wysłania Towaru do Klienta przekazywana jest na adres poczty elektronicz
 Klient obowiązany jest zbadać doręczoną przesyłkę w czasie i w sposób przyjęty przy przesyłkach danego rodzaju. W razie stwierdzenia ubytku lub uszkodzenia przesyłki Klient ma prawo żądać od pracownika Dostawcy spisania właściwego protokołu.
 Sprzedawca, zgodnie z wolą Klienta, dołącza do przesyłki będącej przedmiotem Dostawy paragon albo fakturę VAT obejmującą dostarczane Towary.
 W przypadku nieobecności Klienta pod wskazanym przez niego adresem, podanym przy składaniu zamówienia jako adres Dostawy, pracownik Dostawcy pozostawi awizo lub podejmie próbę kontaktu telefonicznego celem ustalenia terminu, w którym Klient będzie obecny. W przypadku zwrotnego odesłania zamówionego Towaru do Sklepu Internetowego przez Dostawcę, Sprzedawca skontaktuje się z Klientem drogą elektroniczną lub telefonicznie, ustalając ponownie z Klientem termin i koszt Dostawy.
-§ 8 Rękojmia
+</br>§ 8 Rękojmia
 
 Sprzedawca zapewnia Dostawę Towaru pozbawionego wad fizycznych i prawnych. Sprzedawca jest odpowiedzialny względem Klienta, jeżeli Towar ma wadę fizyczną lub prawną (rękojmia).
 Jeżeli Towar ma wadę, Klient może:
@@ -170,7 +170,7 @@ Sprzedawca odpowiada z tytułu rękojmi, jeżeli wada fizyczna zostanie stwierdz
 Wszelkie reklamacje związane z Towarem lub realizacją Umowy sprzedaży, Klient może kierować w formie pisemnej na adres Sprzedawcy. 6. Sprzedawca w ciągu 14 dni od dnia żądania zawierającego reklamację, ustosunkuje się do reklamacji Towaru lub reklamacji związanej z realizacją Umowy sprzedaży zgłoszonej przez Klienta.
 Klient może zgłosić Sprzedawcy reklamację w związku z korzystaniem z usług nieodpłatnych świadczonych drogą elektroniczną przez Sprzedawcę oraz w związku z Rezerwacją. Reklamacja może być złożona w formie elektronicznej i przesłana przez formularz. W zgłoszeniu reklamacyjnym Klient winien zawrzeć opis zaistniałego problemu. Sprzedawca niezwłocznie, lecz nie później niż w terminie 14 dni rozpatruje reklamacje i udziela Klientowi odpowiedzi.
 Sprzedawca nie korzysta z pozasądowego rozwiązywania sporów, o których mowa w ustawie z dnia 23 września 2016 r., o pozasądowym rozwiązywaniu sporów konsumenckich.
-§ 9 Odstąpienie od Umowy sprzedaży zawartej na odległość
+</br>§ 9 Odstąpienie od Umowy sprzedaży zawartej na odległość
 
 Klient będący Konsumentem, który zawarł Umowę sprzedaży na odległość, może w terminie 14 dni odstąpić od niej bez podawania przyczyny.
 Bieg terminu na odstąpienie od Umowy sprzedaży rozpoczyna się od chwili objęcia Towaru w posiadanie przez Konsumenta. Konsument może odstąpić od Umowy sprzedaży składając Sprzedawcy oświadczenie o odstąpieniu. Oświadczenie to może zostać złożone przykładowo pisemnie na adres Sprzedawcy, za pośrednictwem poczty elektronicznej na adres Sprzedawcy. Oświadczenie można złożyć na formularzu, którego wzór został zamieszczony przez Sprzedawcę na Stronie Internetowej Sklepu pod adresem: Formularz odstąpienia. Do zachowania terminu wystarczy wysłanie oświadczenia przed jego upływem.
@@ -186,7 +186,7 @@ Sprzedawca dokonuje zwrotu płatności przy użyciu takiego samego sposobu zapł
 Prawo odstąpienia od Umowy sprzedaży nie przysługuje Klientowi będącemu Konsumentem w odniesieniu do umów w których Towarem jest rzecz ulegająca szybkiemu zepsuciu lub mająca krótki termin przydatności do użycia.
 Prawo odstąpienia od Umowy sprzedaży nie przysługuje Klientowi będącemu Konsumentem w odniesieniu do umów, w których Towarem jest rzecz dostarczana w zapieczętowanym opakowaniu, której po otwarciu opakowania nie można zwrócić ze względu na ochronę zdrowia lub ze względów higienicznych, jeżeli opakowanie zostało otwarte po dostarczeniu.
 Prawo odstąpienia od umowy sprzedaży nie przysługuje Klientowi będącemu Konsumentem w odniesieniu do umów zawartych w Sklepie Stacjonarnym Sprzedawcy, na skutek dokonanej Rezerwacji.
-§ 10 Usługi nieodpłatne
+</br>§ 10 Usługi nieodpłatne
 
 Sprzedawca świadczy na rzecz Klientów, drogą elektroniczną usługi nieodpłatne:
 Formularz kontaktowy;
@@ -209,7 +209,7 @@ Rezygnacja z usługi Zamieszczanie opinii możliwa jest w każdej chwili i poleg
 Usługa Sprawdź dostępność w sklepach stacjonarnych polega na umożliwieniu Klientom przez Sprzedawcę, sprawdzenie dostępności wybranego Towaru, w Sklepie Stacjonarnym lub Sklepach Stacjonarnych Sprzedawcy, z tym zastrzeżeniem, że sprawdzenie dostępności Towaru następuje na moment skorzystania przez Klienta z przedmiotowej usługi, bez gwarancji niezmienności tej dostępności, w późniejszym czasie.
 Rezygnacja z usługi Sprawdź dostępność w sklepach stacjonarnych możliwa jest w każdej chwili i polega na zaprzestaniu sprawdzania dostępności wybranego Towaru, w Sklepie Stacjonarnym lub Sklepach Stacjonarnych Sprzedawcy.
 Sprzedawca jest uprawniony do zablokowania dostępu do Konta Klienta i usług nieodpłatnych, w przypadku działania przez Klienta na szkodę Sprzedawcy lub innych Klientów, naruszenia przez Klienta przepisów prawa lub postanowień Regulaminu, a także, gdy zablokowanie dostępu do Konta Klienta i usług nieodpłatnych jest uzasadnione względami bezpieczeństwa - w szczególności: przełamywaniem przez Klienta zabezpieczeń Strony Internetowej Sklepu lub innymi działaniami hakerskimi. Zablokowanie dostępu do Konta Klienta i usług nieodpłatnych z wymienionych przyczyn trwa przez okres niezbędny do rozwiązania kwestii stanowiącej podstawę zablokowania dostępu do Konta Klienta i usług nieodpłatnych. Sprzedawca zawiadamia Klienta o zablokowaniu dostępu do Konta Klienta i usług nieodpłatnych drogą elektroniczną na adres podany przez Klienta w formularzu rejestracyjnym.
-§ 11 Odpowiedzialność Klienta w zakresie zamieszczanych przez niego treści
+</br>§ 11 Odpowiedzialność Klienta w zakresie zamieszczanych przez niego treści
 
 Zamieszczając treści oraz udostępniając je Klient dokonuje dobrowolnego rozpowszechniania treści. Zamieszczane treści nie wyrażają poglądów Sprzedawcy i nie powinny być utożsamiane z jego działalnością. Sprzedawca nie jest dostawcą treści, a jedynie podmiotem, który zapewnia w tym celu odpowiednie zasoby teleinformatyczne.
 Klient oświadcza, że:
@@ -229,11 +229,11 @@ pozostawać w sprzeczności z interesem Sprzedawcy;
 naruszać w inny sposób postanowienia Regulaminu, dobre obyczaje, przepisy obowiązującego prawa, normy społeczne lub obyczajowe.
 W przypadku gdy zamieszczane przez klienta treści, byłyby zabronione (zgodnie z §12 ust. 3 lub §12 ust. 5) lub w przypadku otrzymania powiadomienia zgodnie z §13 Regulaminu, Sprzedawca zastrzega sobie prawo do niezamieszczania, modyfikowania lub usuwania treści zamieszczanych przez Klientów w ramach korzystania przez nich z usług, o których mowa w §11 Regulaminu, w szczególności w odniesieniu do treści, co do których, opierając się na doniesieniach osób trzecich lub odpowiednich organów, stwierdzono, że mogą one stanowić naruszenie niniejszego Regulaminu lub obowiązujących przepisów prawa. Sprzedawca nie prowadzi bieżącej kontroli zamieszczanych treści.
 Klient wyraża zgodę na nieodpłatne wykorzystywanie przez Sprzedawcę umieszczonych przez niego treści w ramach Strony Internetowej Sklepu.
-§ 12 Zgłaszanie zagrożenia lub naruszenia praw
+</br>§ 12 Zgłaszanie zagrożenia lub naruszenia praw
 
 W przypadku, gdy Klient lub inna osoba lub podmiot uzna, iż treść publikowana na Stronie Internetowej Sklepu narusza ich prawa, dobra osobiste, dobre obyczaje, uczucia, moralność, przekonania, zasady uczciwej konkurencji, know-how, tajemnicę chronioną prawem lub na podstawie zobowiązania, może powiadomić Sprzedawcę o potencjalnym naruszeniu.
 Sprzedawca powiadomiony o potencjalnym naruszeniu, podejmuje niezwłoczne działania mające na celu usunięcie ze Strony Internetowej Sklepu, treści będących przyczyną naruszenia.
-§ 13 Ochrona danych osobowych
+</br>§ 13 Ochrona danych osobowych
 
 Administratorem danych osobowych Klientów przekazanych Sprzedawcy dobrowolnie w ramach Rejestracji, składania zamówienia jednorazowego, Rezerwacji oraz w ramach świadczenia przez Sprzedawcę usług drogą elektroniczną lub w ramach innych okoliczności określonych w Regulaminie, jest Sprzedawca.
 Sprzedawca przetwarza dane osobowe Klientów w celu realizacji zamówień, dokonywania Rezerwacji, świadczenia przez Sprzedawcę usług drogą elektroniczną oraz innych celów określonych w Regulaminie. Dane są przetwarzane wyłącznie na podstawie przepisów prawa lub zgody wyrażonej przez Klienta zgodnie z obowiązującymi przepisami prawa.
@@ -243,12 +243,12 @@ Sprzedawca zapewnia możliwość usunięcia danych osobowych z prowadzonego zbio
 Sprzedawca chroni przekazane mu dane osobowe oraz dokłada wszelkich starań w celu zabezpieczenia ich przed nieuprawnionym dostępem lub wykorzystaniem przez osoby nieupoważnione.
 Sprzedawca przekazuje dane osobowe Klienta Dostawcy w zakresie niezbędnym do realizacji Dostawy.
 W przypadku, gdy Klient wybierze płatność poprzez system PayU, jego dane osobowe są przekazywane w zakresie niezbędnym dla realizacji płatności spółce PayU S.A. z siedzibą w Poznaniu (60-166), przy ul. Grunwaldzkiej 182, wpisanej do rejestru przedsiębiorców prowadzonego przez Sąd Rejonowy Poznań - Nowe Miasto i Wilda w Poznaniu, Wydział VIII Gospodarczy Krajowego Rejestru Sądowego pod numerem KRS 0000274399.
-§ 14 Rozwiązanie umowy (nie dotyczy Umów sprzedaży)
+</br>§ 14 Rozwiązanie umowy (nie dotyczy Umów sprzedaży)
 
 Zarówno Klient, jak i Sprzedawca mogą rozwiązać umowę o świadczenie usług drogą elektroniczną w każdym czasie i bez podania przyczyn, z zastrzeżeniem zachowania praw nabytych przez drugą stronę przed rozwiązaniem ww. umowy oraz postanowień poniżej.
 Klient, który dokonał Rejestracji rozwiązuje umowę o świadczenie usług drogą elektroniczną, poprzez wysłanie do Sprzedawcy stosownego oświadczenia woli, przy użyciu dowolnego środka komunikacji na odległość, umożliwiającego zapoznanie się Sprzedawcy z oświadczeniem woli Klienta.
 Sprzedawca wypowiada umowę o świadczenie usług drogą elektroniczną poprzez wysłanie do Klienta stosownego oświadczenia woli na adres poczty elektronicznej podany przez Klienta podczas Rejestracji.
-§ 15 Postanowienia końcowe
+</br>§ 15 Postanowienia końcowe
 
 Sprzedawca ponosi odpowiedzialność z tytułu niewykonania lub nienależytego wykonania umowy, lecz w przypadku umów zawieranych z Klientami będącymi Przedsiębiorcami Sprzedawca ponosi odpowiedzialność tylko w przypadku umyślnego wyrządzenia szkody i w granicach rzeczywiście poniesionych strat przez Klienta będącego Przedsiębiorcą.
 Treść niniejszego Regulaminu może zostać utrwalona poprzez wydrukowanie, zapisanie na nośniku lub pobranie w każdej chwili ze Strony Internetowej Sklepu.
