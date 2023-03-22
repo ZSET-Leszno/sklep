@@ -454,7 +454,7 @@ if(isset($_POST['wyloguj']))
 				</div>
 
 				<div class="blok3-prawo">
-					<img src="onas.png">
+					<img src="images/onas.png">
 				</div>
 				<div class="clear"></div>
 			</div>
