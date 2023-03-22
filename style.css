@@ -384,19 +384,30 @@ nav
 {
     float: left;
     width: 50%;
+    max-height: 520px;
 }
 
 .blok3-prawo
 {   
     width: 50%;
     float: left;
+    max-height: 520px;
 }
 
 .blok3-prawo img
 {
     width: 100%;
-    min-height: auto;
+    min-height: 300px;
+    max-height: 520px;
 }
+
+@media (MAX-width: 1020px) {
+    .blok3-prawo, .blok3-lewo {
+      float: none;
+      width: auto;
+      margin-bottom: 100px;
+    }
+  }
 
 
 /*formualrz początek*/
@@ -407,12 +418,12 @@ nav
     width: 700px;
     height: 550px;
     padding-top: 65px;
-    margin-right: 200px;
-    float: right;
+    text-align: center;
+    float: left;
     border-radius: 15px;
     border: 1px solid #aaaaaa;
     margin-top: 20px;
-    margin-bottom: 30px;
+    margin-bottom: 60px;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
