@@ -447,13 +447,14 @@ if(isset($_POST['wyloguj']))
 			<?php mysqli_close($conn);?>
 			<div class="blok3">
 				<div class="blok3-lewo">
+					<h1>O NAS</h1>
 					<p>
 						MKNutrition specjalizująca się w produkcji i sprzedaży suplementów diety to firma, która oferuje produkty, które mają uzupełnić braki w składnikach odżywczych w diecie. Staramy się również zapewnić swoim klientom najwyższą jakość swoich produktów poprzez przestrzeganie rygorystycznych standardów jakościowych i bezpieczeństwa.
 					</p>
 				</div>
 
 				<div class="blok3-prawo">
-					<img src="onas.jpg">
+					<img src="onas.png">
 				</div>
 				<div class="clear"></div>
 			</div>
