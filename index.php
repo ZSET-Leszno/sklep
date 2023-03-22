@@ -45,10 +45,10 @@
 									<a href="sklep.php" data-text="&nbsp;Sklep">&nbsp;Sklep&nbsp; </a>
 								</li>
 								<li style="--clr:#ff6493">
-									<a href="/?action=page2" data-text="&nbsp;o&nbsp;nas">&nbsp;O nas&nbsp; </a>
+									<a href="#onas" data-text="&nbsp;o&nbsp;nas">&nbsp;O nas&nbsp; </a>
 								</li>
 								<li style="--clr:#ffdd1c">
-									<a href="/?action=page3" data-text="&nbsp;Napisz">&nbsp;Napisz&nbsp;</a>
+									<a href="#formularz" data-text="&nbsp;Napisz">&nbsp;Napisz&nbsp;</a>
 								</li>
 								<li style="--clr:#00dc82">
 									<a href="regulamin.php" data-text="&nbsp;Regulamin">&nbsp;Regulamin&nbsp; </a>
@@ -447,7 +447,7 @@ if(isset($_POST['wyloguj']))
 			<?php mysqli_close($conn);?>
 			<div class="blok3">
 				<div class="blok3-lewo">
-					<h1>O NAS</h1>
+					<h1 id="onas">O NAS</h1>
 					<p>
 						MKNutrition specjalizująca się w produkcji i sprzedaży suplementów diety to firma, która oferuje produkty, które mają uzupełnić braki w składnikach odżywczych w diecie. Staramy się również zapewnić swoim klientom najwyższą jakość swoich produktów poprzez przestrzeganie rygorystycznych standardów jakościowych i bezpieczeństwa.
 					</p>
@@ -463,7 +463,7 @@ if(isset($_POST['wyloguj']))
 			<div class="linia"></div>
 
 			<div class="blok4">
-				<h1>Masz Jakieś Pytanie?</h1>
+				<h1 id="formularz">Masz Jakieś Pytanie?</h1>
 				<form class="card-form" action="order.php" method="post" enctype="multipart/form-data">
                 	<div class="input">
                     	<input type="text" id="imie" name="imie" class="input-field" required/>
