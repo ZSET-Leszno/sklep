@@ -7,6 +7,7 @@
 	
 	<meta http-equiv="X-Ua-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.png">
 
 	<link rel="stylesheet" href="bootstrap.min.css">
 	<link rel="stylesheet" href="logowanie.css">
