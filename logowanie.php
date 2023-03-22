@@ -74,9 +74,6 @@
                   header('Location: index.php');
                   $_SESSION['name'] = $row['user_name'];
                   $_SESSION['email'] = $row['user_email'];
-                  if(!isset($_COOKIE['user'])) {
-                    setcookie("session_name", "$row['user_name']", time() + (30), "/");
-                }
                 }
                 else
                 {
