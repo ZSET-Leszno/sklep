@@ -92,8 +92,18 @@ header('Location: index.php');
 
     <div class="container_sklep row">
 
-        <div class="lewo_sklep col-3">
-           
+        <div class="lewo_sklep col-3">  
+
+		<div class="sortuj" id="sortuj" name="sortuj" onclick="otwieranie_sortuj()">Sortuj wg: Nazwa, A-Z</div>
+		<div class="sortuj_type row col-2" id="sortuj_type" name="sortuj_type">
+			<a href="/?action=nazwa_first" class="sortuj_element col-12 ml-3">Nazwa, A-Z</a>
+			<a href="/?action=nazwa_last" class="sortuj_element col-12 ml-3">Nazwa, Z-A</a>
+			<a href="/?action=cena_low" class="sortuj_element col-12 ml-3">Cena, rosnąco</a>
+			<a href="/?action=cena_high" class="sortuj_element col-12 ml-3">Cena, malejąco</a>
+			<a href="/?action=available" class="sortuj_element col-12 ml-3">Dostępny</a>
+		</div>
+			
+		<h3 class="filtrowanie">Filtrowanie</h3>
         </div>
 
         <div class="prawo_sklep col-9 mx-auto">
@@ -231,6 +241,19 @@ header('Location: index.php');
 		function zamykanie() {
 		document.getElementById("przelacznik").style.width = "0%";
 		}
+
+		function otwieranie_sortuj() {
+			document.getElementById("sortuj_type").style.height = "200px";
+			document.getElementById("filtrowanie").style.marginTop = "200px";
+		}
+
+		//zamykanie okna sortowanie
+		const box = document.querySelector(".sortuj")
+		document.addEventListener("click", function(event){
+			if (event.target.closest(".sortuj")) return
+			document.getElementById("sortuj_type").style.height = "0px";
+		})
+
 	</script> 
 	<script src="https://skrypt-cookies.pl/id/c6aec89ee9f942b0.js"></script> <!--ciasteczka-->
 
