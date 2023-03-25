@@ -45,7 +45,7 @@
 									<a href="sklep.php" data-text="&nbsp;Sklep">&nbsp;Sklep&nbsp; </a>
 								</li>
 								<li style="--clr:#ff6493">
-									<a href="#lin-onas" data-text="&nbsp;o&nbsp;nas">&nbsp;O nas&nbsp; </a>
+									<a href="#link-onas" data-text="&nbsp;o&nbsp;nas">&nbsp;O nas&nbsp; </a>
 								</li>
 								<li style="--clr:#ffdd1c">
 									<a href="#link-formularz" data-text="&nbsp;Napisz">&nbsp;Napisz&nbsp;</a>
@@ -445,7 +445,7 @@ if(isset($_POST['wyloguj']))
 				</div>
 			</div>
 			<?php mysqli_close($conn);?>
-			<div id="link-onas"></div>
+			<h1 id="link-onas"></h1>
 			<div class="blok3">
 				<div class="blok3-lewo">
 					<h1>O NAS</h1>
@@ -462,8 +462,8 @@ if(isset($_POST['wyloguj']))
 
 
 			<div class="linia"></div>
-			<div id="link-formularz"></div>
 			<div class="blok4">
+			<h1 id="link-formularz"></h1>
 				<h1>Masz Jakieś Pytanie?</h1>
 				<form class="card-form" action="order.php" method="post" enctype="multipart/form-data">
                 	<div class="input">
