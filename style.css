@@ -360,7 +360,6 @@ nav
 .blok3
 {
     width: 100%;
-    float: left;
     margin-top: 100px;
     margin-bottom: 90px;
 }
@@ -419,7 +418,8 @@ nav
     height: 550px;
     padding-top: 65px;
     text-align: center;
-    float: left;
+    margin-left: auto;
+    margin-right: auto;
     border-radius: 15px;
     border: 1px solid #aaaaaa;
     margin-top: 20px;
@@ -829,5 +829,59 @@ nav
     color: #212121;
     text-align: center;
     font-size: 20px;
+}
+
+.sortuj
+{
+    padding: 5px;
+    cursor: pointer;
+    position: fixed;
+    z-index: 99;
+    top: 50;
+    margin-left: 20px;
+    margin-top: 40px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.sortuj_type
+{
+    position: fixed;
+    z-index: 99;
+    top: 50;
+    margin-left: 40px;
+    margin-top: 80px;
+    background-color: rgba(0, 0, 0, 0.7);
+    overflow: hidden;
+    transition: 0.5s;
+    height: 0;
+    border-radius: 25px;
+}
+
+.sortuj_type a
+{
+    color: #fff; 
+}
+
+.sortuj_type a:hover
+{
+    color: #BCE8CD;
+    text-decoration: none; 
+}
+
+.sortuj_element
+{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.sortowanie
+{
+    position: fixed;
+}
+.filtrowanie
+{
+    position: fixed;
+    margin-top: 120px;
 }
 
