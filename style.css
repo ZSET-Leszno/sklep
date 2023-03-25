@@ -842,7 +842,7 @@ nav
     margin-left: 20px;
     margin-top: 40px;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 24px;
 }
 
 .sortuj_type
@@ -884,5 +884,12 @@ nav
 {
     position: fixed;
     margin-top: 120px;
+    padding: 5px;
+    cursor: pointer;
+    z-index: 99;
+    top: 50;
+    margin-left: 24px;
+    font-weight: bold;
+    font-size: 20px;
 }
 

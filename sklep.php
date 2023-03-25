@@ -67,7 +67,7 @@
 if(isset($_POST['wyloguj']))
 {
 session_destroy();
-header('Location: index.php'); 
+header('Location: sklep.php'); 
 }
 ?>
                 <div class="float-right przycisk-div">
@@ -92,16 +92,16 @@ header('Location: index.php');
 
         <div class="lewo_sklep col-3">  
 
-		<div class="sortuj" id="sortuj" name="sortuj" onclick="otwieranie_sortuj()">Sortuj wg: Nazwa, A-Z</div>
-		<div class="sortuj_type row col-2" id="sortuj_type" name="sortuj_type">
-			<a href="/?action=nazwa_first" class="sortuj_element col-12 ml-3">Nazwa, A-Z</a>
-			<a href="/?action=nazwa_last" class="sortuj_element col-12 ml-3">Nazwa, Z-A</a>
-			<a href="/?action=cena_low" class="sortuj_element col-12 ml-3">Cena, rosnąco</a>
-			<a href="/?action=cena_high" class="sortuj_element col-12 ml-3">Cena, malejąco</a>
-			<a href="/?action=available" class="sortuj_element col-12 ml-3">Dostępny</a>
-		</div>
-			
-		<h3 class="filtrowanie">Filtrowanie</h3>
+			<div class="sortuj" id="sortuj" name="sortuj" onclick="otwieranie_sortuj()">Sortuj wg: Nazwa, A-Z</div>
+			<div class="sortuj_type row col-2" id="sortuj_type" name="sortuj_type">
+				<a href="/?action=nazwa_first" class="sortuj_element col-12 ml-3">Nazwa, A-Z</a>
+				<a href="/?action=nazwa_last" class="sortuj_element col-12 ml-3">Nazwa, Z-A</a>
+				<a href="/?action=cena_low" class="sortuj_element col-12 ml-3">Cena, rosnąco</a>
+				<a href="/?action=cena_high" class="sortuj_element col-12 ml-3">Cena, malejąco</a>
+				<a href="/?action=available" class="sortuj_element col-12 ml-3">Dostępny</a>
+			</div>
+				
+			<div class="filtrowanie">Filtrowanie</div>
         </div>
 
         <div class="prawo_sklep col-9 mx-auto">
