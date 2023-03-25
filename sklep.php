@@ -6,12 +6,10 @@
 	<title>MK-Nutrition</title>
 	<meta name="description" content="Strona dla twardzieli.">
 	<meta name="keywords" content="sterydy, sklep, szybkie efekty">
-	<link rel="icon" type="image/x-icon" href="/images/strzyk.png">
-	
 	<meta http-equiv="X-Ua-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-	
+	<link rel="icon" type="image/x-icon" href="/images/favicon.png">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<link rel="stylesheet" href="css/fontello.css" type="text/css" />
 	<link rel="stylesheet" href="style.css">

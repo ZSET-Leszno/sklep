@@ -6,8 +6,6 @@
 	<title>MK-Nutrition</title>
 	<meta name="description" content="Strona dla twardzieli.">
 	<meta name="keywords" content="sterydy, sklep, szybkie efekty">
-	<link rel="icon" type="image/x-icon" href="/images/strzyk.png">
-	
 	<meta http-equiv="X-Ua-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
