@@ -363,6 +363,7 @@ nav
     width: 100%;
     margin-top: 100px;
     margin-bottom: 90px;
+    position: relative;
 }
 
 .blok3 p
@@ -401,11 +402,27 @@ nav
     max-height: 520px;
 }
 
+.bialko
+{
+    z-index: 1;
+    width: 100px;
+    position: absolute;
+    left: 50%;
+    top: 15%;
+}
+
 @media (MAX-width: 1020px) {
     .blok3-prawo, .blok3-lewo {
       float: none;
       width: auto;
       margin-bottom: 100px;
+    }
+  }
+
+  @media (MAX-width: 1020px) {
+    .bialko {
+        left: 10%;
+        top: 50%;
     }
   }
 
