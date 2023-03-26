@@ -35,22 +35,22 @@
             <a href="#" class="nakladka-zamykanie" onclick="zamykanie()">&times;</a>
             <div class="menu">
                 <nav>
-                <ul>
-                    <li style="--clr:#00ade1">
-                        <a href="/?action=page1" data-text="&nbsp;Białko">&nbsp;Białko&nbsp; </a>
-                    </li>
-                    <li style="--clr:#ff6493">
-                        <a href="/?action=page2" data-text="&nbsp;Kreatyna">&nbsp;Kreatyna&nbsp; </a>
-                    </li>
-                    <li style="--clr:#ffdd1c">
-                        <a href="/?action=page3" data-text="&nbsp;PWR">&nbsp;PWR&nbsp;</a>
-                    </li>
-                    <li style="--clr:#00dc82">
-                        <a href="/?action=page4" data-text="&nbsp;Zdrowie">&nbsp;Zdrowie&nbsp; </a>
-                    </li>
-                    <li style="--clr:#dc00d4">
-                        <a href="/?action=page5" data-text="&nbsp;Inne">&nbsp;Inne&nbsp;</a>
-                    </li>
+				<ul>
+					<li style="--clr:#00ade1">
+						<a href="sklep.php" data-text="&nbsp;Sklep">&nbsp;Sklep&nbsp; </a>
+					</li>
+					<li style="--clr:#ff6493">
+						<a href="index.php#link-onas" data-text="&nbsp;o&nbsp;nas">&nbsp;O nas&nbsp; </a>
+					</li>
+					<li style="--clr:#ffdd1c">
+						<a href="index.php#link-formularz" data-text="&nbsp;Napisz">&nbsp;Napisz&nbsp;</a>
+					</li>
+					<li style="--clr:#00dc82">
+						<a href="regulamin.php" data-text="&nbsp;Regulamin">&nbsp;Regulamin&nbsp; </a>
+					</li>
+					<li style="--clr:#dc00d4">
+						<a href="/?action=page5" data-text="&nbsp;Moje&nbsp;Konto">&nbsp;Moje konto&nbsp;</a>
+					</li>
                 </ul>
 
                 </nav>
@@ -88,60 +88,154 @@ header('Location: sklep.php');
             
     </div>
 
-    <div class="container_sklep row">
+		<div class="container_sklep row">
 
-        <div class="lewo_sklep col-3">  
+			<div class="lewo_sklep col-3">  
+<?php 
+if (isset($_GET['nazwa_first'])) {$sortowanie_nazwa="Nazwa, A-Z";}
 
-			<div class="sortuj" id="sortuj" name="sortuj" onclick="otwieranie_sortuj()">Sortuj wg: Nazwa, A-Z</div>
-			<div class="sortuj_type row col-2" id="sortuj_type" name="sortuj_type">
-				<a href="/?action=nazwa_first" class="sortuj_element col-12 ml-3">Nazwa, A-Z</a>
-				<a href="/?action=nazwa_last" class="sortuj_element col-12 ml-3">Nazwa, Z-A</a>
-				<a href="/?action=cena_low" class="sortuj_element col-12 ml-3">Cena, rosnąco</a>
-				<a href="/?action=cena_high" class="sortuj_element col-12 ml-3">Cena, malejąco</a>
-				<a href="/?action=available" class="sortuj_element col-12 ml-3">Dostępny</a>
+elseif (isset($_GET['nazwa_last'])) {$sortowanie_nazwa="Nazwa, Z-A";}
+
+elseif (isset($_GET['cena_low'])) {$sortowanie_nazwa="Cena, rosnąco";}
+
+elseif (isset($_GET['cena_high'])) {$sortowanie_nazwa="Cena, malejąco";}
+
+elseif (isset($_GET['navailable'])) {$sortowanie_nazwa="Niedostępne";}
+
+else{$sortowanie_nazwa="Nazwa, A-Z";}
+?>
+				<div class="sortuj" id="sortuj" name="sortuj" onclick="otwieranie_sortuj()">Sortuj wg: <?php echo "$sortowanie_nazwa";?></div>
+				<div class="sortuj_type row col-2" id="sortuj_type" name="sortuj_type">
+					<a href="sklep.php?nazwa_first=true" class="sortuj_element col-12 ml-3">Nazwa, A-Z</a>
+					<a href="sklep.php?nazwa_last=true" class="sortuj_element col-12 ml-3">Nazwa, Z-A</a>
+					<a href="sklep.php?cena_low=true" class="sortuj_element col-12 ml-3">Cena, rosnąco</a>
+					<a href="sklep.php?cena_high=true" class="sortuj_element col-12 ml-3">Cena, malejąco</a>
+					<a href="sklep.php?navailable=true" class="sortuj_element col-12 ml-3">Niedostępne</a>
+				</div>
+					
+				<div class="filtrowanie" id="filtrowanie" name="filtrowanie">Filtrowanie
+
+				<form method="POST" action="">
+					<input type="checkbox" id="f_bialko" name="f_bialko" value="f_bialko">
+					<label for="f_bialko"> Odżywka białkowa</label><br>
+
+					<input type="checkbox" id="f_kreatyna" name="f_kreatyna" value="f_kreatyna">
+					<label for="f_kreatyna"> Kreatyna</label><br>
+
+					<input type="checkbox" id="f_pwr" name="f_pwr" value="f_pwr">
+					<label for="f_pwr"> Przedtreningówka</label><br>
+
+					<input type="checkbox" id="f_witaminy" name="f_witaminy" value="f_witaminy">
+					<label for="f_witaminy"> Witaminy i Minerały</label><br>
+
+					<input type="submit" value="Filtruj" name="filtr_wyslij" id="filtr_wyslij">
+				</form>
+
+
+
+
+
+				</div>
 			</div>
-				
-			<div class="filtrowanie">Filtrowanie</div>
-        </div>
 
-        <div class="prawo_sklep col-9 mx-auto">
-            <div class="container_produkty row">
-                <?php 
+			<div class="prawo_sklep col-9 mx-auto">
 
-                include "config.php";
-                $conn = mysqli_connect($serwer,$user,$password,$baza) or die ("Odpowiedź: Błąd połączenia z serwerem");
 
-                $wynik = mysqli_query($conn, "SELECT * FROM MK_Nutrition_produkty");
+				<div class="container_produkty row">
+					<?php 
 
-                while($row = mysqli_fetch_row($wynik))
-			{
-                echo <<<_END
-                <div class="produkty-oferta col-12 col-lg-4"><a href="" class="produkty-oferta-a">
-                <div class="produkty-oferty-zdj col-12 mt-4">
-                    <img src="$row[5]" alt="$row[4]" class="">
-                </div>
-                <div class="produkty-oferty-nazwa col-12 mt-3">
-                    $row[1]
-                </div>
-                <div class="produkty-ofery-cena col-12 mt-4">
-                    $row[2] PLN
-                </div></a>
-            </div>
-            _END;
-			}
-                mysqli_close($conn);
+					include "config.php";
+					$conn = mysqli_connect($serwer,$user,$password,$baza) or die ("Odpowiedź: Błąd połączenia z serwerem");
 
-                ?>
+					
+
+					if (isset($_GET['nazwa_first'])) {$wynik = mysqli_query($conn, "SELECT * FROM MK_Nutrition_produkty WHERE produkt_ilosc>0 ORDER BY produkt_nazwa ASC");}
+
+					elseif (isset($_GET['nazwa_last'])) {$wynik = mysqli_query($conn, "SELECT * FROM MK_Nutrition_produkty WHERE produkt_ilosc>0 ORDER BY produkt_nazwa DESC");}
+
+					elseif (isset($_GET['cena_low'])) {$wynik = mysqli_query($conn, "SELECT * FROM MK_Nutrition_produkty WHERE produkt_ilosc>0 ORDER BY produkt_cena ASC");}
+
+					elseif (isset($_GET['cena_high'])) {$wynik = mysqli_query($conn, "SELECT * FROM MK_Nutrition_produkty WHERE produkt_ilosc>0 ORDER BY produkt_cena DESC");}
+
+					elseif (isset($_GET['navailable'])) {$wynik = mysqli_query($conn, "SELECT * FROM MK_Nutrition_produkty WHERE produkt_ilosc<=0");}
+
+					else{$wynik = mysqli_query($conn, "SELECT * FROM MK_Nutrition_produkty WHERE produkt_ilosc>0 ORDER BY produkt_nazwa ASC");}
+					
+
+
+					while($row = mysqli_fetch_row($wynik))
+					{
+						if(isset($_GET['navailable']))
+						{
+						echo <<<_END
+						<div class="produkty-oferta col-12 col-lg-4"><a href="" class="produkty-oferta-a">
+							<div class="produkty-oferty-zdj col-12 mt-4">
+								<img src="$row[5]" alt="$row[4]" class="">
+							</div>
+							<div class="produkty-oferty-nazwa col-12 mt-3">
+								$row[1]
+							</div>
+							<div class="produkty-ofery-ndostepny mt-4">
+								NIEDOSTĘPNY
+							</div></a>
+						</div>
+						_END;}
+
+						else
+						{
+						echo <<<_END
+						<div class="produkty-oferta col-12 col-lg-4"><a href="" class="produkty-oferta-a">
+							<div class="produkty-oferty-zdj col-12 mt-4">
+								<img src="$row[5]" alt="$row[4]" class="">
+							</div>
+							<div class="produkty-oferty-nazwa col-12 mt-3">
+								$row[1]
+							</div>
+							<div class="produkty-ofery-cena col-12 mt-4">
+								$row[2] PLN
+							</div></a>
+						</div>
+						_END;}
+					}
+
+					if(isset($_POST['filtr_wyslij']))
+					{
+					$bialko = $_POST['f_bialko'];
+					$kreatyna = $_POST['f_kreatyna'];
+					$pwr = $_POST['f_pwr'];
+					$witaminy = $_POST['f_witaminy'];
+
+
+					$wyswietl = array();
+					
+					if(isset($bialko))
+					{array_push($wyswietl, "$bialko");}
+
+					if(isset($kreatyna))
+					{array_push($wyswietl, "$kreatyna");}
+
+					if(isset($pwr))
+					{array_push($wyswietl, "$pwr");}
+
+					if(isset($witaminy))
+					{array_push($wyswietl, "$witaminy");}
+
+					
+					}
+					
+
+
+					mysqli_close($conn);
+
+					?>
+
                 
+            	</div>
+    		</div>
+        
 
 
-                <div class="clear"></div>
-            </div>
-        </div>
-        <div class="clear"></div>
-
-
-    </div>
+		</div>
 
 
 
@@ -171,13 +265,13 @@ header('Location: sklep.php');
 
 
 
-    <footer>
+	<footer>
 		<div class="footer">
 			<div class="footer-top">
 				<div class="footer-top-info mx-auto row">
 					<div class="col-3 mx-auto"> <i class="icon-phone"></i> Tel +48 123456789</div>
-					<div class="col-3 mx-auto"><i class="icon-mail"></i> Jana Kilińskiego 4, Leszno</div>
-					<div class="col-3 mx-auto"><i class="icon-location"></i> Mail@zset.leszno.pl</div>
+					<div class="col-3 mx-auto"><i class="icon-location"></i> Jana Kilińskiego 4, Leszno</div>
+					<div class="col-3 mx-auto"><i class="icon-mail"></i> <a href="mailto:m.przewozny@zset.leszno.pl" class="mail">Mail@zset.leszno.pl</a></div>
 				</div>
 			</div>
 
@@ -191,10 +285,10 @@ header('Location: sklep.php');
 
 					<div class="footer-info3 col-3 mx-auto"><h2>Przydatne<br>MK-Linki</h2>
 						<ul>
-							<li>O nas</li>
-							<li>Kontakt</li>
-							<li>Praca</li>
-							<li>Współpraca</li>
+							<li><a href="index.php#link-onas" onclick="zamykanie()" class="linki_a">O nas</a></li>
+							<li><a href="index.php#link-formularz" onclick="zamykanie()" class="linki_a">Napisz</a></li>
+							<li><a href="regulamin.php" class="linki_a">Regulamin</a></li>
+							<li><a href="mailto:m.przewozny@zset.leszno.pl" class="mail">E-mail</a></li>
 						</ul> 
 					</div>
 
@@ -241,8 +335,10 @@ header('Location: sklep.php');
 		}
 
 		function otwieranie_sortuj() {
-			document.getElementById("sortuj_type").style.height = "200px";
-			document.getElementById("filtrowanie").style.marginTop = "200px";
+			document.getElementById("sortuj_type").style.height = "240px";
+			document.getElementById("sortuj_type").style.paddingTop = "20px";
+			document.getElementById("sortuj_type").style.paddingBottom = "5px";
+			document.getElementById("filtrowanie").style.marginTop = "340px";
 		}
 
 		//zamykanie okna sortowanie
@@ -250,7 +346,13 @@ header('Location: sklep.php');
 		document.addEventListener("click", function(event){
 			if (event.target.closest(".sortuj")) return
 			document.getElementById("sortuj_type").style.height = "0px";
+			document.getElementById("filtrowanie").style.marginTop = "120px";
+			document.getElementById("sortuj_type").style.paddingTop = "0px";
+			document.getElementById("sortuj_type").style.paddingBottom = "0px";
 		})
+
+		//sortowanie
+
 
 	</script> 
 	<script src="https://skrypt-cookies.pl/id/c6aec89ee9f942b0.js"></script> <!--ciasteczka-->

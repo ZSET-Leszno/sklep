@@ -42,11 +42,11 @@
 								<li style="--clr:#00ade1">
 									<a href="sklep.php" data-text="&nbsp;Sklep">&nbsp;Sklep&nbsp; </a>
 								</li>
-								<li style="--clr:#ff6493">
-									<a href="#link-onas" data-text="&nbsp;o&nbsp;nas">&nbsp;O nas&nbsp; </a>
+								<li style="--clr:#ff6493" >
+									<a href="#link-onas" onclick="zamykanie()" data-text="&nbsp;o&nbsp;nas">&nbsp;O nas&nbsp; </a>
 								</li>
 								<li style="--clr:#ffdd1c">
-									<a href="#link-formularz" data-text="&nbsp;Napisz">&nbsp;Napisz&nbsp;</a>
+									<a href="#link-formularz" onclick="zamykanie()" data-text="&nbsp;Napisz">&nbsp;Napisz&nbsp;</a>
 								</li>
 								<li style="--clr:#00dc82">
 									<a href="regulamin.php" data-text="&nbsp;Regulamin">&nbsp;Regulamin&nbsp; </a>
@@ -102,25 +102,6 @@ if(isset($_POST['wyloguj']))
 
 
 <main>
-	<?php 
-	$pageName = $_GET['action'] ?? null;
-
-	?>
-
-	<div class="php">
-		<?php if($pageName === 'page1'): ?>
-			<h3>strona 1</h3>
-		<?php elseif($pageName === 'page2'): ?>
-			<h3>strona 2</h3>	
-		<?php elseif($pageName === 'page3'): ?>
-			<h3>strona 3</h3>
-		<?php elseif($pageName === 'page4'): ?>
-			<h3>strona 4</h3>
-		<?php elseif($pageName === 'page5'): ?>
-			<h3>strona 5</h3>
-		<?php else: ?>
-
-
 			<?php 
 			$wylosowano = 0;
 			$produkty = [];
@@ -460,8 +441,9 @@ if(isset($_POST['wyloguj']))
 
 
 			<div class="linia"></div>
-			<div class="blok4">
 			<h1 id="link-formularz"></h1>
+			<div class="blok4">
+			
 				<h1>Masz Jakieś Pytanie?</h1>
 				<form class="card-form" action="order.php" method="post" enctype="multipart/form-data">
                 	<div class="input">
@@ -483,7 +465,6 @@ if(isset($_POST['wyloguj']))
 			</div>
 
 			<div class="clear"></div>
-		<?php endif; ?>
 
 	</div>
 
@@ -528,10 +509,10 @@ if(isset($_POST['wyloguj']))
 
 					<div class="footer-info3 col-3 mx-auto"><h2>Przydatne<br>MK-Linki</h2>
 						<ul>
-							<li>O nas</li>
-							<li>Napisz</li>
-							<li><a href="regulamin.php" class="regulamin_a">Regulamin</a></li>
-							<li>E-mail</li>
+							<li><a href="#link-onas" onclick="zamykanie()" class="linki_a">O nas</a></li>
+							<li><a href="#link-formularz" onclick="zamykanie()" class="linki_a">Napisz</a></li>
+							<li><a href="regulamin.php" class="linki_a">Regulamin</a></li>
+							<li><a href="mailto:m.przewozny@zset.leszno.pl" class="mail">E-mail</a></li>
 						</ul> 
 					</div>
 
