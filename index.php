@@ -426,6 +426,9 @@ if(isset($_POST['wyloguj']))
 			<?php mysqli_close($conn);?>
 			<h1 id="link-onas"></h1>
 			<div class="blok3">
+				<div class="bialko">
+						<img src="images/bialko.png">
+				</div>
 				<div class="blok3-lewo">
 					<h1>O NAS</h1>
 					<p>
@@ -434,8 +437,9 @@ if(isset($_POST['wyloguj']))
 				</div>
 
 				<div class="blok3-prawo">
-					<img src="images/onas.png">
+					<img src="images/tloonas.png">
 				</div>
+				
 				<div class="clear"></div>
 			</div>
 
