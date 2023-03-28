@@ -113,8 +113,12 @@ else{$sortowanie_nazwa="Nazwa, A-Z";}
 					<a href="sklep.php?navailable=true" class="sortuj_element col-12 ml-3">Niedostępne</a>
 				</div>
 
-				<div class="przycisk">
-					<div><img src="images/strzalka.png"</div>
+				<div class="strzalka d-inline">
+					<img src="images/strzalka.png">
+				</div>
+
+				<div class="strzalka2 d-none">
+					<img src="images/strzalka.png">
 				</div>
 					
 				<div class="filtrowanie" id="filtrowanie" name="filtrowanie">Filtrowanie
@@ -340,7 +344,12 @@ else{$sortowanie_nazwa="Nazwa, A-Z";}
 			document.getElementById("sortuj_type").style.height = "240px";
 			document.getElementById("sortuj_type").style.paddingTop = "20px";
 			document.getElementById("sortuj_type").style.paddingBottom = "5px";
-			document.getElementById("filtrowanie").style.marginTop = "340px";
+			document.getElementById("filtrowanie").style.marginTop = "400px";
+			$('.strzalka').addClass('d-none'); 
+			$('.strzalka').removeClass('d-inline');
+
+			$('.strzalka2').addClass('d-inline'); 
+			$('.strzalka2').removeClass('d-none');
 		}
 
 		//zamykanie okna sortowanie
@@ -348,9 +357,14 @@ else{$sortowanie_nazwa="Nazwa, A-Z";}
 		document.addEventListener("click", function(event){
 			if (event.target.closest(".sortuj")) return
 			document.getElementById("sortuj_type").style.height = "0px";
-			document.getElementById("filtrowanie").style.marginTop = "120px";
+			document.getElementById("filtrowanie").style.marginTop = "140px";
 			document.getElementById("sortuj_type").style.paddingTop = "0px";
 			document.getElementById("sortuj_type").style.paddingBottom = "0px";
+			$('.strzalka').addClass('d-inline'); 
+			$('.strzalka').removeClass('d-none');
+
+			$('.strzalka2').addClass('d-none'); 
+			$('.strzalka2').removeClass('d-inline');
 		})
 
 		//sortowanie
