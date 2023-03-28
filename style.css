@@ -601,24 +601,6 @@ nav
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*footer początek*/
 
 footer
@@ -905,10 +887,11 @@ footer
     overflow: hidden;
     transition: 0.5s;
     height: 0;
-    border-radius: 20px;
+    border-radius: 5px;
     box-shadow: 0px 0px 24px -11px rgba(66, 68, 90, 1);
-    padding-top: 0px;
-    padding-bottom: 0px;
+    border: 2px solid #0c0e0c;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 .sortuj_type a
@@ -945,5 +928,11 @@ footer
     font-weight: bold;
     font-size: 20px;
     transition: 0.5s;
+}
+
+.strzalka
+{
+    width: 30px;
+    height: 30px;
 }
 

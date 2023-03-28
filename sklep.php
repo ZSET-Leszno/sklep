@@ -112,6 +112,10 @@ else{$sortowanie_nazwa="Nazwa, A-Z";}
 					<a href="sklep.php?cena_high=true" class="sortuj_element col-12 ml-3">Cena, malejąco</a>
 					<a href="sklep.php?navailable=true" class="sortuj_element col-12 ml-3">Niedostępne</a>
 				</div>
+
+				<div class="przycisk">
+					<div><img src="images/strzalka.png"</div>
+				</div>
 					
 				<div class="filtrowanie" id="filtrowanie" name="filtrowanie">Filtrowanie
 
