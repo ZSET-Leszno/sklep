@@ -116,16 +116,16 @@ else{$sortowanie_nazwa="Nazwa, A-Z";}
 				<div class="filtrowanie" id="filtrowanie" name="filtrowanie">Filtrowanie
 
 				<form method="POST" action="">
-					<input type="checkbox" id="f_bialko" name="f_bialko" value="f_bialko">
+					<input type="checkbox" id="f_bialko" name="bialko" value="bialko">
 					<label for="f_bialko"> Odżywka białkowa</label><br>
 
-					<input type="checkbox" id="f_kreatyna" name="f_kreatyna" value="f_kreatyna">
+					<input type="checkbox" id="f_kreatyna" name="kreatyna" value="kreatyna">
 					<label for="f_kreatyna"> Kreatyna</label><br>
 
-					<input type="checkbox" id="f_pwr" name="f_pwr" value="f_pwr">
+					<input type="checkbox" id="f_pwr" name="pwr" value="pwr">
 					<label for="f_pwr"> Przedtreningówka</label><br>
 
-					<input type="checkbox" id="f_witaminy" name="f_witaminy" value="f_witaminy">
+					<input type="checkbox" id="f_witaminy" name="witaminy" value="witaminy">
 					<label for="f_witaminy"> Witaminy i Minerały</label><br>
 
 					<input type="submit" value="Filtruj" name="filtr_wyslij" id="filtr_wyslij">
@@ -147,19 +147,41 @@ else{$sortowanie_nazwa="Nazwa, A-Z";}
 					include "config.php";
 					$conn = mysqli_connect($serwer,$user,$password,$baza) or die ("Odpowiedź: Błąd połączenia z serwerem");
 
-					
+					if(isset($_POST['filtr_wyslij']))
+					{
+						$bialko = $_POST['bialko'];
+						$kreatyna = $_POST['kreatyna'];
+						$pwr = $_POST['pwr'];
+						$witaminy = $_POST['witaminy'];
 
-					if (isset($_GET['nazwa_first'])) {$wynik = mysqli_query($conn, "SELECT * FROM MK_Nutrition_produkty WHERE produkt_ilosc>0 ORDER BY produkt_nazwa ASC");}
+						if(empty($bialko) and empty($kreatyna) and empty($pwr) and empty($witaminy))
+						{
+							$bialko = 'bialko';
+							$kreatyna = 'kreatyna';
+							$pwr = 'pwr';
+							$witaminy = 'witaminy';
+						}
 
-					elseif (isset($_GET['nazwa_last'])) {$wynik = mysqli_query($conn, "SELECT * FROM MK_Nutrition_produkty WHERE produkt_ilosc>0 ORDER BY produkt_nazwa DESC");}
+					}
+					else
+						{
+							$bialko = 'bialko';
+							$kreatyna = 'kreatyna';
+							$pwr = 'pwr';
+							$witaminy = 'witaminy';
+						}
+		
+					if (isset($_GET['nazwa_first'])) {$wynik = mysqli_query($conn, "SELECT * FROM MK_Nutrition_produkty WHERE produkt_ilosc>0 and (produkt_rodzaj = '$bialko' or produkt_rodzaj = '$kreatyna' or produkt_rodzaj = '$pwr' or produkt_rodzaj = '$witaminy')ORDER BY produkt_nazwa ASC");}
 
-					elseif (isset($_GET['cena_low'])) {$wynik = mysqli_query($conn, "SELECT * FROM MK_Nutrition_produkty WHERE produkt_ilosc>0 ORDER BY produkt_cena ASC");}
+					elseif (isset($_GET['nazwa_last'])) {$wynik = mysqli_query($conn, "SELECT * FROM MK_Nutrition_produkty WHERE produkt_ilosc>0 and (produkt_rodzaj = '$bialko' or produkt_rodzaj = '$kreatyna' or produkt_rodzaj = '$pwr' or produkt_rodzaj = '$witaminy') ORDER BY produkt_nazwa DESC");}
 
-					elseif (isset($_GET['cena_high'])) {$wynik = mysqli_query($conn, "SELECT * FROM MK_Nutrition_produkty WHERE produkt_ilosc>0 ORDER BY produkt_cena DESC");}
+					elseif (isset($_GET['cena_low'])) {$wynik = mysqli_query($conn, "SELECT * FROM MK_Nutrition_produkty WHERE produkt_ilosc>0 and (produkt_rodzaj = '$bialko' or produkt_rodzaj = '$kreatyna' or produkt_rodzaj = '$pwr' or produkt_rodzaj = '$witaminy') ORDER BY produkt_cena ASC");}
 
-					elseif (isset($_GET['navailable'])) {$wynik = mysqli_query($conn, "SELECT * FROM MK_Nutrition_produkty WHERE produkt_ilosc<=0");}
+					elseif (isset($_GET['cena_high'])) {$wynik = mysqli_query($conn, "SELECT * FROM MK_Nutrition_produkty WHERE produkt_ilosc>0 and (produkt_rodzaj = '$bialko' or produkt_rodzaj = '$kreatyna' or produkt_rodzaj = '$pwr' or produkt_rodzaj = '$witaminy') ORDER BY produkt_cena DESC");}
 
-					else{$wynik = mysqli_query($conn, "SELECT * FROM MK_Nutrition_produkty WHERE produkt_ilosc>0 ORDER BY produkt_nazwa ASC");}
+					elseif (isset($_GET['navailable'])) {$wynik = mysqli_query($conn, "SELECT * FROM MK_Nutrition_produkty WHERE produkt_ilosc<=0 and (produkt_rodzaj = '$bialko' or produkt_rodzaj = '$kreatyna' or produkt_rodzaj = '$pwr' or produkt_rodzaj = '$witaminy')");}
+
+					else{$wynik = mysqli_query($conn, "SELECT * FROM MK_Nutrition_produkty WHERE produkt_ilosc>0 and (produkt_rodzaj = '$bialko' or produkt_rodzaj = '$kreatyna' or produkt_rodzaj = '$pwr' or produkt_rodzaj = '$witaminy')  ORDER BY produkt_nazwa ASC ");}
 					
 
 
@@ -198,32 +220,8 @@ else{$sortowanie_nazwa="Nazwa, A-Z";}
 						_END;}
 					}
 
-					if(isset($_POST['filtr_wyslij']))
-					{
-					$bialko = $_POST['f_bialko'];
-					$kreatyna = $_POST['f_kreatyna'];
-					$pwr = $_POST['f_pwr'];
-					$witaminy = $_POST['f_witaminy'];
-
-
-					$wyswietl = array();
-					
-					if(isset($bialko))
-					{array_push($wyswietl, "$bialko");}
-
-					if(isset($kreatyna))
-					{array_push($wyswietl, "$kreatyna");}
-
-					if(isset($pwr))
-					{array_push($wyswietl, "$pwr");}
-
-					if(isset($witaminy))
-					{array_push($wyswietl, "$witaminy");}
-
-					
-					}
-					
-
+					print_r($wyswietl);
+					echo $wyswietl[0];
 
 					mysqli_close($conn);
 
