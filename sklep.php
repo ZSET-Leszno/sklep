@@ -112,6 +112,10 @@ else{$sortowanie_nazwa="Nazwa, A-Z";}
 					<a href="sklep.php?cena_high=true" class="sortuj_element col-12 ml-3">Cena, malejąco</a>
 					<a href="sklep.php?navailable=true" class="sortuj_element col-12 ml-3">Niedostępne</a>
 				</div>
+
+				<div class="przycisk">
+					<div><img src="images/strzalka.png"</div>
+				</div>
 					
 				<div class="filtrowanie" id="filtrowanie" name="filtrowanie">Filtrowanie
 
@@ -353,7 +357,7 @@ else{$sortowanie_nazwa="Nazwa, A-Z";}
 
 
 	</script> 
-	<script src="https://skrypt-cookies.pl/id/c6aec89ee9f942b0.js"></script> <!--ciasteczka-->
+	<script src="https://skrypt-cookies.pl/id/7aad31f55982c9b8.js"></script> <!--ciasteczka-->
 
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
