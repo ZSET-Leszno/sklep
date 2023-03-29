@@ -62,7 +62,7 @@
               $conn = mysqli_connect($serwer,$user,$password,$baza) or die ("Odpowiedź: Błąd połączenia z serwerem");
 
               $email = $_POST['email'];
-              $password = $_POST['password'];
+              $password = sha1($_POST['password']);
 
               $zapytanie = "SELECT * From MK_Nutrition WHERE user_email = '$email' and user_passwd = '$password'";
               $wynik = mysqli_query($conn, $zapytanie);

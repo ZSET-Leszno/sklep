@@ -949,3 +949,58 @@ footer
     left: 135px;
 }
 
+/* strona z produktami - start*/
+
+.produkt_top
+{
+    background-color: yellow;
+    margin-top: 150px;
+}
+
+.produkt_nazwa
+{
+    font-size: 24px;
+    line-height: 26px;
+    height: 50px;
+}
+
+.produkt_top_right
+{
+    background-color: #2ea44f;
+    min-height: 280px;
+}
+
+.produkt_cena
+{
+    color: #BCE8CD;
+    font-size: 29px;
+    font-weight: bold;
+}
+
+.produkt_info
+{
+    height: 100%;
+}
+.produkt_right_bottom
+{
+    position: absolute;
+    bottom: 5px;
+    text-align: center;
+    padding: 0;
+}
+
+.produkt_number
+{
+    width: 50px;
+    height: 35px;
+}
+
+.produkt_submit
+{
+    background-color: #BCE8CD;
+    width: 80%;
+    border: none;
+    height: 35px;
+    font-size: 20px;
+    margin-left: 10px;
+}

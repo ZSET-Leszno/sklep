@@ -5,7 +5,7 @@
     $imie = $_POST['imie'];
     $nazwisko = $_POST['nazwisko'];
     $email = $_POST['email'];
-    $password = $_POST['password'];
+    $password = sha1($_POST['password']);
 
     $dodanie = "INSERT INTO `MK_Nutrition`(`user_name`, `user_surname`, `user_email`, `user_passwd`) VALUES ('$imie','$nazwisko','$email','$password')";
 
