@@ -23,11 +23,11 @@
     
 
       <?php if(isset($_GET['zarejestrowano'])): ?>
-        <div class="okno_log">Konto zostało poprawnie dodane, <br>Dziękujemy!</div>
+        <div class="pop-up">Konto zostało poprawnie dodane, <br>Dziękujemy!</div>
       <?php endif; ?>   
 
       <?php if(isset($_GET['login'])){
-        echo"<div class='okno_log'>Zalogowano poprawnie <br>Witamy "; 
+        echo"<div class='pop-up'>Zalogowano poprawnie <br>Witamy "; 
        if(!empty($_SESSION['name']) && isset($_SESSION['name']))
         {
           echo $_SESSION['name'];
@@ -36,14 +36,14 @@
       }?>
 
       <?php if(isset($_GET['blad'])): ?>
-        <div class="okno_log">Bład w logowaniu</div>
+        <div class="pop-up">Bład w logowaniu</div>
       <?php endif; ?>
 
 
 
         <h1>Logowanie</h1>
             <div class="ramka-logowanie">
-                <div class="formularz-logowanie">
+                <div class="frame-login">
                     <form method="POST" action="">
                         <input type="text" id="email" name="email" placeholder="&#xf007;  E-Mail" required>
                         <input type="password" id="password" name="password" placeholder="&#xf023;  Hasło" required>
