@@ -27,7 +27,7 @@
       <?php endif; ?>   
 
       <?php if(isset($_GET['login'])){
-        echo"<div class='pop-up'>Zalogowano poprawnie <br>Witamy "; 
+        echo"<div class='pop-up'z>Zalogowano poprawnie <br>Witamy "; 
        if(!empty($_SESSION['name']) && isset($_SESSION['name']))
         {
           echo $_SESSION['name'];
