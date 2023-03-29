@@ -10,7 +10,7 @@
 
   <link rel="icon" type="image/x-icon" href="/images/favicon.png">
 	<link rel="stylesheet" href="bootstrap.min.css">
-	<link rel="stylesheet" href="logowanie.css">
+	<link rel="stylesheet" href="login.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,300,600' rel='stylesheet' type='text/css'>  
   <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,300,600' rel='stylesheet' type='text/css'> 
@@ -42,8 +42,8 @@
 
 
         <h1>Logowanie</h1>
-            <div class="ramka-logowanie">
-                <div class="frame-login">
+            <div class="frame-login">
+                <div class="form-login">
                     <form method="POST" action="">
                         <input type="text" id="email" name="email" placeholder="&#xf007;  E-Mail" required>
                         <input type="password" id="password" name="password" placeholder="&#xf023;  Hasło" required>
