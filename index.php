@@ -446,26 +446,27 @@ if(isset($_POST['wyloguj']))
 
 			<div class="linia"></div>
 			<h1 id="link-formularz"></h1>
-			<div class="blok4">
-			
-				<h1>Masz Jakieś Pytanie?</h1>
-				<form class="card-form" action="order.php" method="post" enctype="multipart/form-data">
-                	<div class="input">
-                    	<input type="text" id="imie" name="imie" class="input-field" required/>
-                    	<label class="input-label">Imię:</label>
-                	</div>
-                    <div class="input">
-                    	<input type="text" id="email" name="email" class="input-field" required/>
-                    	<label class="input-label">Email:</label>
-                	</div>
-                    <div class="input">
-                    	<input type="text" id="wiadomosc" name="wiadomosc" class="input-field" required/>
-                    	<label class="input-label">Wiadomość:</label>
-                	</div>
-					<div class="formularz-logowanie">
-                		<button type="submit">Wyślij</button>
-					</div>
-            	</form>
+			<div class="blok4-margines-zewnetrzny">
+				<div class="blok4">
+					<h1>Masz Jakieś Pytanie?</h1>
+					<form class="card-form" action="order.php" method="post" enctype="multipart/form-data">
+						<div class="input">
+							<input type="text" id="imie" name="imie" class="input-field" required/>
+							<label class="input-label">Imię:</label>
+						</div>
+						<div class="input">
+							<input type="text" id="email" name="email" class="input-field" required/>
+							<label class="input-label">Email:</label>
+						</div>
+						<div class="input">
+							<input type="text" id="wiadomosc" name="wiadomosc" class="input-field" required/>
+							<label class="input-label">Wiadomość:</label>
+						</div>
+						<div class="formularz-logowanie">
+							<button type="submit">Wyślij</button>
+						</div>
+					</form>
+				</div>
 			</div>
 
 			<div class="clear"></div>
