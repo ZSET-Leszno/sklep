@@ -441,23 +441,37 @@ nav
     }
 }
 
+@media (MAX-width: 440px) 
+{
+    .blok3-prawo, .bialko
+    {
+        margin-top: 150px;
+    }
+}
+
 
                                              /*formualrz początek*/
 
                                              
 .blok4
 {
-    width: 700px;
-    height: 550px;
     padding-top: 65px;
     text-align: center;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 15px;
+    margin-right: 15px;
     border-radius: 15px;
     border: 1px solid #aaaaaa;
     margin-top: 20px;
     margin-bottom: 60px;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.blok4-margines-zewnetrzny
+{
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 700px;
+    height: 550px;
 }
 
 .card-form 
@@ -604,7 +618,7 @@ nav
 
                                                     /*footer */
 
-
+                                                    
 footer
 {
     z-index: 99 !important;
@@ -636,7 +650,6 @@ footer
 
 .footer-top-info
 {
-    width: 80%;
     text-align: center;
 }
 
