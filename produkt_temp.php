@@ -216,7 +216,7 @@ header('Location: sklep.php');
 		<div class="produkt_bottom_opis"><p>Opis</p></div>
 		<br>
 		<p>
-		<strong>KFD Premium WPC 82 - 900 g to powiększona wersja produktu o gramaturze 700 g</strong>
+		<strong>MK Premium WPC 82 - 900 g to powiększona wersja produktu o gramaturze 700 g</strong>
 		(może się jeszcze zdarzyć z nalepką z informacją że to gramatura + 200 g, jeśli opakowanie nosi oznaczenie 700 g). Produkt to wysokiej jakości, instantyzowany i w 100% czysty koncentrat białka serwatkowego użyty jako główny składnik produktu.	
 		</p>
 
