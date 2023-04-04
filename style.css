@@ -1004,3 +1004,50 @@ footer
     font-size: 20px;
     margin-left: 10px;
 }
+
+.proponowane
+{
+    background-color: #1D9BF0;
+    gap: 10px;
+}
+
+.podstrona-proponowane
+{
+    box-shadow: 0px 0px 24px -11px rgba(66, 68, 90, 1);
+	border-radius: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	transition: all 0.2s ease-in-out;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	cursor: pointer;
+    background-color: #fff;
+}
+
+.podstrona-proponowane:hover
+{
+	transform: scale(0.97);
+}
+
+.produkt_bottom
+{
+    padding: 0;
+    background-color: #fd5949;
+    height: 600px;
+}
+
+.produkt_bottom_opis
+{
+    background-color: violet;
+    color: #BCE8CD;
+    font-weight: 600;
+    font-size: 20px;
+    border-bottom: 3px solid;
+    width: 100px;
+    padding-bottom: 10px;
+}
+
+.produkt_bottom p
+{
+    padding-left: 30px;
+}
