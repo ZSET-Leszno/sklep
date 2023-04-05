@@ -2,6 +2,7 @@ body
 {
     margin: 0;
     background-color: #f1f3fb;
+    overflow-x: hidden;
 }
 
 html
@@ -864,12 +865,6 @@ footer
     float: left;
 }
 
-.produkt_nazwa
-{
-    padding-top: 20px;
-    height: 102px;
-}
-
 .produkt_nazwa p
 {
     color: #212121;
@@ -950,6 +945,7 @@ footer
     top: 10px;
     left: 135px;
     margin-top: 200px;
+    transition: 0.5s;
 }
 
 .strzalka2 img
@@ -960,26 +956,32 @@ footer
     position: fixed;
     margin-top: 350px;
     left: 135px;
+    transition: 0.5s;
+}
+
+.strzalka,.strzalka2
+{
+    transition: 0.5s;
 }
 
 /* strona z produktami - start*/
 
 .produkt_top
 {
-    background-color: yellow;
+    background-color: #fff;
     margin-top: 150px;
+    padding-bottom: 20px;
 }
 
 .produkt_nazwa
 {
     font-size: 24px;
     line-height: 26px;
-    height: 50px;
+    padding-top: 30px;
 }
 
 .produkt_top_right
 {
-    background-color: #2ea44f;
     min-height: 280px;
 }
 
@@ -988,6 +990,7 @@ footer
     color: #BCE8CD;
     font-size: 29px;
     font-weight: bold;
+    padding-top: 15px;
 }
 
 .produkt_info
@@ -997,9 +1000,49 @@ footer
 .produkt_right_bottom
 {
     position: absolute;
-    bottom: 5px;
+    bottom: 65px;
     text-align: center;
     padding: 0;
+}
+
+.produkt_dostawa
+{
+    width: 95%;
+    margin-left: -15px;
+    padding: 0;
+    position: absolute;
+    bottom: 10px;
+    height: 40px;
+    font-size: 14px;
+}
+
+.produkt_dostepnosc
+{
+    position: absolute;
+    bottom: 85px;
+    width: 95%;
+}
+
+.produkt_dostepnosc p
+{
+    font-size: 14px;
+    color: #5d5d5d;
+}
+
+.dos1
+{
+    padding: 0;
+}
+.dos2
+{
+    padding: 0;
+    font-weight: bold;
+}
+.dos3
+{
+    padding: 0;
+    text-align: right;
+    font-weight: bold;
 }
 
 .produkt_number
@@ -1020,7 +1063,6 @@ footer
 
 .proponowane
 {
-    background-color: #1D9BF0;
     gap: 10px;
 }
 
@@ -1044,14 +1086,14 @@ footer
 
 .produkt_bottom
 {
-    padding: 0;
-    background-color: #fd5949;
-    height: 600px;
+    padding: 10px;
+    background-color: #fff;
+    margin-bottom: 100px;
+    padding-bottom: 30px;
 }
 
 .produkt_bottom_opis
 {
-    background-color: violet;
     color: #BCE8CD;
     font-weight: 600;
     font-size: 20px;

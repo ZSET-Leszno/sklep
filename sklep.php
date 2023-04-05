@@ -198,7 +198,7 @@ else{$sortowanie_nazwa="Nazwa, A-Z";}
 						if(isset($_GET['navailable']))
 						{
 						echo <<<_END
-						<div class="produkty-oferta col-12 col-lg-4"><a href="" class="produkty-oferta-a">
+						<div class="produkty-oferta col-12 col-lg-4"><a href="sklep.php?id=$row[0]" class="produkty-oferta-a">
 							<div class="produkty-oferty-zdj col-12 mt-4">
 								<img src="$row[5]" alt="$row[4]" class="">
 							</div>
@@ -214,7 +214,7 @@ else{$sortowanie_nazwa="Nazwa, A-Z";}
 						else
 						{
 						echo <<<_END
-						<div class="produkty-oferta col-12 col-lg-4"><a href="" class="produkty-oferta-a">
+						<div class="produkty-oferta col-12 col-lg-4"><a href="sklep.php?id=$row[0]" class="produkty-oferta-a">
 							<div class="produkty-oferty-zdj col-12 mt-4">
 								<img src="$row[5]" alt="$row[4]" class="">
 							</div>
@@ -250,7 +250,7 @@ else{$sortowanie_nazwa="Nazwa, A-Z";}
 
 
 
-
+<!--$_GET["id"]-->
 
 
 

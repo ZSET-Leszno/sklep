@@ -176,11 +176,43 @@ header('Location: sklep.php');
 	<div class="produkt_top row col-12 col-lg-10 col-xl-8 mx-auto">
 		<div class="produkt_zdj col-sm-12 col-md-6"><img src="https://sklep.kfd.pl/12054-medium_default/trec-whey-100-900g.jpg" alt="bialko"></div>
 
-		<div class="produkt_top_right col-sm-12 col-md-6 mx-auto">
-			<div class="produkt_info mx-auto row col-12">
+		<div class="produkt_top_right col-sm-12 col-md-6">
+			<div class="produkt_info ml-2 col-12">
 				<div class="produkt_nazwa col-12">KFD Premium WPC 82 - 700 g - Białko (WPC 80)</div>
 				<div class="produkt_cena col-12">65.99 PLN</div>
-				<div class="produkt_dostawa col-12">dostawa</div>
+				<div class="produkt_dostawa">Przewidywana data dostawy
+					<?php 
+						$data = date("d-m-Y");
+						echo date( "d-m-Y", strtotime( "$data +5 day" ) );
+					?>
+				</div>
+				<div class="produkt_dostepnosc row">
+
+				<p class="dos1 col-2">Ilość</p>
+<?php
+include "config.php";
+$conn = mysqli_connect($serwer,$user,$password,$baza) or die ("Odpowiedź: Błąd połączenia z serwerem");
+
+$wynik = mysqli_query($conn, "SELECT produkt_ilosc FROM MK_Nutrition_produkty Where produkt_id='1' ");
+
+while($row = mysqli_fetch_row($wynik))
+			{
+				if($row[0]>0)
+				{
+					$dostepnosc="Dostępny";
+				}
+				else
+				{
+					$dostepnosc="Nie dostepny";
+				}
+				echo <<<_END
+				<p class="dos2 col-6">W magazynie $row[0]</p>
+
+				<p class="dos3 col-3 col-md-4">$dostepnosc</p>
+				_END;
+			}
+?>
+				</div>
 				<form action="" class="produkt_right_bottom row col-12">
 					<input type="number" value="1" min="1" class="produkt_number">
 					<input type="submit" value="Dodaj do koszyka" class="produkt_submit">
