@@ -508,11 +508,11 @@ if(isset($_POST['wyloguj']))
 
 
 				<div class="footer-info row">
-					<div class="footer-info1 col-3 mx-auto"><h2>Fabryka <br>MK-Nutrition</h2>MK-Nutrition Sp. z o. o. to jeden z największych producentów i sprzedawców suplementów diety, odżywek i produktów spożywczych w Polsce. Nasze produkty to sprawdzone składy i najwyższa jakość – stosujemy tylko przebadane składniki o udokumentowanej skuteczności.  </div>
+					<div class="footer-info1 col-lg-3 col-12 mx-auto"><h2>Fabryka <br>MK-Nutrition</h2>MK-Nutrition Sp. z o. o. to jeden z największych producentów i sprzedawców suplementów diety, odżywek i produktów spożywczych w Polsce. Nasze produkty to sprawdzone składy i najwyższa jakość – stosujemy tylko przebadane składniki o udokumentowanej skuteczności.  </div>
 
-					<div class="footer-info2 col-3 mx-auto"><h2>Praca w <br>MK-Nutrition</h2>MK-Nutrition Sp. z o. o. to jeden z największych producentów i sprzedawców suplementów diety, odżywek i produktów spożywczych w Polsce. Nasze produkty to sprawdzone składy i najwyższa jakość – stosujemy tylko przebadane składniki o udokumentowanej skuteczności.  </div>
+					<div class="footer-info1 col-lg-3 col-12 mx-auto"><h2>Praca w <br>MK-Nutrition</h2>MK-Nutrition Sp. z o. o. to jeden z największych producentów i sprzedawców suplementów diety, odżywek i produktów spożywczych w Polsce. Nasze produkty to sprawdzone składy i najwyższa jakość – stosujemy tylko przebadane składniki o udokumentowanej skuteczności.  </div>
 
-					<div class="footer-info3 col-3 mx-auto"><h2>Przydatne<br>MK-Linki</h2>
+					<div class="footer-info1 col-lg-3 col-12 mx-auto"><h2>Przydatne<br>MK-Linki</h2>
 						<ul>
 							<li><a href="#link-onas" onclick="zamykanie()" class="linki_a">O nas</a></li>
 							<li><a href="#link-formularz" onclick="zamykanie()" class="linki_a">Napisz</a></li>
