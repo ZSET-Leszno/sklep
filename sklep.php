@@ -265,13 +265,13 @@ else{$sortowanie_nazwa="Nazwa, A-Z";}
 
 
 
-	<footer>
+		<footer>
 		<div class="footer">
 			<div class="footer-top">
 				<div class="footer-top-info mx-auto row">
-					<div class="col-3 mx-auto"> <i class="icon-phone"></i> Tel +48 123456789</div>
-					<div class="col-3 mx-auto"><i class="icon-location"></i> Jana Kilińskiego 4, Leszno</div>
-					<div class="col-3 mx-auto"><i class="icon-mail"></i> <a href="mailto:m.przewozny@zset.leszno.pl" class="mail">Mail@zset.leszno.pl</a></div>
+					<div class="col-lg-3 col-12 p-0 mx-auto"> <i class="icon-phone"></i> Tel +48 123456789</div>
+					<div class="col-lg-3 col-12 my-4 my-lg-0 p-0 mx-auto"><i class="icon-location"></i> Jana Kilińskiego 4, Leszno</div>
+					<div class="col-lg-3 col-12 p-0 mx-auto"><i class="icon-mail"></i> <a href="mailto:m.przewozny@zset.leszno.pl" class="mail">Mail@zset.leszno.pl</a></div>
 				</div>
 			</div>
 
@@ -279,14 +279,14 @@ else{$sortowanie_nazwa="Nazwa, A-Z";}
 
 
 				<div class="footer-info row">
-					<div class="footer-info1 col-3 mx-auto"><h2>Fabryka <br>MK-Nutrition</h2>MK-Nutrition Sp. z o. o. to jeden z największych producentów i sprzedawców suplementów diety, odżywek i produktów spożywczych w Polsce. Nasze produkty to sprawdzone składy i najwyższa jakość – stosujemy tylko przebadane składniki o udokumentowanej skuteczności.  </div>
+					<div class="footer-info1 col-lg-3 col-12 mx-auto"><h2>Fabryka <br>MK-Nutrition</h2>MK-Nutrition Sp. z o. o. to jeden z największych producentów i sprzedawców suplementów diety, odżywek i produktów spożywczych w Polsce. Nasze produkty to sprawdzone składy i najwyższa jakość – stosujemy tylko przebadane składniki o udokumentowanej skuteczności.  </div>
 
-					<div class="footer-info2 col-3 mx-auto"><h2>Praca w <br>MK-Nutrition</h2>MK-Nutrition Sp. z o. o. to jeden z największych producentów i sprzedawców suplementów diety, odżywek i produktów spożywczych w Polsce. Nasze produkty to sprawdzone składy i najwyższa jakość – stosujemy tylko przebadane składniki o udokumentowanej skuteczności.  </div>
+					<div class="footer-info1 col-lg-3 col-12 mx-auto"><h2>Praca w <br>MK-Nutrition</h2>MK-Nutrition Sp. z o. o. to jeden z największych producentów i sprzedawców suplementów diety, odżywek i produktów spożywczych w Polsce. Nasze produkty to sprawdzone składy i najwyższa jakość – stosujemy tylko przebadane składniki o udokumentowanej skuteczności.  </div>
 
-					<div class="footer-info3 col-3 mx-auto"><h2>Przydatne<br>MK-Linki</h2>
+					<div class="footer-info1 col-lg-3 col-12 mx-auto"><h2>Przydatne<br>MK-Linki</h2>
 						<ul>
-							<li><a href="index.php#link-onas" onclick="zamykanie()" class="linki_a">O nas</a></li>
-							<li><a href="index.php#link-formularz" onclick="zamykanie()" class="linki_a">Napisz</a></li>
+							<li><a href="#link-onas" onclick="zamykanie()" class="linki_a">O nas</a></li>
+							<li><a href="#link-formularz" onclick="zamykanie()" class="linki_a">Napisz</a></li>
 							<li><a href="regulamin.php" class="linki_a">Regulamin</a></li>
 							<li><a href="mailto:m.przewozny@zset.leszno.pl" class="mail">E-mail</a></li>
 						</ul> 
