@@ -64,7 +64,7 @@
 
 					<div class="d-inline-block logo-div">
 						<a href="#"><img src="images/logo.png" alt="Logo" class="logo col-lg-7 col-md-6 col-4 d-inline mt-lg-0 mt-md-1 mt-3"></a>
-						<a href="#"><img src="images/logo2.png" alt="Logo" class="logo2 col-lg-7 col-md-6 col-4 d-none mt-lg-0 mt-md-1 mt-3"></a>
+						<a href="#"><img src="images/logo2.png" alt="Logo" class="logo2 col-lg-7 col-md-7 col-7 mt-lg-7 mt-md-0 mt-0 d-inline"></a>
 					</div>
 						
 <?php 
