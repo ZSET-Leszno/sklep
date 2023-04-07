@@ -33,7 +33,7 @@
                 <?php endif; ?>
             </div>
 
-            <a href="#" class="nakladka-zamykanie" onclick="zamykanie()">&times;</a>
+            <p class="nakladka-zamykanie" onclick="zamykanie()">&times;</p>
             <div class="menu">
                 <nav>
                 <ul>

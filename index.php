@@ -35,7 +35,7 @@
 							<?php endif; ?>
 						</div>
 
-						<a href="#" class="nakladka-zamykanie" onclick="zamykanie()">&times;</a>
+						<p class="nakladka-zamykanie" onclick="zamykanie()">&times;</p>
 						<div class="menu">
 							<nav>
 							<ul>
@@ -181,7 +181,7 @@ if(isset($_POST['wyloguj']))
 
 			<div class="blok1">
 				<div class="produkty-oferty row">
-					<p class="col-12 text-center text-md-left Proponowane">Proponowane produkty</p>
+					<p class="col-12 text-center text-lg-left Proponowane">Proponowane produkty</p>
 
 
 			
@@ -192,8 +192,8 @@ if(isset($_POST['wyloguj']))
 						<div class="produkty-oferty-nazwa col-12 mt-3">
 							<?php echo "$nazwa1"; ?>
 						</div>
-						<div class="produkty-ofery-cena col-12 mt-4">
-							<?php echo "$cena1"; ?>
+						<div class="produkty-oferty-cena col-12 mt-4">
+							<?php echo "$cena1 PLN"; ?>
 						</div></a>
 					</div>
 
@@ -205,8 +205,8 @@ if(isset($_POST['wyloguj']))
 						<div class="produkty-oferty-nazwa col-12 mt-3">
 							<?php echo "$nazwa2"; ?>
 						</div>
-						<div class="produkty-ofery-cena col-12 mt-4">
-							<?php echo "$cena2"; ?>
+						<div class="produkty-oferty-cena col-12 mt-4">
+							<?php echo "$cena2 PLN"; ?>
 						</div></a>
 					</div>
 
@@ -217,8 +217,8 @@ if(isset($_POST['wyloguj']))
 						<div class="produkty-oferty-nazwa col-12 mt-3">
 							<?php echo "$nazwa3"; ?>
 						</div>
-						<div class="produkty-ofery-cena col-12 mt-4">
-							<?php echo "$cena3"; ?>
+						<div class="produkty-oferty-cena col-12 mt-4">
+							<?php echo "$cena3 PLN"; ?>
 						</div></a>
 					</div>
 
@@ -229,8 +229,8 @@ if(isset($_POST['wyloguj']))
 						<div class="produkty-oferty-nazwa col-12 mt-3">
 							<?php echo "$nazwa4"; ?>
 						</div>
-						<div class="produkty-ofery-cena col-12 mt-4">
-							<?php echo "$cena4"; ?>
+						<div class="produkty-oferty-cena col-12 mt-4">
+							<?php echo "$cena4 PLN"; ?>
 						</div></a>
 					</div>
 
@@ -241,8 +241,8 @@ if(isset($_POST['wyloguj']))
 						<div class="produkty-oferty-nazwa col-12 mt-3">
 							<?php echo "$nazwa5"; ?>
 						</div>
-						<div class="produkty-ofery-cena col-12 mt-4">
-							<?php echo "$cena5"; ?>
+						<div class="produkty-oferty-cena col-12 mt-4">
+							<?php echo "$cena5 PLN"; ?>
 						</div></a>
 					</div>
 
@@ -356,7 +356,7 @@ if(isset($_POST['wyloguj']))
 
 			<div class="blok2">
 			<div class="produkty-oferty row">
-					<p class="col-12 text-center text-md-left Proponowane">Proponowana kategoria: <?php echo "$rodzaj_nazwa"; ?></p>
+					<p class="col-12 text-center text-lg-left Proponowane">Proponowana kategoria: <?php echo "$rodzaj_nazwa"; ?></p>
 
 
 			
@@ -367,8 +367,8 @@ if(isset($_POST['wyloguj']))
 						<div class="produkty-oferty-nazwa col-12 mt-3">
 							<?php echo "$nazwa6"; ?>
 						</div>
-						<div class="produkty-ofery-cena col-12 mt-4">
-							<?php echo "$cena6"; ?>
+						<div class="produkty-oferty-cena col-12 mt-4">
+							<?php echo "$cena6 PLN"; ?>
 						</div></a>
 					</div>
 
@@ -380,8 +380,8 @@ if(isset($_POST['wyloguj']))
 						<div class="produkty-oferty-nazwa col-12 mt-3">
 							<?php echo "$nazwa7"; ?>
 						</div>
-						<div class="produkty-ofery-cena col-12 mt-4">
-							<?php echo "$cena7"; ?>
+						<div class="produkty-oferty-cena col-12 mt-4">
+							<?php echo "$cena7 PLN"; ?>
 						</div></a>
 					</div>
 
@@ -392,8 +392,8 @@ if(isset($_POST['wyloguj']))
 						<div class="produkty-oferty-nazwa col-12 mt-3">
 							<?php echo "$nazwa8"; ?>
 						</div>
-						<div class="produkty-ofery-cena col-12 mt-4">
-							<?php echo "$cena8"; ?>
+						<div class="produkty-oferty-cena col-12 mt-4">
+							<?php echo "$cena8 PLN"; ?>
 						</div></a>
 					</div>
 
@@ -404,8 +404,8 @@ if(isset($_POST['wyloguj']))
 						<div class="produkty-oferty-nazwa col-12 mt-3">
 							<?php echo "$nazwa9"; ?>
 						</div>
-						<div class="produkty-ofery-cena col-12 mt-4">
-							<?php echo "$cena9"; ?>
+						<div class="produkty-oferty-cena col-12 mt-4">
+							<?php echo "$cena9 PLN"; ?>
 						</div></a>
 					</div>
 
@@ -416,8 +416,8 @@ if(isset($_POST['wyloguj']))
 						<div class="produkty-oferty-nazwa col-12 mt-3">
 							<?php echo "$nazwa10"; ?>
 						</div>
-						<div class="produkty-ofery-cena col-12 mt-4">
-							<?php echo "$cena10"; ?>
+						<div class="produkty-oferty-cena col-12 mt-4">
+							<?php echo "$cena10 PLN"; ?>
 						</div></a>
 					</div>
 

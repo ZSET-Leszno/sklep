@@ -32,7 +32,7 @@
                 <?php endif; ?>
             </div>
 
-            <a href="#" class="nakladka-zamykanie" onclick="zamykanie()">&times;</a>
+            <p class="nakladka-zamykanie" onclick="zamykanie()">&times;</p>
             <div class="menu">
                 <nav>
 				<ul>
@@ -198,14 +198,14 @@ else{$sortowanie_nazwa="Nazwa, A-Z";}
 						if(isset($_GET['navailable']))
 						{
 						echo <<<_END
-						<div class="produkty-oferta col-12 col-lg-4"><a href="sklep.php?id=$row[0]" class="produkty-oferta-a">
+						<div class="produkty-oferta col-12 col-lg-4"><a href="produkt.php?id=$row[0]" class="produkty-oferta-a">
 							<div class="produkty-oferty-zdj col-12 mt-4">
 								<img src="$row[5]" alt="$row[4]" class="">
 							</div>
 							<div class="produkty-oferty-nazwa col-12 mt-3">
 								$row[1]
 							</div>
-							<div class="produkty-ofery-ndostepny mt-4">
+							<div class="produkty-oferty-ndostepny mt-4">
 								NIEDOSTĘPNY
 							</div></a>
 						</div>
@@ -214,14 +214,14 @@ else{$sortowanie_nazwa="Nazwa, A-Z";}
 						else
 						{
 						echo <<<_END
-						<div class="produkty-oferta col-12 col-lg-4"><a href="sklep.php?id=$row[0]" class="produkty-oferta-a">
+						<div class="produkty-oferta col-12 col-lg-4"><a href="produkt.php?id=$row[0]" class="produkty-oferta-a">
 							<div class="produkty-oferty-zdj col-12 mt-4">
 								<img src="$row[5]" alt="$row[4]" class="">
 							</div>
 							<div class="produkty-oferty-nazwa col-12 mt-3">
 								$row[1]
 							</div>
-							<div class="produkty-ofery-cena col-12 mt-4">
+							<div class="produkty-oferty-cena col-12 mt-4">
 								$row[2] PLN
 							</div></a>
 						</div>
@@ -245,12 +245,6 @@ else{$sortowanie_nazwa="Nazwa, A-Z";}
 
 
 
-
-
-
-
-
-<!--$_GET["id"]-->
 
 
 
