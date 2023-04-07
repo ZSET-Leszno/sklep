@@ -57,12 +57,11 @@ nav
 
 .menu ul li a{
     position: relative;
-    font-size: 3em;
+    font-size: 2.5em;
     text-decoration: none;
     Line-height: 1em; 
     letter-spacing: 2px;
     text-transform: uppercase;
-    color: transparent;
     -webkit-text-stroke: 1px rgba(255, 255, 255, 0.5);
 }
 
@@ -87,7 +86,6 @@ nav
 
 .header{
     width: 100%;
-    height: 751px;
 }
 
 .tlo
@@ -158,6 +156,8 @@ nav
     font-size: 18px;
     transition: transform 1s;
     margin-right: 20px;
+    position: relative;
+    z-index: 10;
 }
 
 .logowanie2
@@ -247,6 +247,7 @@ nav
     top: 8px;
     position: relative;
     left: 0px;
+    z-index: 10;
 }
 
 .sticky
@@ -263,17 +264,11 @@ nav
 
 .navb
 {
-    background-color: none;
 	transition: all 0.3s ease-in-out;
     height: 70px;
 
 }
 
-
-.blok1
-{
-    margin-top: 100px;
-}
 
 .Proponowane
 {

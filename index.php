@@ -22,9 +22,8 @@
 </head>
 <body>
 
-<header>
+	<header>
 		<div class="header">
-			<div class="tlo">
 				<div class="navb">
 					<div id="przelacznik" class="menu-nakladka">
 						<div class="d-inline d-md-none">
@@ -60,21 +59,13 @@
 
 
 						</div>
-					</div>
+				</div>
 
 					<div class="d-inline-block logo-div">
 						<a href="#"><img src="images/logo.png" alt="Logo" class="logo col-lg-7 col-md-6 col-4 d-inline mt-lg-0 mt-md-1 mt-3"></a>
 						<a href="#"><img src="images/logo2.png" alt="Logo" class="logo2 col-lg-7 col-md-7 col-7 mt-lg-7 mt-md-0 mt-0 d-inline"></a>
 					</div>
 						
-<?php 
-if(isset($_POST['wyloguj']))
-{
-	session_destroy();
-	session_unset();
-	header('Location: index.php'); 
-}
-?>
 							<div class="float-right przycisk-div">
 								<span onclick="otwieranie()" class="przycisk"><img src="images/toogle-icon1.png" class="nakladka-otwieranie"></span>
 							</div>
@@ -92,11 +83,19 @@ if(isset($_POST['wyloguj']))
 							<?php endif; ?>
 
 					
-				</div>
-		 	</div>
 		</div>
+	</div>
+	<img src="images/tlo.jpg" style="width:100%; height: auto; position: relative; top: -80px" alt="Skup Samochodów, zadzwoń 723 652 032.">
 
-</header>
+<?php 
+if(isset($_POST['wyloguj']))
+{
+	session_destroy();
+	session_unset();
+	header('Location: index.php'); 
+}
+?>
+	</header>
 
 
 
