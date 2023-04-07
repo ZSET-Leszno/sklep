@@ -90,12 +90,31 @@ nav
 
 .tlo
 {
-    background-size: 100%;
-    background-image: url(images/tlo.jpg);
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 100%;
+    width:100%;
+    height: auto;
+    position: relative;
+    top: -80px
 }
+
+@media (MAX-width: 491px) 
+{
+    .tlo
+    {
+        top: -160px;
+    }
+
+    .produkty-oferty, .blok3, .linia, .blok4
+    {
+        position: relative;
+        top: -80px;
+    }
+
+    .przycisk
+    {
+        position: relative;
+        top: -110px;
+    }
+} 
 
 .logo
 {

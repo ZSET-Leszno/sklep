@@ -85,7 +85,7 @@
 					
 		</div>
 	</div>
-	<img src="images/tlo.jpg" style="width:100%; height: auto; position: relative; top: -80px" alt="Skup Samochodów, zadzwoń 723 652 032.">
+	<img src="images/tlo.jpg" class="tlo" alt="Skup Samochodów, zadzwoń 723 652 032.">
 
 <?php 
 if(isset($_POST['wyloguj']))
