@@ -1,3 +1,4 @@
+<?php session_start();?>
 <!DOCTYPE html>
 <html lang="pl">
 <head>
@@ -87,15 +88,131 @@ header('Location: sklep.php');
             
                 </div>
 
+		<?php 
+			include "config.php";
+			$conn = mysqli_connect($serwer,$user,$password,$baza) or die ("Odpowiedź: Błąd połączenia z serwerem");
+			
+			$rodzaj = rand(1,4);
+
+			if($rodzaj == 1)
+			{
+				$od = 2;
+				$do = 8;
+				$rodzaj_nazwa = 'Białko';
+			}
+			elseif($rodzaj == 2)
+			{
+				$od = 9;
+				$do = 13;
+				$rodzaj_nazwa = 'Kreatyna';
+			}
+			elseif($rodzaj == 3)
+			{
+				$od = 14;
+				$do = 18;
+				$rodzaj_nazwa = 'PWR';
+			}
+			elseif($rodzaj == 4)
+			{
+				$od = 19;
+				$do = 34;
+				$rodzaj_nazwa = 'Witaminy';
+			}
+
+			$wylosowano = 0;
+			$produkty2 = [];
+			for ($i=1; $i<=3; $i++)
+			{
+				do
+				{
+					$liczba=rand($od,$do);
+					$losowanie_ok=true;
+					for ($j=1; $j<=$wylosowano; $j++)
+					{
+						//czy liczba nie zostala juz wczesniej wylosowana?
+						if ($liczba==$produkty2[$j]) $losowanie_ok=false;
+					}
+		   
+					if ($losowanie_ok==true)
+					{
+						//mamy unikatowa liczbe, zapiszmy ja do tablicy
+						$wylosowano++;
+						$produkty2[$wylosowano]=$liczba;
+					}
+		   
+				} while($losowanie_ok!=true);
+			}
+
+			$wynik11 = mysqli_query($conn, "SELECT * From MK_Nutrition_produkty where produkt_id='$produkty2[1]'");
+			$wynik12 = mysqli_query($conn, "SELECT * From MK_Nutrition_produkty where produkt_id='$produkty2[2]'");
+			$wynik13 = mysqli_query($conn, "SELECT * From MK_Nutrition_produkty where produkt_id='$produkty2[3]'");
+
+			while($row = mysqli_fetch_row($wynik11))
+			{
+				$nazwa11 = $row[1];
+				$cena11 = $row[2];
+				$rodzaj11 = $row[4];
+				$zdj11 = $row[5];
+			}
+
+			while($row = mysqli_fetch_row($wynik12))
+			{
+				$nazwa12= $row[1];
+				$cena12 = $row[2];
+				$rodzaj12 = $row[4];
+				$zdj12 = $row[5];
+			}
+
+			while($row = mysqli_fetch_row($wynik13))
+			{
+				$nazwa13= $row[1];
+				$cena13= $row[2];
+				$rodzaj13 = $row[4];
+				$zdj13 = $row[5];
+			}
+			mysqli_close($conn);
+			?>
 <main>
 	<div class="produkt_top row col-12 col-lg-10 col-xl-8 mx-auto">
 		<div class="produkt_zdj col-sm-12 col-md-6"><img src="https://sklep.kfd.pl/12054-medium_default/trec-whey-100-900g.jpg" alt="bialko"></div>
 
-		<div class="produkt_top_right col-sm-12 col-md-6 mx-auto">
-			<div class="produkt_info mx-auto row col-12">
+		<div class="produkt_top_right col-sm-12 col-md-6">
+			<div class="produkt_info ml-2 col-12">
 				<div class="produkt_nazwa col-12">KFD Premium WPC 82 - 700 g - Białko (WPC 80)</div>
 				<div class="produkt_cena col-12">65.99 PLN</div>
-				<div class="produkt_dostawa col-12">dostawa</div>
+				<div class="produkt_dostawa">Przewidywana data dostawy
+					<?php 
+						$data = date("d-m-Y");
+						echo date( "d-m-Y", strtotime( "$data +5 day" ) );
+					?>
+				</div>
+				<div class="produkt_dostepnosc row">
+
+				<p class="dos1 col-2">Ilość</p>
+<?php
+include "config.php";
+$conn = mysqli_connect($serwer,$user,$password,$baza) or die ("Odpowiedź: Błąd połączenia z serwerem");
+
+$wynik = mysqli_query($conn, "SELECT produkt_ilosc FROM MK_Nutrition_produkty Where produkt_id='1' ");
+
+while($row = mysqli_fetch_row($wynik))
+			{
+				if($row[0]>0)
+				{
+					$dostepnosc="Dostępny";
+				}
+				else
+				{
+					$dostepnosc="Nie dostepny";
+				}
+				echo <<<_END
+				<p class="dos2 col-6">W magazynie $row[0]</p>
+
+				<p class="dos3 col-3 col-md-4">$dostepnosc</p>
+				_END;
+			}
+?>
+				</div>
 				<form action="" class="produkt_right_bottom row col-12">
 					<input type="number" value="1" min="1" class="produkt_number">
 					<input type="submit" value="Dodaj do koszyka" class="produkt_submit">
@@ -103,7 +220,56 @@ header('Location: sklep.php');
 			</div>
 		</div>
 
-	</div>	
+		<div class="proponowane col-12 col-md-9 mx-auto row">
+
+					<div class="podstrona-proponowane col-3"><a href="" class="produkty-oferta-a">
+						<div class="produkty-oferty-zdj col-12 mt-4">
+							<img src="<?php echo "$zdj11"; ?>" alt="<?php echo "$rodzaj11"; ?>" class="">
+						</div></a>
+					</div>
+
+					<div class="podstrona-proponowane col-3"><a href="" class="produkty-oferta-a">
+						<div class="produkty-oferty-zdj col-12 mt-4">
+							<img src="<?php echo "$zdj12"; ?>" alt="<?php echo "$rodzaj12"; ?>" class="">
+						</div></a>
+					</div>
+
+					<div class="podstrona-proponowane col-3"><a href="" class="produkty-oferta-a">
+						<div class="produkty-oferty-zdj col-12 mt-4">
+							<img src="<?php echo "$zdj13"; ?>" alt="<?php echo "$rodzaj13"; ?>" class="">
+						</div></a>
+					</div>
+
+		</div>
+
+	</div>
+	
+	<div class="produkt_bottom col-12 col-lg-10 col-xl-8 mx-auto">
+		<div class="produkt_bottom_opis"><p>Opis</p></div>
+		<br>
+		<p>
+		<strong>MK Premium WPC 82 - 900 g to powiększona wersja produktu o gramaturze 700 g</strong>
+		(może się jeszcze zdarzyć z nalepką z informacją że to gramatura + 200 g, jeśli opakowanie nosi oznaczenie 700 g). Produkt to wysokiej jakości, instantyzowany i w 100% czysty koncentrat białka serwatkowego użyty jako główny składnik produktu.	
+		</p>
+
+		<p>Produkt wyróżnia się doskonałą kompozycją smakową (w opcji promocyjnej wybrane smaki z naszej bogatej oferty, pozostałe smaki są tutaj (w opcji 700 g)</p>
+		<p>Używany przez nas surowiec jest instantyzowany / aglomeryzowany - to znaczy, że charakteryzuje się doskonałą rozpuszczalnością, a po przygotowaniu nie powstaje uporczywa piana.</p>
+	
+		<br>
+		<p><strong>Atuty:</strong><br>
+		• Produkt firmy MK otrzymywany jest przy użyciu procesu ultrafiltracji, w którym tłuszcze oraz cukry są efektywniej separowane od białek, przez co otrzymany produkt wykazuje wyższą czystość. <br>
+		• Pozbawiony jest również aspartamu i innych uważanych za kontrowersyjne - dodatków jak wypełniacze w tym sztuczne "substancje barwiące". <br>
+		• Wg opinii wielu klientów, zaletą produktu jest brak białek pochodzenia roślinnego - m.in. soi, pszenicy (znanej jako peptyd l-glutaminy), ryżu lub innych - mniej wartościowych - dodatków. <br>
+		• Cechuje się także wysoką zawartością BCAA (aminokwasów rozgałęzionych). <br>
+		• Nasz produkt nie zawiera enzymów trawiennych, które, stosowane głównie w produktach amerykańskich, mogą służyć jako element maskujący niskiej jakości surowiec, zawierający ogromne (jak na preparat dla ludzi) dawki laktozy (cukier mleczny). <br>
+		• Koncentrat serwatki to białko szybko wchłanialne. Dzięki temu może być idealnym uzupełnieniem diety każdego entuzjasty sportu. <br>
+		</p>
+
+		<br>
+		<p><strong>UWAGA!</strong><br> 
+		Warto zwrócić uwagę, że jest to produkt o zawartości ok. 80% białka w suchej masie, więc smaki, pomimo naszych najszczerszych starań, nie będą smakować identycznie jak znane produkty spożywcze zawierające ok. 99% tłuszczu i cukru w składzie. Staramy się robić wszystko, aby produkt wysokobiałkowy był możliwe jak najlepszy w smaku przy zachowaniu najwyższej zawartości białka. W przeciwieństwie do innych firm, które psują jakość produktów, obniżając udział białka nawet o 20-30%, zastępując je np. glicyną lub cukrem, priorytetem dla nas jest wysoka przyswajalność i koncentracja składników aktywnych.
+		</p>
+	</div>
 </main>
 
 
