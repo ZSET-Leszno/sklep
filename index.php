@@ -437,6 +437,7 @@ if(isset($_POST['wyloguj']))
 
 				<div class="blok3-prawo">
 					<img src="images/tloonas.png">
+					<h1 id="link-formularz"></h1>
 				</div>
 				
 				<div class="clear"></div>
@@ -444,7 +445,7 @@ if(isset($_POST['wyloguj']))
 
 
 			<div class="linia"></div>
-			<h1 id="link-formularz"></h1>
+			<h1></h1>
 			<div class="blok4-margines-zewnetrzny">
 				<div class="blok4">
 					<h1>Masz Jakieś Pytanie?</h1>
