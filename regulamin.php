@@ -296,8 +296,8 @@ Regulamin wchodzi w życie z dniem 25.07.2018 r.
 
 					<div class="footer-info1 col-lg-3 col-12 mx-auto"><h2>Przydatne<br>MK-Linki</h2>
 						<ul>
-							<li><a href="#link-onas" onclick="zamykanie()" class="linki_a">O nas</a></li>
-							<li><a href="#link-formularz" onclick="zamykanie()" class="linki_a">Napisz</a></li>
+							<li><a href="index.php#link-onas" onclick="zamykanie()" class="linki_a">O nas</a></li>
+							<li><a href="index.php#link-formularz" onclick="zamykanie()" class="linki_a">Napisz</a></li>
 							<li><a href="regulamin.php" class="linki_a">Regulamin</a></li>
 							<li><a href="mailto:m.przewozny@zset.leszno.pl" class="mail">E-mail</a></li>
 						</ul> 
