@@ -295,10 +295,10 @@ else{$sortowanie_nazwa="Nazwa, A-Z";}
 				</div>
 
 				<div class="sociale">
-					<a href="#" class="icon icon--facebook"><i class="icon-facebook"></i></a>
-					<a href="#" class="icon icon--instagram"><i class="icon-instagram"></i></a>
-					<a href="#" class="icon icon--twitter"><i class="icon-twitter"></i></a>
-					<a href="#" class="icon icon--github-circled"><i class="icon-github-circled"></i></a>
+					<a href="images/dev.jpeg" class="icon icon--facebook"><i class="icon-facebook"></i></a>
+					<a href="images/dev.jpeg" class="icon icon--instagram"><i class="icon-instagram"></i></a>
+					<a href="images/dev.jpeg" class="icon icon--twitter"><i class="icon-twitter"></i></a>
+					<a href="images/dev.jpeg" class="icon icon--github-circled"><i class="icon-github-circled"></i></a>
 				</div>
 
 				<div class="copy">© 2023 All Rights Reserved. MK-Nutrition <br>
