@@ -19,8 +19,18 @@
 
 	<script src="jquery.scrollTo.min.js"></script>
 
+<?php 
+if(isset($_POST['wyloguj']))
+{
+	session_destroy();
+	session_unset();
+	header('Location: index.php'); 
+}
+?>
+
 </head>
 <body>
+
 
 	<header>
 		<div class="header">
@@ -50,9 +60,16 @@
 								<li style="--clr:#00dc82">
 									<a href="regulamin.php" data-text="&nbsp;Regulamin">&nbsp;Regulamin&nbsp; </a>
 								</li>
-								<li style="--clr:#dc00d4">
-									<a href="/?action=page5" data-text="&nbsp;Moje&nbsp;Konto">&nbsp;Moje konto&nbsp;</a>
-								</li>
+								<?php 
+								if($_SESSION['admin'] == '1')
+								{
+									echo <<<_END
+									<li style="--clr:#dc00d4">
+										<a href="/?action=page5" data-text="&nbsp;Panel&nbsp;admina">&nbsp;Panel admina&nbsp;</a>
+									</li>
+									_END;
+								}
+								?>
 							</ul>
 
 							</nav>
@@ -87,20 +104,13 @@
 	</div>
 	<img src="images/tlo.jpg" class="tlo" alt="Skup Samochodów, zadzwoń 723 652 032.">
 
-<?php 
-if(isset($_POST['wyloguj']))
-{
-	session_destroy();
-	session_unset();
-	header('Location: index.php'); 
-}
-?>
 	</header>
 
 
 
 
 <main>
+
 			<?php 
 			$wylosowano = 0;
 			$produkty = [];

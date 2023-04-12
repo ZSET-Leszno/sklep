@@ -76,6 +76,7 @@
                   header('Location: index.php');
                   $_SESSION['name'] = $row['user_name'];
                   $_SESSION['email'] = $row['user_email'];
+                  $_SESSION['admin'] = $row['user_admin'];
                 }
                 else
                 {
