@@ -19,14 +19,6 @@
 
 	<script src="jquery.scrollTo.min.js"></script>
 
-<?php 
-if(isset($_POST['wyloguj']))
-{
-	session_destroy();
-	session_unset();
-	header('Location: index.php'); 
-}
-?>
 
 </head>
 <body>
@@ -38,7 +30,7 @@ if(isset($_POST['wyloguj']))
 					<div id="przelacznik" class="menu-nakladka">
 						<div class="d-inline d-md-none">
 							<?php if(!empty($_SESSION['name']) && isset($_SESSION['name'])): ?>
-								<a href="logowanie.php" class="logowanie2">Wyloguj</a>
+								<a href="wyloguj.php" class="logowanie2">Wyloguj</a>
 							<?php else: ?>
 								<a href="logowanie.php" class="logowanie2">Logowanie</a>
 							<?php endif; ?>
@@ -61,7 +53,7 @@ if(isset($_POST['wyloguj']))
 									<a href="regulamin.php" data-text="&nbsp;Regulamin">&nbsp;Regulamin&nbsp; </a>
 								</li>
 								<?php 
-								if($_SESSION['admin'] == '1')
+								if($_SESSION['admin'] == true)
 								{
 									echo <<<_END
 									<li style="--clr:#dc00d4">
@@ -89,9 +81,7 @@ if(isset($_POST['wyloguj']))
 							
 							<?php if(!empty($_SESSION['name']) && isset($_SESSION['name'])): ?>
 							<div class="float-right d-none d-md-block wyloguj-div">
-								<form method="post">
-									<input type="submit" class="logowanie" name="wyloguj" value="Wyloguj" id="wyloguj"></input>
-								</form>
+									<a href="wyloguj.php" class="logowanie">Wyloguj</a>
 							</div>
 							<?php else: ?>
 							<div class="float-right d-none d-md-block logowanie-div">
