@@ -86,7 +86,12 @@
 							<?php endif; ?>
             
     	</div>
-
+<?php 
+	if($_SESSION['admin'] == false)
+	{
+		header('Location: index.php'); 
+	}
+?>
 
 <main>
 	
@@ -122,15 +127,35 @@
 					<div class="kolumna5 col-2"><p>$row[4]</p></div>
 					<div class="kolumna6 col-2"><p>$row[5]</p></div>
 					<div class="edytuj col-1"><img src="images/edit.png"></div>
-					<div class="usun col-1"><img src="images/delete1.png" class="usun_img"><img src="images/delete2.png" class="usun_hover"></div>
+					<div class="usun col-1"><a href="usun.php?id=$row[0]">
+						<img src="images/delete1.png" class="usun_img">
+						<img src="images/delete2.png" class="usun_hover">
+					</a></div>
 				</div>
 			_END;
-			//echo ' <a href="usuwanie.php?id='.$r['id_osoby'].'">DEL</a> ';
 		}
-
+		$id_count = mysqli_query($conn, "SELECT COUNT(produkt_id) FROM MK_Nutrition_produkty"); 
 		mysqli_close($conn);
 	?>
 	</div>
+	
+		
+			<div class='wiersz row mx-auto col-11'>
+				<form method='POST' action='' class="col-12">
+					<label class="col-1"></label>
+
+					<input type='text' id='nazwa' name='nazwa' placeholder='Nazwa' class="col-3">
+					<input type="number" step="0.01" id='cena' name='cena' placeholder='Cena' class="col-1">
+					<input type='number' id='ilosc' name='ilosc' placeholder='Ilość' class="col-1">
+					<input type='text' id='rodzaj' name='rodzaj' placeholder='Rodzaj' class="col-2">
+					<input type='text' id='zdj' name='zdj' placeholder='Zdjęcie URL' class="col-2">
+
+					<label class="col-1"></label>
+
+		
+				</form>
+			</div>
+
 
 </main>
 
@@ -204,34 +229,11 @@
 		document.getElementById("przelacznik").style.width = "0%";
 		}
 
-		function otwieranie_sortuj() {
-			document.getElementById("sortuj_type").style.height = "240px";
-			document.getElementById("sortuj_type").style.paddingTop = "20px";
-			document.getElementById("sortuj_type").style.paddingBottom = "5px";
-			document.getElementById("filtrowanie").style.marginTop = "400px";
-			$('.strzalka').addClass('d-none'); 
-			$('.strzalka').removeClass('d-inline');
 
-			$('.strzalka2').addClass('d-inline'); 
-			$('.strzalka2').removeClass('d-none');
+		function usuwanie(){
+		document.getElementById("pop_up_usun").style.height = "240px";
+		document.getElementById("pop_up_usun").style.opacity = "1";
 		}
-
-		//zamykanie okna sortowanie
-		const box = document.querySelector(".sortuj")
-		document.addEventListener("click", function(event){
-			if (event.target.closest(".sortuj")) return
-			document.getElementById("sortuj_type").style.height = "0px";
-			document.getElementById("filtrowanie").style.marginTop = "140px";
-			document.getElementById("sortuj_type").style.paddingTop = "0px";
-			document.getElementById("sortuj_type").style.paddingBottom = "0px";
-			$('.strzalka').addClass('d-inline'); 
-			$('.strzalka').removeClass('d-none');
-
-			$('.strzalka2').addClass('d-none'); 
-			$('.strzalka2').removeClass('d-inline');
-		})
-
-		//sortowanie
 
 
 	</script> 

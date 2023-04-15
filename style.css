@@ -1216,13 +1216,7 @@ footer
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    height: 30px;
-    display: inline;
-}
-
-.usun_img:hover
-{
-    display: none;
+    height: 40px;
 }
 
 .usun_hover
@@ -1231,10 +1225,17 @@ footer
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    height: 30px;
+    height: 40px;
     display: none;
 }
-.usun_hover:hover
+
+.usun:hover .usun_hover
 {
     display: inline;
+}
+
+.wiersz input, .wiersz form, .wiersz label
+{
+    padding: 0;
+    margin: 0;
 }
