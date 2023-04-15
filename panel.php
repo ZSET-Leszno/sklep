@@ -85,183 +85,54 @@
 							</div>
 							<?php endif; ?>
             
-    </div>
+    	</div>
 
-		<div class="container_sklep row">
 
-			<div class="lewo_sklep col-3">  
-<?php 
-if (isset($_GET['nazwa_first'])) {$sortowanie_nazwa="Nazwa, A-Z";}
+<main>
+	
+	<div class="wiersz-top-blur row col-11"></div>
+	<div class="wiersz-top row col-11">
+		<div class="kolumna1 col-1"><p>ID</p></div>
+		<div class="kolumna2 col-3"><p>Nazwa</p></div>
+		<div class="kolumna3 col-1"><p>Cena</p></div>
+		<div class="kolumna4 col-1"><p>Ilosc</p></div>
+		<div class="kolumna5 col-2"><p>Rodzaj</p></div>
+		<div class="kolumna61 col-2"><p>Zdjęcie</p></div>
+		<div class="edytuj1 col-1"><p>Edytuj</p></div>
+		<div class="usun1 col-1"><p>Usuń</p></div>
+	</div>
+	<div class="tabela">
+	<?php
 
-elseif (isset($_GET['nazwa_last'])) {$sortowanie_nazwa="Nazwa, Z-A";}
+		include "config.php";
+		$conn = mysqli_connect($serwer,$user,$password,$baza) or die ("Odpowiedź: Błąd połączenia z serwerem");
 
-elseif (isset($_GET['cena_low'])) {$sortowanie_nazwa="Cena, rosnąco";}
+		$wynik = mysqli_query($conn, "SELECT * From MK_Nutrition_produkty");
+		$liczba = mysqli_num_rows($wynik);
 
-elseif (isset($_GET['cena_high'])) {$sortowanie_nazwa="Cena, malejąco";}
-
-elseif (isset($_GET['navailable'])) {$sortowanie_nazwa="Niedostępne";}
-
-else{$sortowanie_nazwa="Nazwa, A-Z";}
-?>
-				<div class="sortuj" id="sortuj" name="sortuj" onclick="otwieranie_sortuj()">Sortuj wg: <?php echo "$sortowanie_nazwa";?></div>
-				<div class="sortuj_type row col-2" id="sortuj_type" name="sortuj_type">
-					<a href="sklep.php?nazwa_first=true" class="sortuj_element col-12 ml-3">Nazwa, A-Z</a>
-					<a href="sklep.php?nazwa_last=true" class="sortuj_element col-12 ml-3">Nazwa, Z-A</a>
-					<a href="sklep.php?cena_low=true" class="sortuj_element col-12 ml-3">Cena, rosnąco</a>
-					<a href="sklep.php?cena_high=true" class="sortuj_element col-12 ml-3">Cena, malejąco</a>
-					<a href="sklep.php?navailable=true" class="sortuj_element col-12 ml-3">Niedostępne</a>
+		while($row = mysqli_fetch_array($wynik))
+		{
+			echo <<<_END
+			
+				<div class="wiersz row mx-auto col-11">
+					<div class="kolumna1 col-1"><p>$row[0]</p></div>
+					<div class="kolumna2 col-3"><p>$row[1]</p></div>
+					<div class="kolumna3 col-1"><p>$row[2]</p></div>
+					<div class="kolumna4 col-1"><p>$row[3]</p></div>
+					<div class="kolumna5 col-2"><p>$row[4]</p></div>
+					<div class="kolumna6 col-2"><p>$row[5]</p></div>
+					<div class="edytuj col-1"><img src="images/edit.png"></div>
+					<div class="usun col-1"><img src="images/delete1.png" class="usun_img"><img src="images/delete2.png" class="usun_hover"></div>
 				</div>
+			_END;
+			//echo ' <a href="usuwanie.php?id='.$r['id_osoby'].'">DEL</a> ';
+		}
 
-				<div class="strzalka d-inline">
-					<img src="images/strzalka.png">
-				</div>
+		mysqli_close($conn);
+	?>
+	</div>
 
-				<div class="strzalka2 d-none">
-					<img src="images/strzalka.png">
-				</div>
-					
-				<div class="filtrowanie" id="filtrowanie" name="filtrowanie">Filtrowanie
-
-				<form method="POST" action="">
-					<input type="checkbox" id="f_bialko" name="bialko" value="bialko">
-					<label for="f_bialko"> Odżywka białkowa</label><br>
-
-					<input type="checkbox" id="f_kreatyna" name="kreatyna" value="kreatyna">
-					<label for="f_kreatyna"> Kreatyna</label><br>
-
-					<input type="checkbox" id="f_pwr" name="pwr" value="pwr">
-					<label for="f_pwr"> Przedtreningówka</label><br>
-
-					<input type="checkbox" id="f_witaminy" name="witaminy" value="witaminy">
-					<label for="f_witaminy"> Witaminy i Minerały</label><br>
-
-					<input type="submit" value="Filtruj" name="filtr_wyslij" id="filtr_wyslij">
-				</form>
-
-
-
-
-
-				</div>
-			</div>
-
-			<div class="prawo_sklep col-9 mx-auto">
-
-
-				<div class="container_produkty row">
-					<?php 
-
-					include "config.php";
-					$conn = mysqli_connect($serwer,$user,$password,$baza) or die ("Odpowiedź: Błąd połączenia z serwerem");
-
-					if(isset($_POST['filtr_wyslij']))
-					{
-						$bialko = $_POST['bialko'];
-						$kreatyna = $_POST['kreatyna'];
-						$pwr = $_POST['pwr'];
-						$witaminy = $_POST['witaminy'];
-
-						if(empty($bialko) and empty($kreatyna) and empty($pwr) and empty($witaminy))
-						{
-							$bialko = 'bialko';
-							$kreatyna = 'kreatyna';
-							$pwr = 'pwr';
-							$witaminy = 'witaminy';
-						}
-
-					}
-					else
-						{
-							$bialko = 'bialko';
-							$kreatyna = 'kreatyna';
-							$pwr = 'pwr';
-							$witaminy = 'witaminy';
-						}
-		
-					if (isset($_GET['nazwa_first'])) {$wynik = mysqli_query($conn, "SELECT * FROM MK_Nutrition_produkty WHERE produkt_ilosc>0 and (produkt_rodzaj = '$bialko' or produkt_rodzaj = '$kreatyna' or produkt_rodzaj = '$pwr' or produkt_rodzaj = '$witaminy')ORDER BY produkt_nazwa ASC");}
-
-					elseif (isset($_GET['nazwa_last'])) {$wynik = mysqli_query($conn, "SELECT * FROM MK_Nutrition_produkty WHERE produkt_ilosc>0 and (produkt_rodzaj = '$bialko' or produkt_rodzaj = '$kreatyna' or produkt_rodzaj = '$pwr' or produkt_rodzaj = '$witaminy') ORDER BY produkt_nazwa DESC");}
-
-					elseif (isset($_GET['cena_low'])) {$wynik = mysqli_query($conn, "SELECT * FROM MK_Nutrition_produkty WHERE produkt_ilosc>0 and (produkt_rodzaj = '$bialko' or produkt_rodzaj = '$kreatyna' or produkt_rodzaj = '$pwr' or produkt_rodzaj = '$witaminy') ORDER BY produkt_cena ASC");}
-
-					elseif (isset($_GET['cena_high'])) {$wynik = mysqli_query($conn, "SELECT * FROM MK_Nutrition_produkty WHERE produkt_ilosc>0 and (produkt_rodzaj = '$bialko' or produkt_rodzaj = '$kreatyna' or produkt_rodzaj = '$pwr' or produkt_rodzaj = '$witaminy') ORDER BY produkt_cena DESC");}
-
-					elseif (isset($_GET['navailable'])) {$wynik = mysqli_query($conn, "SELECT * FROM MK_Nutrition_produkty WHERE produkt_ilosc<=0 and (produkt_rodzaj = '$bialko' or produkt_rodzaj = '$kreatyna' or produkt_rodzaj = '$pwr' or produkt_rodzaj = '$witaminy')");}
-
-					else{$wynik = mysqli_query($conn, "SELECT * FROM MK_Nutrition_produkty WHERE produkt_ilosc>0 and (produkt_rodzaj = '$bialko' or produkt_rodzaj = '$kreatyna' or produkt_rodzaj = '$pwr' or produkt_rodzaj = '$witaminy')  ORDER BY produkt_nazwa ASC ");}
-					
-
-
-					while($row = mysqli_fetch_row($wynik))
-					{
-						if(isset($_GET['navailable']))
-						{
-						echo <<<_END
-						<div class="produkty-oferta col-12 col-lg-4"><a href="produkt.php?id=$row[0]" class="produkty-oferta-a">
-							<div class="produkty-oferty-zdj col-12 mt-4">
-								<img src="$row[5]" alt="$row[4]" class="">
-							</div>
-							<div class="produkty-oferty-nazwa col-12 mt-3">
-								$row[1]
-							</div>
-							<div class="produkty-oferty-ndostepny mt-4">
-								NIEDOSTĘPNY
-							</div></a>
-						</div>
-						_END;}
-
-						else
-						{
-						echo <<<_END
-						<div class="produkty-oferta col-12 col-lg-4"><a href="produkt.php?id=$row[0]" class="produkty-oferta-a">
-							<div class="produkty-oferty-zdj col-12 mt-4">
-								<img src="$row[5]" alt="$row[4]" class="">
-							</div>
-							<div class="produkty-oferty-nazwa col-12 mt-3">
-								$row[1]
-							</div>
-							<div class="produkty-oferty-cena col-12 mt-4">
-								$row[2] PLN
-							</div></a>
-						</div>
-						_END;}
-					}
-
-					print_r($wyswietl);
-					echo $wyswietl[0];
-
-					mysqli_close($conn);
-
-					?>
-
-                
-            	</div>
-    		</div>
-        
-
-
-		</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+</main>
 
 
 		<footer>

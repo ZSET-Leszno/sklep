@@ -27,7 +27,7 @@
         <div id="przelacznik" class="menu-nakladka">
             <div class="d-inline d-md-none">
                 <?php if(!empty($_SESSION['name']) && isset($_SESSION['name'])): ?>
-                    <a href="logowanie.php" class="logowanie2">Wyloguj</a>
+                    <a href="wyloguj.php" class="logowanie2">Wyloguj</a>
                 <?php else: ?>
                     <a href="logowanie.php" class="logowanie2">Logowanie</a>
                 <?php endif; ?>
@@ -49,9 +49,16 @@
 					<li style="--clr:#00dc82">
 						<a href="regulamin.php" data-text="&nbsp;Regulamin">&nbsp;Regulamin&nbsp; </a>
 					</li>
-					<li style="--clr:#dc00d4">
-						<a href="/?action=page5" data-text="&nbsp;Moje&nbsp;Konto">&nbsp;Moje konto&nbsp;</a>
-					</li>
+					<?php 
+					if($_SESSION['admin'] == true)
+					{
+						echo <<<_END
+						<li style="--clr:#dc00d4">
+							<a href="panel.php" data-text="&nbsp;Panel&nbsp;admina">&nbsp;Panel admina&nbsp;</a>
+						</li>
+						_END;
+					}
+					?>
                 </ul>
 
                 </nav>
@@ -64,25 +71,19 @@
             <a href="index.php"><img src="images/logo2.png" alt="Logo" class="logo2 col-lg-7 col-md-6 col-4 d-inline mt-lg-0 mt-md-1 mt-3"></a>
         </div>
             
-<?php 
-if(isset($_POST['wyloguj']))
-{
-session_destroy();
-header('Location: index.php'); 
-}
-?>
                 <div class="float-right przycisk-div">
                     <span onclick="otwieranie()" class="przycisk"><img src="images/toogle-icon1.png" class="nakladka-otwieranie"></span>
                 </div>
-                <div class="float-right d-none d-md-block logowanie-div">
-                <?php if(!empty($_SESSION['name']) && isset($_SESSION['name'])): ?>
-                    <form method="post">
-                        <input type="submit" class="logowanie" name="wyloguj" value="Wyloguj" id="wyloguj"></input>
-                    </form>
-                <?php else: ?>
-                    <a href="logowanie.php" class="logowanie">Logowanie</a>
-                <?php endif; ?>
-                </div>
+
+                	<?php if(!empty($_SESSION['name']) && isset($_SESSION['name'])): ?>
+					<div class="float-right d-none d-md-block wyloguj-div">
+						<a href="wyloguj.php" class="logowanie">Wyloguj</a>
+					</div>
+					<?php else: ?>
+					<div class="float-right d-none d-md-block logowanie-div">
+						<a href="logowanie.php" class="logowanie">Logowanie</a>
+					</div>
+					<?php endif; ?>
             
     </div>
 

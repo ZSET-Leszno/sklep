@@ -25,11 +25,11 @@
     <div class="navb sticky">
         <div id="przelacznik" class="menu-nakladka">
             <div class="d-inline d-md-none">
-                <!--<?php if(!empty($_SESSION['name']) && isset($_SESSION['name'])): ?>
-                    <a href="logowanie.php" class="logowanie2">Wyloguj</a>
-                <?php else: ?>-->
+                <?php if(!empty($_SESSION['name']) && isset($_SESSION['name'])): ?>
+                    <a href="wyloguj.php" class="logowanie2">Wyloguj</a>
+                <?php else: ?>
                     <a href="logowanie.php" class="logowanie2">Logowanie</a>
-               <!-- <?php endif; ?>-->
+               	<?php endif; ?>
             </div>
 
             <p class="nakladka-zamykanie" onclick="zamykanie()">&times;</p>
@@ -48,9 +48,16 @@
 					<li style="--clr:#00dc82">
 						<a href="regulamin.php" data-text="&nbsp;Regulamin">&nbsp;Regulamin&nbsp; </a>
 					</li>
-					<li style="--clr:#dc00d4">
-						<a href="/?action=page5" data-text="&nbsp;Moje&nbsp;Konto">&nbsp;Moje konto&nbsp;</a>
-					</li>
+					<?php 
+					if($_SESSION['admin'] == true)
+					{
+						echo <<<_END
+						<li style="--clr:#dc00d4">
+							<a href="panel.php" data-text="&nbsp;Panel&nbsp;admina">&nbsp;Panel admina&nbsp;</a>
+						</li>
+						_END;
+					}
+					?>
                 </ul>
 
                 </nav>
@@ -62,23 +69,14 @@
         <div class="d-inline-block logo-div">
             <a href="index.php"><img src="images/logo2.png" alt="Logo" class="logo2 col-lg-7 col-md-6 col-4 d-inline mt-lg-0 mt-md-1 mt-3"></a>
         </div>
- <!--         
-<?php 
-if(isset($_POST['wyloguj']))
-{
-session_destroy();
-header('Location: sklep.php'); 
-}
-?>-->  
+ 
                 <div class="float-right przycisk-div">
 								<span onclick="otwieranie()" class="przycisk"><img src="images/toogle-icon1.png" class="nakladka-otwieranie"></span>
 							</div>
 							
 							<?php if(!empty($_SESSION['name']) && isset($_SESSION['name'])): ?>
 							<div class="float-right d-none d-md-block wyloguj-div">
-								<form method="post">
-									<input type="submit" class="logowanie" name="wyloguj" value="Wyloguj" id="wyloguj"></input>
-								</form>
+								<a href="wyloguj.php" class="logowanie">Wyloguj</a>
 							</div>
 							<?php else: ?>
 							<div class="float-right d-none d-md-block logowanie-div">
@@ -93,34 +91,34 @@ header('Location: sklep.php');
 			$conn = mysqli_connect($serwer,$user,$password,$baza) or die ("Odpowiedź: Błąd połączenia z serwerem");
 			
 			$id = $_GET["id"];
-			$wynik10 = mysqli_query($conn, "SELECT * From MK_Nutrition_produkty where produkt_id='$id'");
+			$wynik = mysqli_query($conn, "SELECT * From MK_Nutrition_produkty where produkt_id='$id'");
 
-			while($row = mysqli_fetch_row($wynik10))
+			while($row = mysqli_fetch_row($wynik))
 			{
-				$nazwa10 = $row[1];
-				$cena10 = $row[2];
-				$ilosc10 = $row[3];
-				$rodzaj10 = $row[4];
-				$zdj10 = $row[5];
+				$nazwa = $row[1];
+				$cena = $row[2];
+				$ilosc = $row[3];
+				$rodzaj = $row[4];
+				$zdj = $row[5];
 			}
 
 
-			if($rodzaj10 == 'bialko')
+			if($rodzaj == 'bialko')
 			{
 				$od = 2;
 				$do = 8;
 			}
-			elseif($rodzaj10 == 'kreatyna')
+			elseif($rodzaj == 'kreatyna')
 			{
 				$od = 9;
 				$do = 13;
 			}
-			elseif($rodzaj10 == 'pwr')
+			elseif($rodzaj == 'pwr')
 			{
 				$od = 14;
 				$do = 18;
 			}
-			elseif($rodzaj10 == 'witaminy')
+			elseif($rodzaj == 'witaminy')
 			{
 				$od = 19;
 				$do = 34;
@@ -156,6 +154,7 @@ header('Location: sklep.php');
 
 			while($row = mysqli_fetch_row($wynik11))
 			{
+				$id11 = $row[0];
 				$nazwa11 = $row[1];
 				$cena11 = $row[2];
 				$rodzaj11 = $row[4];
@@ -164,6 +163,7 @@ header('Location: sklep.php');
 
 			while($row = mysqli_fetch_row($wynik12))
 			{
+				$id12 = $row[0];
 				$nazwa12= $row[1];
 				$cena12 = $row[2];
 				$rodzaj12 = $row[4];
@@ -172,6 +172,7 @@ header('Location: sklep.php');
 
 			while($row = mysqli_fetch_row($wynik13))
 			{
+				$id13 = $row[0];
 				$nazwa13= $row[1];
 				$cena13= $row[2];
 				$rodzaj13 = $row[4];
@@ -181,15 +182,15 @@ header('Location: sklep.php');
 			?>
 <main>
 	<div class="produkt_top row col-12 col-lg-10 col-xl-8 mx-auto">
-		<div class="produkt_zdj col-sm-12 col-md-6"><img src="<?php echo $zdj10; ?>" alt="<?php echo $rodzaj10; ?>"></div>
+		<div class="produkt_zdj col-sm-12 col-md-6"><img src="<?php echo $zdj; ?>" alt="<?php echo $rodzaj; ?>"></div>
 
 		<div class="produkt_top_right col-sm-12 col-md-6">
 			<div class="produkt_info ml-2 col-12">
-				<div class="produkt_nazwa col-12"><?php echo $nazwa10; ?></div>
-				<div class="produkt_cena col-12"><?php echo "$cena10 PLN"; ?></div>
+				<div class="produkt_nazwa col-12"><?php echo $nazwa; ?></div>
+				<div class="produkt_cena col-12"><?php echo "$cena PLN"; ?></div>
 				
 					<?php 
-					if($ilosc10>0)
+					if($ilosc>0)
 					{
 						echo '<div class="produkt_dostawa">Przewidywana data dostawy ';
 						$data = date("d-m-Y");
@@ -201,12 +202,12 @@ header('Location: sklep.php');
 				<div class="produkt_dostepnosc row col-12">
 					<?php
 					
-						if($ilosc10>0)
+						if($ilosc>0)
 						{
 							echo <<<_END
 							<p class="dos1 col-1">Ilość</p>
 	
-							<p class="dos2 ml-4 pl-2 pl-sm-0 pl-md-2 pl-xl-0 col-6">W magazynie $ilosc10</p>
+							<p class="dos2 ml-4 pl-2 pl-sm-0 pl-md-2 pl-xl-0 col-6">W magazynie $ilosc</p>
 	
 							<p class="dos3 ml-4 pl-2 pl-sm-0 ml-md-0 col-3 col-md-4">Dostępny</p>
 							_END;
@@ -214,7 +215,7 @@ header('Location: sklep.php');
 						else
 						{
 							echo <<<_END
-							<p class="dos2 col-6">W magazynie $ilosc10</p>
+							<p class="dos2 col-6">W magazynie $ilosc</p>
 							<p class="dos3 col-5">Niedostępny</p>
 							_END;
 						}
@@ -223,7 +224,7 @@ header('Location: sklep.php');
 				</div>
 				<form action="" class="produkt_right_bottom row col-12">
 					<?php
-					if($ilosc10>0)
+					if($ilosc>0)
 					{
 						echo <<<_END
 							<input type="number" value="1" min="1" class="produkt_number">
@@ -244,19 +245,19 @@ header('Location: sklep.php');
 
 		<div class="proponowane col-12 col-md-9 mx-auto row">
 		<p class="col-12 text-center Proponowane_produkt">Podobne produkty</p>
-					<div class="podstrona-proponowane col-3"><a href="" class="produkty-oferta-a">
+					<div class="podstrona-proponowane col-3"><a href="produkt.php?id=<?php echo $id11; ?>" class="produkty-oferta-a">
 						<div class="produkty-oferty-zdj col-12 mt-4">
 							<img src="<?php echo "$zdj11"; ?>" alt="<?php echo "$rodzaj11"; ?>" class="">
 						</div></a>
 					</div>
 
-					<div class="podstrona-proponowane col-3"><a href="" class="produkty-oferta-a">
+					<div class="podstrona-proponowane col-3"><a href="produkt.php?id=<?php echo $id12; ?>" class="produkty-oferta-a">
 						<div class="produkty-oferty-zdj col-12 mt-4">
 							<img src="<?php echo "$zdj12"; ?>" alt="<?php echo "$rodzaj12"; ?>" class="">
 						</div></a>
 					</div>
 
-					<div class="podstrona-proponowane col-3"><a href="" class="produkty-oferta-a">
+					<div class="podstrona-proponowane col-3"><a href="produkt.php?id=<?php echo $id13; ?>" class="produkty-oferta-a">
 						<div class="produkty-oferty-zdj col-12 mt-4">
 							<img src="<?php echo "$zdj13"; ?>" alt="<?php echo "$rodzaj13"; ?>" class="">
 						</div></a>
@@ -306,13 +307,13 @@ header('Location: sklep.php');
 
 
 
-	<footer>
+<footer>
 		<div class="footer">
 			<div class="footer-top">
 				<div class="footer-top-info mx-auto row">
-					<div class="col-3 mx-auto"> <i class="icon-phone"></i> Tel +48 123456789</div>
-					<div class="col-3 mx-auto"><i class="icon-location"></i> Jana Kilińskiego 4, Leszno</div>
-					<div class="col-3 mx-auto"><i class="icon-mail"></i> <a href="mailto:m.przewozny@zset.leszno.pl" class="mail">Mail@zset.leszno.pl</a></div>
+					<div class="col-lg-3 col-12 p-0 mx-auto"> <i class="icon-phone"></i> Tel +48 123456789</div>
+					<div class="col-lg-3 col-12 my-4 my-lg-0 p-0 mx-auto"><i class="icon-location"></i> Jana Kilińskiego 4, Leszno</div>
+					<div class="col-lg-3 col-12 p-0 mx-auto"><i class="icon-mail"></i> <a href="mailto:m.przewozny@zset.leszno.pl" class="mail">Mail@zset.leszno.pl</a></div>
 				</div>
 			</div>
 
@@ -320,11 +321,11 @@ header('Location: sklep.php');
 
 
 				<div class="footer-info row">
-					<div class="footer-info1 col-3 mx-auto"><h2>Fabryka <br>MK-Nutrition</h2>MK-Nutrition Sp. z o. o. to jeden z największych producentów i sprzedawców suplementów diety, odżywek i produktów spożywczych w Polsce. Nasze produkty to sprawdzone składy i najwyższa jakość – stosujemy tylko przebadane składniki o udokumentowanej skuteczności.  </div>
+					<div class="footer-info1 col-lg-3 col-12 mx-auto"><h2>Fabryka <br>MK-Nutrition</h2>MK-Nutrition Sp. z o. o. to jeden z największych producentów i sprzedawców suplementów diety, odżywek i produktów spożywczych w Polsce. Nasze produkty to sprawdzone składy i najwyższa jakość – stosujemy tylko przebadane składniki o udokumentowanej skuteczności.  </div>
 
-					<div class="footer-info2 col-3 mx-auto"><h2>Praca w <br>MK-Nutrition</h2>MK-Nutrition Sp. z o. o. to jeden z największych producentów i sprzedawców suplementów diety, odżywek i produktów spożywczych w Polsce. Nasze produkty to sprawdzone składy i najwyższa jakość – stosujemy tylko przebadane składniki o udokumentowanej skuteczności.  </div>
+					<div class="footer-info1 col-lg-3 col-12 mx-auto"><h2>Praca w <br>MK-Nutrition</h2>MK-Nutrition Sp. z o. o. to jeden z największych producentów i sprzedawców suplementów diety, odżywek i produktów spożywczych w Polsce. Nasze produkty to sprawdzone składy i najwyższa jakość – stosujemy tylko przebadane składniki o udokumentowanej skuteczności.  </div>
 
-					<div class="footer-info3 col-3 mx-auto"><h2>Przydatne<br>MK-Linki</h2>
+					<div class="footer-info1 col-lg-3 col-12 mx-auto"><h2>Przydatne<br>MK-Linki</h2>
 						<ul>
 							<li><a href="index.php#link-onas" onclick="zamykanie()" class="linki_a">O nas</a></li>
 							<li><a href="index.php#link-formularz" onclick="zamykanie()" class="linki_a">Napisz</a></li>
@@ -336,10 +337,10 @@ header('Location: sklep.php');
 				</div>
 
 				<div class="sociale">
-					<a href="#" class="icon icon--facebook"><i class="icon-facebook"></i></a>
-					<a href="#" class="icon icon--instagram"><i class="icon-instagram"></i></a>
-					<a href="#" class="icon icon--twitter"><i class="icon-twitter"></i></a>
-					<a href="#" class="icon icon--github-circled"><i class="icon-github-circled"></i></a>
+					<a href="images/dev.jpeg" class="icon icon--facebook"><i class="icon-facebook"></i></a>
+					<a href="images/dev.jpeg" class="icon icon--instagram"><i class="icon-instagram"></i></a>
+					<a href="images/dev.jpeg" class="icon icon--twitter"><i class="icon-twitter"></i></a>
+					<a href="images/dev.jpeg" class="icon icon--github-circled"><i class="icon-github-circled"></i></a>
 				</div>
 
 				<div class="copy">© 2023 All Rights Reserved. MK-Nutrition <br>

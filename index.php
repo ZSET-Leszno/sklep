@@ -57,7 +57,7 @@
 								{
 									echo <<<_END
 									<li style="--clr:#dc00d4">
-										<a href="/?action=page5" data-text="&nbsp;Panel&nbsp;admina">&nbsp;Panel admina&nbsp;</a>
+										<a href="panel.php" data-text="&nbsp;Panel&nbsp;admina">&nbsp;Panel admina&nbsp;</a>
 									</li>
 									_END;
 								}
@@ -138,6 +138,7 @@
 
 			while($row = mysqli_fetch_row($wynik1))
 			{
+				$id1 = $row[0];
 				$nazwa1 = $row[1];
 				$cena1 = $row[2];
 				$rodzaj1 = $row[4];
@@ -146,6 +147,7 @@
 
 			while($row = mysqli_fetch_row($wynik2))
 			{
+				$id2 = $row[0];
 				$nazwa2= $row[1];
 				$cena2 = $row[2];
 				$rodzaj2 = $row[4];
@@ -154,6 +156,7 @@
 
 			while($row = mysqli_fetch_row($wynik3))
 			{
+				$id3 = $row[0];
 				$nazwa3= $row[1];
 				$cena3 = $row[2];
 				$rodzaj3 = $row[4];
@@ -162,6 +165,7 @@
 
 			while($row = mysqli_fetch_row($wynik4))
 			{
+				$id4 = $row[0];
 				$nazwa4= $row[1];
 				$cena4 = $row[2];
 				$rodzaj4 = $row[4];
@@ -170,6 +174,7 @@
 
 			while($row = mysqli_fetch_row($wynik5))
 			{
+				$id5 = $row[0];
 				$nazwa5= $row[1];
 				$cena5 = $row[2];
 				$rodzaj5 = $row[4];
@@ -184,7 +189,7 @@
 
 
 			
-					<div class="produkty-oferta col-6 col-lg-4 col-xl-2"><a href="" class="produkty-oferta-a">
+					<div class="produkty-oferta col-6 col-lg-4 col-xl-2"><a href="produkt.php?id=<?php echo $id1; ?>" class="produkty-oferta-a">
 						<div class="produkty-oferty-zdj col-12 mt-4">
 							<img src="<?php echo "$zdj1"; ?>" alt="<?php echo "$rodzaj1"; ?>" class="">
 						</div>
@@ -197,7 +202,7 @@
 					</div>
 
 
-					<div class="produkty-oferta col-12 col-sm-6 col-lg-4 col-xl-2"><a href="" class="produkty-oferta-a">
+					<div class="produkty-oferta col-12 col-sm-6 col-lg-4 col-xl-2"><a href="produkt.php?id=<?php echo $id2; ?>" class="produkty-oferta-a">
 						<div class="produkty-oferty-zdj col-12 mt-4">
 							<img src="<?php echo "$zdj2"; ?>" alt="<?php echo "$rodzaj2"; ?>" class="">
 						</div>
@@ -209,7 +214,7 @@
 						</div></a>
 					</div>
 
-					<div class="produkty-oferta d-none  d-lg-inline-block col-lg-4 col-xl-2"><a href="" class="produkty-oferta-a">
+					<div class="produkty-oferta d-none  d-lg-inline-block col-lg-4 col-xl-2"><a href="produkt.php?id=<?php echo $id3; ?>" class="produkty-oferta-a">
 						<div class="produkty-oferty-zdj col-12 mt-4">
 							<img src="<?php echo "$zdj3"; ?>" alt="<?php echo "$rodzaj3"; ?>" class="">
 						</div>
@@ -221,7 +226,7 @@
 						</div></a>
 					</div>
 
-					<div class="produkty-oferta  d-none d-xl-inline-block col-xl-2"><a href="" class="produkty-oferta-a">
+					<div class="produkty-oferta  d-none d-xl-inline-block col-xl-2"><a href="produkt.php?id=<?php echo $id4; ?>" class="produkty-oferta-a">
 						<div class="produkty-oferty-zdj col-12 mt-4">
 							<img src="<?php echo "$zdj4"; ?>" alt="<?php echo "$rodzaj4"; ?>" class="">
 						</div>
@@ -233,7 +238,7 @@
 						</div></a>
 					</div>
 
-					<div class="produkty-oferta d-none d-xl-inline-block col-xl-2"><a href="" class="produkty-oferta-a">
+					<div class="produkty-oferta d-none d-xl-inline-block col-xl-2"><a href="produkt.php?id=<?php echo $id5; ?>" class="produkty-oferta-a">
 						<div class="produkty-oferty-zdj col-12 mt-4">
 							<img src="<?php echo "$zdj5"; ?>" alt="<?php echo "$rodzaj5"; ?>" class="">
 						</div>
@@ -309,6 +314,7 @@
 
 			while($row = mysqli_fetch_row($wynik6))
 			{
+				$id6 = $row[0];
 				$nazwa6 = $row[1];
 				$cena6 = $row[2];
 				$rodzaj6 = $row[4];
@@ -317,6 +323,7 @@
 
 			while($row = mysqli_fetch_row($wynik7))
 			{
+				$id7 = $row[0];
 				$nazwa7= $row[1];
 				$cena7 = $row[2];
 				$rodzaj7 = $row[4];
@@ -325,6 +332,7 @@
 
 			while($row = mysqli_fetch_row($wynik8))
 			{
+				$id8 = $row[0];
 				$nazwa8= $row[1];
 				$cena8= $row[2];
 				$rodzaj8 = $row[4];
@@ -333,6 +341,7 @@
 
 			while($row = mysqli_fetch_row($wynik9))
 			{
+				$id9 = $row[0];
 				$nazwa9= $row[1];
 				$cena9 = $row[2];
 				$rodzaj9 = $row[4];
@@ -341,6 +350,7 @@
 
 			while($row = mysqli_fetch_row($wynik10))
 			{
+				$id10 = $row[0];
 				$nazwa10= $row[1];
 				$cena10 = $row[2];
 				$rodzaj10 = $row[4];
@@ -359,7 +369,7 @@
 
 
 			
-					<div class="produkty-oferta col-6 col-lg-4 col-xl-2"><a href="" class="produkty-oferta-a">
+					<div class="produkty-oferta col-6 col-lg-4 col-xl-2"><a href="produkt.php?id=<?php echo $id6; ?>" class="produkty-oferta-a">
 						<div class="produkty-oferty-zdj col-12 mt-4">
 							<img src="<?php echo "$zdj6"; ?>" alt="<?php echo "$rodzaj6"; ?>" class="">
 						</div>
@@ -372,7 +382,7 @@
 					</div>
 
 
-					<div class="produkty-oferta col-12 col-sm-6 col-lg-4 col-xl-2"><a href="" class="produkty-oferta-a">
+					<div class="produkty-oferta col-12 col-sm-6 col-lg-4 col-xl-2"><a href="produkt.php?id=<?php echo $id7; ?>" class="produkty-oferta-a">
 						<div class="produkty-oferty-zdj col-12 mt-4">
 							<img src="<?php echo "$zdj7"; ?>" alt="<?php echo "$rodzaj7"; ?>" class="">
 						</div>
@@ -384,7 +394,7 @@
 						</div></a>
 					</div>
 
-					<div class="produkty-oferta d-none  d-lg-inline-block col-lg-4 col-xl-2"><a href="" class="produkty-oferta-a">
+					<div class="produkty-oferta d-none  d-lg-inline-block col-lg-4 col-xl-2"><a href="produkt.php?id=<?php echo $id8; ?>" class="produkty-oferta-a">
 						<div class="produkty-oferty-zdj col-12 mt-4">
 							<img src="<?php echo "$zdj8"; ?>" alt="<?php echo "$rodzaj8"; ?>" class="">
 						</div>
@@ -396,7 +406,7 @@
 						</div></a>
 					</div>
 
-					<div class="produkty-oferta  d-none d-xl-inline-block col-xl-2"><a href="" class="produkty-oferta-a">
+					<div class="produkty-oferta  d-none d-xl-inline-block col-xl-2"><a href="produkt.php?id=<?php echo $id9; ?>" class="produkty-oferta-a">
 						<div class="produkty-oferty-zdj col-12 mt-4">
 							<img src="<?php echo "$zdj9"; ?>" alt="<?php echo "$rodzaj9"; ?>" class="">
 						</div>
@@ -408,7 +418,7 @@
 						</div></a>
 					</div>
 
-					<div class="produkty-oferta d-none d-xl-inline-block col-xl-2"><a href="" class="produkty-oferta-a">
+					<div class="produkty-oferta d-none d-xl-inline-block col-xl-2"><a href="produkt.php?id=<?php echo $id10; ?>" class="produkty-oferta-a">
 						<div class="produkty-oferty-zdj col-12 mt-4">
 							<img src="<?php echo "$zdj10"; ?>" alt="<?php echo "$rodzaj10"; ?>" class="">
 						</div>

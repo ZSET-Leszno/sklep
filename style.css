@@ -1155,3 +1155,86 @@ footer
 {
     padding-left: 30px;
 }
+
+/* Panel Admina */
+
+.tabela
+{
+    margin-top: 150px;
+    margin-bottom: 50px;
+}
+
+.wiersz
+{
+    padding: 10px 0;
+    border-bottom: dashed 1px;
+}
+
+.wiersz-top
+{
+    position: fixed;
+    background-color: #1d1f1d;
+    top: 90px;
+    z-index: 2;
+    left: 51%;
+    transform: translateX(-50%);
+    color: #BCE8CD;
+    padding: 0px;
+    height: 45px;
+}
+.wiersz-top-blur
+{
+    position: fixed;
+    background-color: rgba(241, 243, 251, 0.85);
+    top: 65px;
+    z-index: 1;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 30px;
+}
+
+.edytuj img
+{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    height: 30px;
+}
+
+.kolumna1 p,.kolumna2 p,.kolumna3 p, .kolumna4 p, .kolumna5 p, .kolumna61 p, .usun1 p, .edytuj1 p
+{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.usun_img
+{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    height: 30px;
+    display: inline;
+}
+
+.usun_img:hover
+{
+    display: none;
+}
+
+.usun_hover
+{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    height: 30px;
+    display: none;
+}
+.usun_hover:hover
+{
+    display: inline;
+}
