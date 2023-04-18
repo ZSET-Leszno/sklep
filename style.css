@@ -23,7 +23,7 @@ html
 
 ::-webkit-scrollbar-thumb
 {
-	background-color: #BCE8CD;;
+	background-color: #BCE8CD;
     border: 1px solid #000;
 	border-radius: 15px;
 }
@@ -1239,3 +1239,28 @@ footer
     padding: 0;
     margin: 0;
 }
+
+.wiersz form
+{
+    padding: 0px;
+    margin-left: 60px;
+    gap: 30px;
+    display: inline-flex;
+}
+
+.panel_input:focus
+{
+    color:  #BCE8CD;
+}
+
+.panel_submit
+{
+
+}
+
+.footer-sm
+{
+    position: fixed;
+    bottom: 0px;
+}
+

@@ -92,11 +92,26 @@
 		header('Location: index.php'); 
 	}
 ?>
+<?php 
+			include "config.php";
+			$conn = mysqli_connect($serwer,$user,$password,$baza) or die ("Odpowiedź: Błąd połączenia z serwerem");
+			
+			$id = $_GET["id"];
+			$wynik = mysqli_query($conn, "SELECT * From MK_Nutrition_produkty where produkt_id='$id'");
 
+			while($row = mysqli_fetch_row($wynik))
+			{
+				$id = $row[0];
+                $nazwa = $row[1];
+				$cena = $row[2];
+				$ilosc = $row[3];
+				$rodzaj = $row[4];
+				$zdj = $row[5];
+			}
+
+?>
 <main>
-	
-	<div class="wiersz-top-blur row col-11"></div>
-	<div class="wiersz-top row col-11">
+    <div class="wiersz-top row col-11">
 		<div class="kolumna1 col-1"><p>ID</p></div>
 		<div class="kolumna2 col-3"><p>Nazwa</p></div>
 		<div class="kolumna3 col-1"><p>Cena</p></div>
@@ -106,41 +121,25 @@
 		<div class="edytuj1 col-1"><p>Edytuj</p></div>
 		<div class="usun1 col-1"><p>Usuń</p></div>
 	</div>
+
 	<div class="tabela">
-	<?php
+			<div class="wiersz row mx-auto col-11">
+				<div class="kolumna1 col-1"><p><?php echo $id; ?></p></div>
+				<div class="kolumna2 col-3"><p><?php echo $nazwa; ?></p></div>
+				<div class="kolumna3 col-1"><p><?php echo $cena; ?></p></div>
+				<div class="kolumna4 col-1"><p><?php echo $ilosc; ?></p></div>
+				<div class="kolumna5 col-2"><p><?php echo $rodzaj; ?></p></div>
+				<div class="kolumna6 col-2"><p><?php echo $zdj; ?></p></div>
+				<div class="edytuj col-1"><a href="edit.php?id=$row[0]"><img src="images/edit.png"></a></div>
+				<div class="usun col-1">
+                    <a href="usun.php?id=$row[0]">
+					    <img src="images/delete1.png" class="usun_img">
+					    <img src="images/delete2.png" class="usun_hover">
+				    </a>
+                </div>
+			</div>
 
-		include "config.php";
-		$conn = mysqli_connect($serwer,$user,$password,$baza) or die ("Odpowiedź: Błąd połączenia z serwerem");
-
-		$wynik = mysqli_query($conn, "SELECT * From MK_Nutrition_produkty");
-		$liczba = mysqli_num_rows($wynik);
-
-		while($row = mysqli_fetch_array($wynik))
-		{
-			echo <<<_END
-			
-				<div class="wiersz row mx-auto col-11">
-					<div class="kolumna1 col-1"><p>$row[0]</p></div>
-					<div class="kolumna2 col-3"><p>$row[1]</p></div>
-					<div class="kolumna3 col-1"><p>$row[2]</p></div>
-					<div class="kolumna4 col-1"><p>$row[3]</p></div>
-					<div class="kolumna5 col-2"><p>$row[4]</p></div>
-					<div class="kolumna6 col-2"><p>$row[5]</p></div>
-					<div class="edytuj col-1"><a href="edit.php?id=$row[0]"><img src="images/edit.png"></a></div>
-					<div class="usun col-1"><a href="usun.php?id=$row[0]">
-						<img src="images/delete1.png" class="usun_img">
-						<img src="images/delete2.png" class="usun_hover">
-					</a></div>
-				</div>
-			_END;
-		}
-		$id_count = mysqli_query($conn, "SELECT COUNT(produkt_id) FROM MK_Nutrition_produkty"); 
-		mysqli_close($conn);
-	?>
-	</div>
-	
-		
-			<div class='wiersz row mx-auto col-11'>
+            <div class='wiersz row mx-auto col-11'>
 				<form method='POST' action='' class="col-12 cc">
 
 					<input type='text' id='nazwa' name='nazwa' placeholder='Nazwa' class="col-3 panel_input" require>
@@ -148,31 +147,36 @@
 					<input type='number' id='ilosc' name='ilosc' placeholder='Ilość' class="col-1 panel_input" require>
 					<input type='text' id='rodzaj' name='rodzaj' placeholder='Rodzaj' class="col-2 panel_input" require>
 					<input type='text' id='zdj' name='zdj' placeholder='Zdjęcie URL' class="col-2 panel_input" require>
-					<input type="submit" name='wyslij_dodaj' id='wyslij_dodaj' value="Dodaj" class="col-1 panel_submit">
+					<input type="submit" name='edit' id='edit' value="Edytuj" class="col-1 panel_submit">
 
 		
 				</form>
 			</div>
-			<?php 
+
+            <?php 
 			include "config.php";
 			$conn = mysqli_connect($serwer,$user,$password,$baza) or die ("Odpowiedź: Błąd połączenia z serwerem");
-			if(isset($_POST['wyslij_dodaj']))
-			{
-				$nazwa = $_POST['nazwa'];
-				$cena = $_POST['cena'];
-				$ilosc = $_POST['ilosc'];
-				$rodzaj = $_POST['rodzaj'];
-				$zdj = $_POST['zdj'];
+	
+            if(isset($_POST['edit']))
+            {
+                $nazwa = $_POST['nazwa'];
+                $cena = $_POST['cena'];
+                $ilosc = $_POST['ilosc'];
+                $rodzaj = $_POST['rodzaj'];
+                $zdj = $_POST['zdj'];
 
-				$wynik = mysqli_query($conn, "INSERT INTO MK_Nutrition_produkty (produkt_nazwa, produkt_cena, produkt_ilosc, produkt_rodzaj, produkt_zdjecie) VALUES ('$nazwa', '$cena', '$ilosc', '$rodzaj', '$zdj')");
-			}
-			mysqli_close($conn);
+                $wynik = mysqli_query($conn, "UPDATE `MK_Nutrition_produkty` SET produkt_nazwa='$nazwa', produkt_cena='$cena', produkt_ilosc='$ilosc',produkt_rodzaj='$rodzaj',produkt_zdjecie='$zdj' WHERE produkt_id='$id' ");
+            }
+
+            mysqli_close($conn);
 			?>
 
+
+        </div>
 </main>
 
 
-		<footer>
+		<footer class="footer-sm">
 		<div class="footer">
 			<div class="footer-top">
 				<div class="footer-top-info mx-auto row">
