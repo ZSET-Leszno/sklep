@@ -103,7 +103,11 @@ elseif (isset($_GET['navailable'])) {$sortowanie_nazwa="Niedostępne";}
 
 else{$sortowanie_nazwa="Nazwa, A-Z";}
 ?>
-				<div class="sortuj" id="sortuj" name="sortuj" onclick="otwieranie_sortuj()">Sortuj wg: <?php echo "$sortowanie_nazwa";?></div>
+				<div class="sortuj" id="sortuj" name="sortuj" onclick="otwieranie_sortuj()">Sortuj wg: <?php echo "$sortowanie_nazwa";?>
+					<div class="strzalka d-inline">
+						<img src="images/strzalka.png">
+				</div>
+				</div>
 				<div class="sortuj_type row col-2" id="sortuj_type" name="sortuj_type">
 					<a href="sklep.php?nazwa_first=true" class="sortuj_element col-12 ml-3">Nazwa, A-Z</a>
 					<a href="sklep.php?nazwa_last=true" class="sortuj_element col-12 ml-3">Nazwa, Z-A</a>
@@ -112,16 +116,15 @@ else{$sortowanie_nazwa="Nazwa, A-Z";}
 					<a href="sklep.php?navailable=true" class="sortuj_element col-12 ml-3">Niedostępne</a>
 				</div>
 
-				<div class="strzalka d-inline">
-					<img src="images/strzalka.png">
-				</div>
 
 				<div class="strzalka2 d-none">
 					<img src="images/strzalka.png">
 				</div>
 					
-				<div class="filtrowanie" id="filtrowanie" name="filtrowanie">Filtrowanie
 
+				<div style="margin-top: 20px;"></div>
+				<div class="napis-filtrowanie" id="filtrowanie">Filtrowanie</div>
+				<div class="filtrowanie" id="filtrowanie2" name="filtrowanie">
 				<form method="POST" action="">
 					<input type="checkbox" id="f_bialko" name="bialko" value="bialko">
 					<label for="f_bialko"> Odżywka białkowa</label><br>
@@ -134,8 +137,9 @@ else{$sortowanie_nazwa="Nazwa, A-Z";}
 
 					<input type="checkbox" id="f_witaminy" name="witaminy" value="witaminy">
 					<label for="f_witaminy"> Witaminy i Minerały</label><br>
-
-					<input type="submit" value="Filtruj" name="filtr_wyslij" id="filtr_wyslij">
+					<div class="con-button-filtrowanie">
+						<input type="submit" value="Filtruj" name="filtr_wyslij" id="filtr_wyslij">
+					</div>
 				</form>
 
 
@@ -338,6 +342,7 @@ else{$sortowanie_nazwa="Nazwa, A-Z";}
 			document.getElementById("sortuj_type").style.paddingTop = "20px";
 			document.getElementById("sortuj_type").style.paddingBottom = "5px";
 			document.getElementById("filtrowanie").style.marginTop = "400px";
+			document.getElementById("filtrowanie2").style.marginTop = "440px";
 			$('.strzalka').addClass('d-none'); 
 			$('.strzalka').removeClass('d-inline');
 
@@ -350,7 +355,8 @@ else{$sortowanie_nazwa="Nazwa, A-Z";}
 		document.addEventListener("click", function(event){
 			if (event.target.closest(".sortuj")) return
 			document.getElementById("sortuj_type").style.height = "0px";
-			document.getElementById("filtrowanie").style.marginTop = "140px";
+			document.getElementById("filtrowanie").style.marginTop = "200px";
+			document.getElementById("filtrowanie2").style.marginTop = "260px";
 			document.getElementById("sortuj_type").style.paddingTop = "0px";
 			document.getElementById("sortuj_type").style.paddingBottom = "0px";
 			$('.strzalka').addClass('d-inline'); 

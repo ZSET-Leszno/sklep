@@ -950,17 +950,56 @@ footer
 {
     position: fixed;
 }
-.filtrowanie
+
+.napis-filtrowanie
 {
     position: fixed;
-    margin-top: 120px;
+    margin-top: 200px;
     padding: 5px;
-    cursor: pointer;
     z-index: 98;
     margin-left: 24px;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 25px;
     transition: 0.5s;
+}
+
+.filtrowanie
+{
+    position: fixed;
+    margin-top: 260px;
+    padding: 5px;
+    z-index: 98;
+    margin-left: 24px;
+    font-size: 18px;
+    transition: 0.5s;
+}
+
+.filtrowanie input
+{
+    cursor: pointer;
+}
+
+.con-button-filtrowanie
+{
+   text-align: center;
+   margin-top: 10px;
+}
+
+#filtr_wyslij
+{
+  background-color:#4bae71;
+  border-radius: 8px;
+  border-style: none;
+  color: #FFFFFF;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  height: 40px;
+  line-height: 20px;
+  list-style: none;
+  padding: 10px 16px;
+  text-align: center;
+  text-decoration: none;
 }
 
 .strzalka img
