@@ -89,7 +89,7 @@
 
 		<div class="container_sklep row">
 
-			<div class="lewo_sklep col-3">  
+			<div class="lewo_sklep">  
 <?php 
 if (isset($_GET['nazwa_first'])) {$sortowanie_nazwa="Nazwa, A-Z";}
 
@@ -109,11 +109,11 @@ else{$sortowanie_nazwa="Nazwa, A-Z";}
 				</div>
 				</div>
 				<div class="sortuj_type row col-2" id="sortuj_type" name="sortuj_type">
-					<a href="sklep.php?nazwa_first=true" class="sortuj_element col-12 ml-3">Nazwa, A-Z</a>
-					<a href="sklep.php?nazwa_last=true" class="sortuj_element col-12 ml-3">Nazwa, Z-A</a>
-					<a href="sklep.php?cena_low=true" class="sortuj_element col-12 ml-3">Cena, rosnąco</a>
-					<a href="sklep.php?cena_high=true" class="sortuj_element col-12 ml-3">Cena, malejąco</a>
-					<a href="sklep.php?navailable=true" class="sortuj_element col-12 ml-3">Niedostępne</a>
+					<a href="sklep.php?nazwa_first=true" class="sortuj_element col-12">Nazwa, A-Z</a>
+					<a href="sklep.php?nazwa_last=true" class="sortuj_element col-12">Nazwa, Z-A</a>
+					<a href="sklep.php?cena_low=true" class="sortuj_element col-12">Cena, rosnąco</a>
+					<a href="sklep.php?cena_high=true" class="sortuj_element col-12">Cena, malejąco</a>
+					<a href="sklep.php?navailable=true" class="sortuj_element col-12">Niedostępne</a>
 				</div>
 
 
@@ -149,7 +149,7 @@ else{$sortowanie_nazwa="Nazwa, A-Z";}
 				</div>
 			</div>
 
-			<div class="prawo_sklep col-9 mx-auto">
+			<div class="prawo_sklep mx-auto">
 
 
 				<div class="container_produkty row">
