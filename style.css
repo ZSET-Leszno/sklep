@@ -294,7 +294,6 @@ nav
 	font-size: 25px;
 	font-weight: bold;
 	margin-bottom: 40px;
-    border-top: 2px solid;
 }
 
 .Proponowane_produkt
@@ -924,9 +923,15 @@ footer
     transition: 0.5s;
     height: 0;
     border-radius: 2px;
-    border: 0.1em solid #0c0e0c;
+    border: 0px;
     padding-top: 0px;
     padding-bottom: 0px;
+}
+
+.sortuj_type_border
+{
+    border: 0.1em solid #0c0e0c;
+    transition: 0.5s;
 }
 
 .sortuj_type a 

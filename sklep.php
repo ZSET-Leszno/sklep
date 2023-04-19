@@ -344,6 +344,7 @@ else{$sortowanie_nazwa="Nazwa, A-Z";}
 			document.getElementById("filtrowanie").style.marginTop = "400px";
 			document.getElementById("filtrowanie2").style.marginTop = "440px";
 			$('.strzalka').addClass('d-none'); 
+			$('.sortuj_type').addClass('sortuj_type_border'); 
 			$('.strzalka').removeClass('d-inline');
 
 			$('.strzalka2').addClass('d-inline'); 
@@ -359,6 +360,7 @@ else{$sortowanie_nazwa="Nazwa, A-Z";}
 			document.getElementById("filtrowanie2").style.marginTop = "260px";
 			document.getElementById("sortuj_type").style.paddingTop = "0px";
 			document.getElementById("sortuj_type").style.paddingBottom = "0px";
+			$('.sortuj_type').removeClass('sortuj_type_border');
 			$('.strzalka').addClass('d-inline'); 
 			$('.strzalka').removeClass('d-none');
 
